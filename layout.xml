@@ -51,7 +51,7 @@
         <title>Hacking</title>
 	<summary>The HACKING file in CVS</summary>
       </tocentry>
-    
+
     </tocentry>
 
     <tocentry page="bugs.xml" filename="bugs.html"/>
@@ -62,7 +62,7 @@
 
     <tocentry page="plug-ins.xml" filename="plug-ins.html">
 
-      <tocentry id="api" href="api/1.3">
+      <tocentry id="api" href="api/1.3/index.html">
 	<title>API Reference</title>
 	<summary>GIMP Reference Manuals</summary>
       </tocentry>
@@ -72,7 +72,7 @@
     </tocentry>
 
     <tocentry page="gimpcon.xml" filename="gimpcon.html" />
-    
+
     <tocentry page="about.xml" filename="about.html" />
 
   </toc>

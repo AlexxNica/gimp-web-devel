@@ -1,3 +1,7 @@
+2003-11-26  Henrik Brix Andersen  <brix@gimp.org>
+
+	* layout.xml: link to api/1.3/index.html instead of just api/1.3/
+
 2003-11-14  Sven Neumann  <sven@gimp.org>
 
 	* plug-ins.xml: link to the API reference and to Simon's talk.
