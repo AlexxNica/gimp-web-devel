@@ -106,6 +106,22 @@
     </para>
 
     <para>
+        The transform tools have attained interactive previews.
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-preview-transform.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-preview-transform-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Rotate tool</phrase>
+          </textobject>
+	</mediaobject>
+      </ulink>
+    </para>
+
+    <para>
       GIMP 2.2-pre1 running on Win XP:
     </para>
     <para role="images">

@@ -1,3 +1,10 @@
+2004-11-20  Øyvind Kolås  <pippin@gimp.org>
+
+	* screenshots.xml
+	* screenshots/Makefile
+	* screenshots/gimp-preview-rotate.png: updated and added screenshot
+	with interactive preview for a transform tool.
+
 2004-11-12  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: fixed broken link.
