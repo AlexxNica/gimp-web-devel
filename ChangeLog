@@ -1,5 +1,10 @@
 2004-01-23  Henrik Brix Andersen  <brix@gimp.org>
 
+	* faq.xml: hopefully make it more clear what DAG is an
+	abbreviation of.
+
+2004-01-23  Henrik Brix Andersen  <brix@gimp.org>
+
 	* faq.xml: added missing <para> tags, spell-checking.
 
 2004-01-22 Daniel Rogers <daniel@phasevelocity.org>

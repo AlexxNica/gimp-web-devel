@@ -435,19 +435,18 @@
         <answer>
           <para>
             GEGL will be a general image processing library.  It uses
-            a directed acyclic graph to represent image processing
-            operations.  In the DAG, images are edges, and operations
-            are nodes.  It takes advantage of this DAG to minimize
-            regions which are processed, provide efficient caching of
-            operations, and efficient redrawing when a parameter of
-            the graph changes.
+            a directed acyclic graph, a DAG, to represent image
+            processing operations.  In the DAG, images are edges, and
+            operations are nodes.  It takes advantage of this DAG to
+            minimize regions which are processed, provide efficient
+            caching of operations, and efficient redrawing when a
+            parameter of the graph changes.
           </para>
           <para>
             GEGL should also be independent of the data type being
             processed and will be able to handle high bit depth
             images, ICC profiles and parallel processing of image
             tiles.
-
           </para>
         </answer>
       </qandaentry>
