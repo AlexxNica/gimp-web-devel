@@ -1,5 +1,11 @@
 2003-12-01  Henrik Brix Andersen  <brix@gimp.org>
 
+	* gimpcon.xml: added a minimal description of what gimpcon is.
+
+	* plug-in-template.xml: turned a list into a paragraph.
+
+2003-12-01  Henrik Brix Andersen  <brix@gimp.org>
+
 	* gimpcon2000.xml: ported the contents from
 	http://www.gimp.org/gimpcon/2000/ to this new layout.
 
@@ -39,7 +45,7 @@
 	creates the directory structure.
 
 	* Makefile: removed the mkdir rule again.
-	
+
 	* gimpcon.xml
 	* gimpcon2003.xml: added some minimal content.
 

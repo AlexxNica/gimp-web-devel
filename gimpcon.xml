@@ -13,13 +13,23 @@
     <summary>Hanging out with the GIMP developers</summary>
   </head>
 
-  <itemizedlist>
-    <listitem>
-      <olink targetdocent="gimpcon2000">GIMPCon 2000</olink>
-    </listitem>
-    <listitem>
-      <olink targetdocent="gimpcon2003">GIMPCon 2003</olink>
-    </listitem>
-  </itemizedlist>
+  <para>
+    The GIMP Developers Conference, also known as GIMPCon, is a
+    gathering of <ulink url="http://www.gimp.org">GIMP</ulink> and
+    <ulink url="http://www.gegl.org">GEGL</ulink> developers from all
+    over the World. This is where we get together and discuss the
+    future development, hack on The GIMP and meet the GIMP users.
+  </para>
+
+  <para>
+    <itemizedlist>
+      <listitem>
+        <olink targetdocent="gimpcon2000">GIMPCon 2000</olink>
+      </listitem>
+      <listitem>
+        <olink targetdocent="gimpcon2003">GIMPCon 2003</olink>
+      </listitem>
+    </itemizedlist>
+  </para>
 
 </webpage>

@@ -22,12 +22,11 @@
     manipulation routines and voilà, your own GIMP plug-in:
   </para>
 
-  <simplelist>
-    <member>
-      <ulink url="ftp://ftp.gimp.org/pub/gimp/plugin-template/">
-        ftp.gimp.org/pub/gimp/plugin-template/
-      </ulink>
-    </member>
-  </simplelist>
+  <para>
+    Grab the latest release from
+    <ulink url="ftp://ftp.gimp.org/pub/gimp/plugin-template/">
+      ftp.gimp.org/pub/gimp/plugin-template/
+    </ulink>
+  </para>
 
 </webpage>
