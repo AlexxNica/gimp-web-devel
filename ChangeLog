@@ -1,3 +1,8 @@
+2005-02-23  Sven Neumann  <sven@gimp.org>
+
+	* install.exclude: keep the ChangeLog-2.2 and NEWS-2.2 symlinks
+	from being overwritten.
+
 2005-02-19  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: updated links for most freedesktop specs.
