@@ -1,7 +1,11 @@
+2004-01-23  Henrik Brix Andersen  <brix@gimp.org>
+
+	* faq.xml: added missing <para> tags, spell-checking.
+
 2004-01-22 Daniel Rogers <daniel@phasevelocity.org>
 
 	* faq.xml: added some more specific GEGL questions.
-	
+
 2004-01-22  Henrik Brix Andersen  <brix@gimp.org>
 
 	* layout.xml: update copyright year.
