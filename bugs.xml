@@ -44,12 +44,8 @@
         List of Open Bugs (excluding enhancement requests)</ulink>
       </listitem>
       <listitem>
-        <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;target_milestone=2.0.1">
-        List of Open Bugs with milestone 2.0.1</ulink>
-      </listitem>
-      <listitem>
-        <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;target_milestone=1.2.4&amp;target_milestone=1.2.5&amp;target_milestone=1.2.6">
-        List of ancient Open Bugs for 1.2 (unlikely to get fixed)</ulink>
+        <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;target_milestone=2.0.2">
+        List of Open Bugs with milestone 2.0.2</ulink>
       </listitem>
       <listitem>
         <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=UNCONFIRMED&amp;bug_status=NEEDINFO&amp;bug_severity=enhancement">

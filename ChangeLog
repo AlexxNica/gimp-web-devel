@@ -1,3 +1,8 @@
+2004-04-14  Simon Budig  <simon@gimp.org>
+
+	* bugs.xml: Changed bug query to milestone 2.0.2, removed
+	empty query for 1.2 bugs.
+
 2004-04-09  Henrik Brix Andersen  <brix@gimp.org>
 
 	* mailing-lists.xml: fixed link to the gimp.org mailing lists
