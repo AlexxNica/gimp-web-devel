@@ -1,19 +1,23 @@
+
+SUBDIRS=screenshots
+
 PROC=xsltproc
 STYLEDIR=xsl
 SCRIPTDIR=scripts
 STYLESHEET=$(STYLEDIR)/mine.xsl
 
-.PHONY : clean
-
-all:
-	make -C screenshots all
-	make website
+all: subdirs website
 
 include depends.tabular
 
+subdirs: $(SUBDIRS)
+
+$(SUBDIRS):
+	$(MAKE) -C $@
+
 autolayout.xml: layout.xml
 	$(PROC) $(STYLEDIR)/autolayout.xsl $< > $@
-	make depends
+	$(MAKE) depends
 
 %.html: autolayout.xml
 	$(PROC) $(STYLESHEET) $(filter-out autolayout.xml,$^) $(TIDY) > $@
@@ -23,4 +27,6 @@ depends: autolayout.xml
 
 depends.tabular: layout.xml
 	touch $@
-	make depends
+	$(MAKE) depends
+
+.PHONY: clean subdirs $(SUBDIRS)
