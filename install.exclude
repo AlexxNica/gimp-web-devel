@@ -2,6 +2,8 @@ CVS
 .cvsignore
 Makefile
 /ChangeLog
+/README
+/TODO
 /install.sh
 /install.exclude
 /api/1.3/app

@@ -1,5 +1,11 @@
 2003-11-13  Sven Neumann  <sven@gimp.org>
 
+	* TODO: added a list of things that could be done sooner or later.
+
+	* install.exclude: don't install README and TODO.
+
+2003-11-13  Sven Neumann  <sven@gimp.org>
+
 	* README: added with info to get you started.
 
 	* install.exclude: added the API docs directories so they don't
