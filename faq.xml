@@ -471,7 +471,7 @@
             The reusability of image processing operations means that
             plug-ins will be able to be designed in a much more modular
             way.  The brush system will be able to become more
-            flexible, especially which filter plug-ins are able to be
+            flexible, especially when filter plug-ins are able to be
             used as procedural brush plug-ins.
           </para>
         </answer>

@@ -1,5 +1,9 @@
 2004-01-23  Henrik Brix Andersen  <brix@gimp.org>
 
+	* faq.xml: fixed minor typo.
+
+2004-01-23  Henrik Brix Andersen  <brix@gimp.org>
+
 	* faq.xml: hopefully make it more clear what DAG is an
 	abbreviation of.
 
