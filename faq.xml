@@ -1,0 +1,609 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" [
+<!ENTITY lists SYSTEM "mailing-lists.xml" NDATA XML>
+<!ENTITY gimpcon SYSTEM "gimpcon.xml" NDATA XML>
+]>
+
+<webpage id="faq" lang="en">
+
+  <head>
+    <title>Frequently Asked Questions</title>
+    <titleabbrev>Developer FAQ</titleabbrev>
+    <summary>New to GIMP Development?</summary>
+  </head>
+
+  <para>
+    Below you will find a collection of frequently asked questions
+    regarding development of The GIMP.
+  </para>
+
+  <qandaset defaultlabel="number">
+    <qandadiv>
+      <title>GIMP Development</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            Who coordinates GIMP development?
+          </para>
+        </question>
+        <answer>
+          <para>
+            GIMP Development is coordinated by Wilber the GIMP along
+            with a loosely knit team of GIMP Developers.  The
+            developers can be reached through the GIMP Developer
+            <olink targetdocent="lists">mailing list</olink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How can I become a GIMP developer?
+          </para>
+        </question>
+        <answer>
+          <para>
+            If you are a developer who wants to start contributing
+            code to the GIMP, the best way to get to know its
+            structure is by fixing bugs reported in Bugzilla.  Pick a
+            bug, perhaps ask the advice of another developer as to
+            whether he/she thinks it will be an easy bug or not, and
+            then fix it.  Sounds easy, doesn't it?
+          </para>
+          <para>
+            After 20 or 30 bugs fixed, people will start to
+            recognize your immense talent, and you will be on your way
+            to becoming a GIMP hacker.  Any time you feel able, you
+            can pick a smaller enhancement request and have a go at
+            implementing it.  It's that easy.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            Where can I discuss GIMP development?
+          </para>
+        </question>
+        <answer>
+          <para>
+            There are several <olink targetdocent="lists">mailing
+            lists</olink> associated with the GIMP project.
+            Developments related issues can be brought up on the GIMP
+            Developer mailing list.
+          </para>
+          <para>
+            The GIMP has its own IRC channel on GIMPNet where most of
+            the active developers hang out.  Join us in #gimp on
+            <ulink url="irc:://irc.gimp.org:6667/#gimp">irc.gimp.org</ulink>.
+          </para>
+          <para>
+            Every once in a while the GIMP developers get together for
+            a few days to throw a GIMP Developers Conference, also
+            referred to as <olink
+            targetdocent="gimpcon">GIMPCon</olink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            Where can I find documentation for the GIMP API?
+          </para>
+        </question>
+        <answer>
+          <para>
+            If you have <ulink
+            url="ftp://ftp.gtk.org/pub/gtk-doc/">gtk-doc</ulink>
+            installed you can pass <command>--enable-gtk-doc</command>
+            to the gimp <filename>configure</filename> script.  After
+            running <command>make</command> you can find the GIMP API
+            reference in the <filename>devel-docs</filename>
+            directory.
+          </para>
+          <para>
+            The API reference will normally be installed in
+            <filename>PREFIX/share/gtk-doc/html</filename>.  An on
+            line version of the GIMP API reference can be found <ulink
+            url="api/1.3/">here</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How do I make a stack trace?
+          </para>
+        </question>
+        <answer>
+          <para>
+            A stack trace is a list of function calls that leads to
+            some point in the program. Debugging tools like <ulink
+            url="http://www.gnu.org/software/gdb/gdb.html">gdb</ulink>
+            can get stack traces from crashed applications so that
+            developers can figure out what went wrong. By including a
+            stack trace with your bug report, it will be much easier
+            for the developers to fix the reported problem.
+          </para>
+          <para>
+            Information on how to make a stack trace can be found in
+            the document <ulink
+            url="http://bugzilla.gnome.org/getting-traces.cgi">Capturing
+            Stack Traces</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is the best way to submit a patch?
+          </para>
+        </question>
+        <answer>
+          <para>
+            The best way to submit a patch is to open a bug report in
+            Bugzilla and attach the patch there along with a
+            description of what it does and why it should be applied.
+          </para>
+          <para>
+            An introduction to how this is done can be found in the
+            <ulink
+            url="http://mmmaybe.gimp.org/bugs/howtos/submit-patch.html">
+            How To Create and Submit a Patch</ulink> document.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is the preferred coding style used in The GIMP?
+          </para>
+        </question>
+        <answer>
+          <para>
+            We encourage you to follow the GIMP coding style
+            throughout the GIMP project.  For the core components
+            (application and libs) this coding style is enforced.  The
+            GIMP coding style is defined as follows:
+            <itemizedlist>
+              <listitem>
+                <para>
+                  Function names are lowercase, words separated by
+                  underscores.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  Macros and enums are all uppercase, words separated
+                  by underscores
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  Types are all words capitalized, no separators
+                  between words.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  All functions in header files need to be prototyped.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  Indentation rules are GNU coding style, in
+                  particular:
+                  <itemizedlist>
+                    <listitem>
+                      <para>
+                        2 characters indentation level
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        Do not use tabs (of course your editor can use
+                        tabs, but it should write them to file as 8
+                        spaces each).
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        Opening brackets are on a new line and
+                        indented one level.
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        Function header have the return type on one
+                        line, the name starting in the first column of
+                        the following line.  All parameters are
+                        prototyped and there's a new line for each.
+                      </para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </listitem>
+            </itemizedlist>
+          </para>
+          <para>
+            Try to make use of GLib's object system as much as
+            possible.  Do not create wrappers around functions of
+            parent classes.  If you end up duplicating code, try to
+            create a common parent class and implement the common
+            methods there.
+          </para>
+          <para>
+            Don't include headers in headers except where unavoidable
+            (e.g. for deriving objects).  Opaque typedefs go to
+            <filename>app/base/base-types.h</filename>,
+            <filename>app/core/core-types.h</filename> etc.  See
+            <filename>devel-docs/includes.txt</filename> for a
+            detailed description of the include policy.
+          </para>
+          <para>
+            Don't use the GTK wrappers around the GLib object and
+            signal system.
+          </para>
+          <para>
+            The above coding style, along with other useful
+            information, is documented in the file <ulink
+            url="HACKING">HACKING</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            Who coordinates the translation of The GIMP?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Any help with translations is appreciated.  If you want to
+            help, please get in contact with the people from the
+            <ulink
+            url="http://developer.gnome.org/projects/gtp/">GNOME
+            Translation Project</ulink> who coordinate all translation
+            efforts in the GNOME CVS tree.
+          </para>
+          <para>
+            More information about The GIMP and localisation can be
+            found in the file <ulink
+            url="README.i18n">README.i18n</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How can I support GIMP development?
+          </para>
+        </question>
+        <answer>
+          <para>
+            By using The GIMP and reporting any bugs you find to
+            <ulink url="http://bugzilla.gnome.org">Bugzilla</ulink>
+            you're helping a great deal.  But there are other
+            non-technical ways of supporting the development of The
+            GIMP as well.
+          </para>
+          <para>
+            The GIMP has a web site, application documentation, lots
+            of tutorials, and more.  Unfortunately, as the GIMP
+            develops over time, much of this documentation needs to be
+            re-written or freshened up, documentation needs to be
+            added for new functionality, the web site needs to get a
+            new lick of paint and so on.
+          </para>
+          <para>
+            If you're interested in helping out you should drop an
+            e-mail to the GIMP Developer <olink
+            targetdocent="lists">mailing list</olink> offering your
+            help.
+          </para>
+        </answer>
+      </qandaentry>
+
+    </qandadiv>
+    <qandadiv>
+      <title>Plug-In Development</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            How do I get my plug-in included in The GIMP?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Basically you should open an enhancement request in
+            Bugzilla and attach your plug-in there asking for it to be
+            included in the GIMP.  If your plug-in is generally useful
+            the GIMP developers might decide to include it in an
+            upcoming release of The GIMP.
+          </para>
+          <para>
+            Another way of making your plug-in available to the World
+            is to submit it to <ulink
+            url="http://registry.gimp.org">The GIMP Plug-In
+            Registry</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How do I debug a GIMP plug-in?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Eeek! The plug-in you're working on has a bug in it! And
+            the fix isn't completely obvious, so you want to use
+            debugger to see what is going on.  But hmm, how does one
+            start a plug-in under a debugger if GIMP is the one who is
+            starting the plug-in...
+          </para>
+          <para>
+            To address this issue, libgimp has some hooks controlled
+            by the <command>GIMP_PLUGIN_DEBUG</command> environment
+            variable.  The idea is that you can attach a debugger to
+            the pid of the plug-in you want to debug.  The process is
+            described in the file <ulink
+            url="debug-plug-ins.txt">debug-plug-ins.txt</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+    </qandadiv>
+    <qandadiv>
+      <title>CVS</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            What should I put in the ChangeLog when doing a CVS commit?
+          </para>
+        </question>
+        <answer>
+          <para>
+            The ChangeLog entry must list all files affected by the
+            CVS commit along with a description of the changes.  The
+            ChangeLog entry should follow the style set forth in the
+            rest of the ChangeLog.
+          </para>
+          <para>
+            If the commit fixes a bug or part of a bug please include
+            a reference to that bug in the form <quote>bug
+            #nnnnn</quote>, where nnnnn is the bug number.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What should I put in the CVS log?
+          </para>
+        </question>
+        <answer>
+          <para>
+            You should always paste the entry from the ChangeLog to
+            the CVS log when doing a CVS commit.  Please strip the
+            leading whitespace first to make the log more readable.
+          </para>
+        </answer>
+      </qandaentry>
+
+    </qandadiv>
+    <qandadiv>
+      <title>GEGL</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is GEGL?
+          </para>
+        </question>
+        <answer>
+          <para>
+            GEGL is the <ulink url="http://www.gegl.org">Generic
+            Graphical Library</ulink>.  It is supposed to replace the
+            handling of various image processing tasks in The GIMP in
+            a not too distant future.
+          </para>
+        </answer>
+      </qandaentry>
+
+    </qandadiv>
+    <qandadiv>
+      <title>Bugzilla</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is Bugzilla?
+          </para>
+        </question>
+        <answer>
+          <para>
+            The GIMP project uses <ulink
+            url="http://bugzilla.gnome.org">GNOME Bugzilla</ulink> for
+            tracking of bug reports, enhancement requests etc.
+          </para>
+          <para>
+            A beginners tutorial describing how to report a bug can be
+            found in the <ulink
+            url="http://mmmaybe.gimp.org/bugs/howtos/bugzilla.html">
+            How To Report GIMP Bugs</ulink> document.
+          </para>
+          <para>
+            An easy to use interface to reporting GIMP bugs can be
+            found on <ulink
+            url="http://bugs.gimp.org">bugs.gimp.org</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is the meaning of the NEEDINFO status code in
+            Bugzilla?
+          </para>
+        </question>
+        <answer>
+          <para>
+            If the status of a bug is changed to NEEDINFO it means the
+            GIMP developers need more information from the bug
+            reporter in order to resolve the bug.
+          </para>
+          <para>
+            More information about the meaning of the Bugzilla status
+            field codes can be found in <ulink
+            url="http://bugzilla.gnome.org/bug_status.html">
+            A Bug's Life Cycle</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is the best way to refer to a bug in Bugzilla?
+          </para>
+        </question>
+        <answer>
+          <para>
+            The best way to refer to a bug is <quote>bug
+            #nnnnn</quote>, where nnnnn is the bug number.  Using
+            <quote>bug</quote> before the number allows Bugzilla to
+            link to the corresponding bug report automatically.  Using
+            <quote>#</quote> before the number is optional for
+            Bugzilla but makes it easier to locate references to bug
+            reports in the ChangeLog or in e-mails.
+          </para>
+          <para>
+            When referencing multiple bugs, it is better to be a bit
+            redundant by writing <quote>bug #xxxxx, bug #yyyyy and bug
+            #zzzzz</quote> instead of <quote>bugs #xxxxx, #yyyyy and
+            #zzzzz</quote> in order to allow Bugzilla to link all bugs
+            automatically.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is the proper way of handling duplicate bug reports?
+          </para>
+        </question>
+        <answer>
+          <para>
+            A bug report describing the same bug as a previous bug
+            report should be marked as DUPLICATE of the older one.
+            In some exceptional cases, it is possible to mark an old
+            bug report as DUPLICATE of a newer one (e.g., when the
+            newer bug report has a significantly better description
+            than the older one).
+          </para>
+          <para>
+            Another exception is when the same person submits the same
+            bug report several times (same description): in this case,
+            it is better to mark the additional copies of the bug
+            report as INVALID in order to avoid inflating the
+            statistics about the number of duplicates.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What is the proper way of marking a bug as RESOLVED?
+          </para>
+        </question>
+        <answer>
+          <para>
+            When fixing a bug, always mention the bug number in the
+            commit message and ChangeLog entry.  Once the changes are
+            in CVS, paste the relevant part of the ChangeLog entry (or
+            all of it) in the comment field and mark the bug as
+            RESOLVED FIXED.  These cross-references help a lot when
+            trying to find when a bug was fixed, its relations to
+            other bugs, and potential regressions.
+          </para>
+          <para>
+            A bug that is fixed in CVS or in an unstable release
+            should be marked as RESOLVED FIXED.  Optionally, the
+            reporter or someone other than the one who fixed the bug
+            can mark it as VERIFIED after some testing.  When the fix
+            is part of a stable release, it can be marked as CLOSED.
+          </para>
+          <para>
+            This is explained further in <ulink
+            url="http://bugzilla.gnome.org/bug_status.html">A Bug's
+            Life Cycle</ulink> except for the difference between
+            stable and unstable releases.
+          </para>
+        </answer>
+      </qandaentry>
+
+    </qandadiv>
+    <qandadiv>
+      <title>Miscellaneous</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            Is there a GIMP user FAQ available?
+          </para>
+        </question>
+        <answer>
+          <para>
+            There is no user FAQ available at the moment.  However
+            there has been discussions about creating one.  If you
+            would like to help with this please drop a mail on the
+            GIMP Developer <olink targetdocent="lists">mailing
+            list</olink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How can I contribute to this FAQ?
+          </para>
+        </question>
+        <answer>
+          <para>
+            If you would like to contribute to this FAQ, send an
+            e-mail to the GIMP developer <olink
+            targetdocent="lists">mailing list</olink> with the
+            exact text you think should be included (both question and
+            answer).
+          </para>
+          <para>
+            With your help this FAQ will grow and become more useful.
+          </para>
+        </answer>
+      </qandaentry>
+
+    </qandadiv>
+
+  </qandaset>
+
+</webpage>
