@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd">
+
 <webpage id="plug-in-template" lang="en">
 
   <head>
@@ -13,13 +14,16 @@
     The GIMP Plug-In Template is an empty GIMP Plug-In that does
     nothing. It also has a GUI that allows to control how it achieves
     this task. But best of all, it comes with a complete setup for
-    autoconf, automake, internationalisation and all these things you
-    never wanted to know about.
+    <ulink url="http://www.gnu.org/software/autoconf/">autoconf</ulink>,
+    <ulink url="http://www.gnu.org/software/automake/">automake</ulink>,
+    internationalisation and all these things you never wanted to know
+    about.
   </para>
+
   <para>
     Thanks to the GIMP Plug-In Template you don't need to worry about
     all these things. Just download the tarball, add some magic image
-    manipulation routines and voilà, your own GIMP plug-in:
+    manipulation routines and voilà, your own GIMP plug-in.
   </para>
 
   <para>
