@@ -35,9 +35,7 @@ img.map {
 }
 
 p {
-  margin: 1.33em 0px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 1.33em 40px;
   text-align: justify;
 }
 
@@ -55,8 +53,7 @@ p.images {
 }
 
 li {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 40px;
   text-align: justify;
 }
 
@@ -80,11 +77,9 @@ td.map {
 }
 
 h1 {
-  background: #dce5d4;
+  background-color: #dce5d4;
   color: black;
-  border-style: solid;
-  border-color: #a9b3a1;
-  border-width: 1px;
+  border: thin solid #a9b3a1;
   padding: 5px;
   margin-bottom: 30px;
   font-weight: bold;
