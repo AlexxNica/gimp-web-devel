@@ -425,7 +425,56 @@
           </para>
         </answer>
       </qandaentry>
+      
+      <qandaentry>
+        <question>
+          <para>
+            What will Gegl be able to do?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Gegl will be a general image processing library.  It uses
+            a directed acyclic graph to represent image processing
+            operations.  In the DAG, images are edges, and operations
+            are nodes.  It takes advantage of this DAG to minimize
+            regions which are processed, provide efficient caching of
+            operations, and efficient redrawing when a parameter of
+            the graph changes.
 
+            Gegl should also be independent of the data type being
+            processed and will be able to handle high bit depth
+            images, ICC profiles and parallel processing of image
+            tiles.
+
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            What does all that gibberish mean for the GIMP?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Many highly requested features of the GIMP will be easier
+            to do using GEGL.  Layer effects, layer groups, and
+            adjustment layers are quite easily represented (and
+            efficiently caculated) using the DAG organization of GEGL.
+            CYMK and high bit depth support will be easier because
+            GEGL does not make the same assumptions about color spaces
+            and data types that the GIMP does.
+            
+            The reusablity of image processing operations means that
+            plugins will be able to be designed in a much more modular
+            way.  The brush system will be able to become more
+            flexible, especially which filter plugins are able to be
+            used as procedural brush plugins.
+          </para>
+        </answer>
+      </qandaentry>
     </qandadiv>
     <qandadiv>
       <title>Bugzilla</title>
