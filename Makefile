@@ -6,8 +6,8 @@ STYLESHEET=$(STYLEDIR)/mine.xsl
 .PHONY : clean
 
 all:
-	make website
 	make -C screenshots all
+	make website
 
 include depends.tabular
 
