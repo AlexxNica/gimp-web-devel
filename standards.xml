@@ -1,0 +1,262 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" >
+
+<webpage id="standards" lang="en">
+
+  <head>
+    <title>GIMP and Standards</title>
+    <titleabbrev>Standards</titleabbrev>
+    <summary>Standards GIMP conforms to</summary>
+  </head>
+
+  <para>
+    GIMP is supposed to integrate well into your workflow. Thus is
+    needs to interoperate with other applications and your desktop.
+    Standards are there to make this happen and so we try to follow
+    established (and sometimes even proposed) standards. Below you
+    will find a list with links to specifications that a GIMP
+    developer may find useful.
+  </para>
+
+  <variablelist>
+    <title>File Formats</title>
+
+    <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/Graphics/GIF/spec-gif89a.txt">Graphics Interchange Format</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the GIF file format, used in the GIF plug-in. GIF
+	  is bad, don't use it.
+	</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/Graphics/JPEG/">JPEG (Joint Photographic Experts Group)</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the JPEG JFIF file format, used in the JPEG plug-in.
+	</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>
+	<ulink url="http://www.libpng.org/pub/mng/spec/jng.html">JNG (JPEG Network Graphics) Format Version 1.0</ulink>
+      </term>
+      <listitem>
+	<para>
+	  GIMP doesn't use this format yet but it would be nice to
+	  extend the MNG plug-in to use it and to add a dedicated JNG
+	  plug-in.
+	</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>
+	<ulink url="http://www.libpng.org/pub/mng/spec/">MNG (Multiple-image Network Graphics) Format Version 1.0</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the MNG file format, used in the MNG plug-in.
+	</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/TR/PNG/">Portable Network Graphics (PNG) Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the PNG file format, used in the PNG plug-in. GIMP
+	  also reads patterns in the PNG file format and it stores
+	  thumbnails as PNG images.
+	</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/TR/SVG/">Scalable Vector Graphics (SVG) 1.1 Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the SVG file format, used in the SVG plug-in. GIMP
+	  uses SVG for import and export of paths and it also loads
+	  gradients from SVG files.
+	</para>
+      </listitem>
+    </varlistentry>
+    
+    <varlistentry>
+      <term>
+	<ulink url="http://partners.adobe.com/asn/developer/PDFS/TN/TIFF6.pdf/">TIFF 6.0 Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the TIFF file format, used in the TIFF plug-in.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/XML/">Extensible Markup Language (XML)</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the XML markup language, used to store the menu layout,
+	  the startup tips, help indices and other things.
+	</para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+
+  <variablelist>
+    <title>Desktop Standards</title>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/desktop-entry-spec/">Desktop Entry Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  This spec describes desktop entries: files describing
+	  information about an application such as the name, icon, and
+	  description.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/file-uri-spec">File URI Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Specifies how URIs for normal UNIX filenames (file: URIs)
+	  are interpreted and created.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://developer.gnome.org/projects/gup/hig/">GNOME Human Interface Guidelines</ulink>
+      </term>
+      <listitem>
+	<para>
+	  We don't follow this spec to the word but we try to adopt as
+	  much of these guidelines as makes sense.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/recent-file-spec/">Recent File Storage Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Provides a standard mechanism for storing a list of recently
+	  used files (really, URIs). Supported since GIMP version 2.1.6.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://triq.net/~jens/thumbnail-spec/">Thumbnail Managing Standard</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Deals with the permanent storage of previews for file
+	  content. In particular, it tries to define a general and
+	  widely accepted standard for this task.
+	</para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+
+  <variablelist>
+    <title>Standards specific to the X window system</title>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/clipboards-spec/">Clipboards</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Not a formal specification, but explains the consensus of the
+	  Qt and GTK+ developers on how the X clipboard works.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/XDND/">Drag-and-Drop Protocol for the X Window System</ulink>
+      </term>
+      <listitem>
+	<para>
+	  XDND defines a standard for drag and drop on X11. It is implemented
+	  by GTK+.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/wm-spec/">Extended Window Manager Hints</ulink>
+      </term>
+      <listitem>
+	<para>
+	  The Window Manager Specification is meant to unify the GNOME and KDE
+	  window manager hint conventions.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://tronche.com/gui/x/icccm/">Inter-Client Communication Conventions Manual (ICCCM)</ulink>
+      </term>
+      <listitem>
+	<para>
+	  This spec defines the interaction between X11 clients. In
+	  particular it talks about selections, cut buffers, window
+	  and session management, manipulation of shared resources
+	  and device color characterization.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/xsettings-spec/">XSETTINGS</ulink>
+      </term>
+      <listitem>
+	<para>
+	  The XSETTINGS protocol provides a mechanism for applications
+	  written with different toolkits to share simple
+	  configuration settings such as double-click-times and
+	  background colors. GTK+ hides this from us.
+	</para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+
+</webpage>
