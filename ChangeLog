@@ -1,5 +1,9 @@
 2003-11-26  Henrik Brix Andersen  <brix@gimp.org>
 
+	* style/default.css: added styling for tables.
+
+	* TODO: removed need for table styling from TODO list.
+
 	* scripts/thumb.sh: simplified
 
 	* screenshots/.cvsignore: ignore all thumbnails

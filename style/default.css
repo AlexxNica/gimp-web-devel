@@ -44,13 +44,13 @@ p.images {
 
 p {
   margin: 1.33em 0px;
-  margin-left: 40px; 
+  margin-left: 40px;
   margin-right: 40px;
   text-align: justify;
 }
 
 li {
-  margin-left: 40px; 
+  margin-left: 40px;
   margin-right: 40px;
   text-align: justify;
 }
@@ -129,8 +129,15 @@ div.titlebar {
   height: 100px;
 }
 
-div.informaltable.table {
-  border-collapse: collapse; 
+div.informaltable table {
+  margin: 0px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-collapse: collapse;
+}
+
+div.informaltable table tr td, div.informaltable table tr th {
+  padding: 5px;
 }
 
 img.titlebarleft {
