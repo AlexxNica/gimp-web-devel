@@ -1,5 +1,12 @@
 2003-12-02  Sven Neumann  <sven@gimp.org>
 
+	* layout.xml
+	* gimpcon.xml
+	* gimpcon2004.xml
+	* gimpcon/2004: added a first draft for GIMPCon 2004.
+
+2003-12-02  Sven Neumann  <sven@gimp.org>
+
 	* Makefile: removed remaining references to mkdir rule.
 
 	* gimpcon2003.xml: thank our sponsors and the CCC.
