@@ -138,7 +138,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/desktop-entry-spec/">Desktop Entry Specification</ulink>
+	<ulink url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html">Desktop Entry Specification</ulink>
       </term>
       <listitem>
 	<para>
@@ -176,7 +176,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/recent-file-spec/">Recent File Storage Specification</ulink>
+	<ulink url="http://standards.freedesktop.org/recent-file-spec/recent-file-spec-latest.html">Recent File Storage Specification</ulink>
       </term>
       <listitem>
 	<para>
@@ -188,7 +188,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/shared-mime-info-spec/">Shared MIME Database</ulink>
+	<ulink url="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html">Shared MIME Database</ulink>
       </term>
       <listitem>
 	<para>
@@ -201,7 +201,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/startup-notification-spec/"> Startup Notification</ulink>
+	<ulink url="http://standards.freedesktop.org/startup-notification-spec/startup-notification-latest.txt"> Startup Notification</ulink>
       </term>
       <listitem>
 	<para>
@@ -235,7 +235,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/clipboards-spec/">Clipboards</ulink>
+	<ulink url="http://standards.freedesktop.org/clipboards-spec/clipboards-latest.txt">Clipboards</ulink>
       </term>
       <listitem>
 	<para>
@@ -259,7 +259,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/wm-spec/">Extended Window Manager Hints</ulink>
+	<ulink url="http://standards.freedesktop.org/wm-spec/wm-spec-latest.html">Extended Window Manager Hints</ulink>
       </term>
       <listitem>
 	<para>
@@ -285,7 +285,7 @@
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/xsettings-spec/">XSETTINGS</ulink>
+	<ulink url="http://standards.freedesktop.org/xsettings-spec/xsettings-spec-0.5.html">XSETTINGS</ulink>
       </term>
       <listitem>
 	<para>
