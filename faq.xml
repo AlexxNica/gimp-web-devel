@@ -114,8 +114,8 @@
           <para>
             The API reference will normally be installed in
             <filename>PREFIX/share/gtk-doc/html</filename>.  An on
-            line version of the GIMP API reference can be found <ulink
-            url="api/1.3/">here</ulink>.
+            line version of the GIMP API reference can be found
+            <ulink url="api/2.0/">here</ulink>.
           </para>
         </answer>
       </qandaentry>

@@ -61,7 +61,7 @@
 
     <tocentry page="plug-ins.xml" filename="plug-ins.html">
 
-      <tocentry id="api" href="/api/1.3/index.html">
+      <tocentry id="api" href="/api/2.0/index.html">
 	<title>API Reference</title>
 	<summary>GIMP Reference Manuals</summary>
       </tocentry>
