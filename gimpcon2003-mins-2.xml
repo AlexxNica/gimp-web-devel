@@ -1,0 +1,367 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" >
+
+<webpage id="gimpcon2003-mins-2" lang="en">
+
+  <head>
+    <title>The Second Big Serious Meeting of GIMPCon2003</title>
+    <titleabbrev>Second Meeting</titleabbrev>
+    <summary>Minutes of the second GIMPCon 2003 Meeting</summary>
+  </head>
+
+  <para>
+    8 Aug 03, around 8pm
+  </para>
+
+  <para>
+    Discussion was led by Daniel Rogers (dsrogers) but stuff said is
+    for the most part anonymous. Partly because there shouldn't be any
+    ad hominem attacks that way, and partly because I didn't take down
+    any names.
+  </para>
+
+  <para>
+    Present: Daniel Rogers (dsrogers), Raphaël Quinet, Dave Neary
+    (bolsh), Sven Neumann (Sven), Michael Natterer (mitch), Henrik
+    Brix Andersen (brix), Jakub Steiner (jimmac), Simon Budig (nomis),
+    Marc Lehmann, Ville Pätsi (drc), Øyvind Kolås (pippin), Calvin
+    Williamson (calvin), Roman Joost (romanofski), Maurits Rijk
+    (Maurits), Branko Collins (bbc).
+  </para>
+
+  <para>
+    Topic discussion, in approximate chronological order:
+    <itemizedlist>
+      <listitem>
+        <link linkend="features">Features required for 2.0</link>
+      </listitem>
+      <listitem>
+        <link linkend="documentation">Documentation</link>
+      </listitem>
+      <listitem>
+        <link linkend="web">Web-site</link>
+      </listitem>
+      <listitem>
+        <link linkend="roadmap">Roadmap</link>
+      </listitem>
+      <listitem>
+        <link linkend="bugs">Bugs</link>
+      </listitem>
+      <listitem>
+        <link linkend="tasks">Task List</link>
+      </listitem>
+      <listitem>
+        <link linkend="foundation">GIMP Foundation</link>
+      </listitem>
+      <listitem>
+        <link linkend="manager">Release manager</link>
+      </listitem>
+    </itemizedlist>
+  </para>
+
+  <section id="features">
+    <title>Features required for 2.0</title>
+
+    <para>
+      There was quite a lot of talk on what was required for a 2.0
+      release. It was agreed that a pre-release should have feature
+      complete versions of everything going into 2.0, for obvious
+      reasons. These can be somewhat buggy, but they should at least
+      support what is supported in the 1.2 equivalents.
+    </para>
+
+    <para>
+      The major features or API changes which it was agreed are
+      necessary are:
+    <orderedlist>
+      <listitem>Complete path tool (nomis)</listitem>
+      <listitem>Remove libgck (Sven and mitch)</listitem>
+      <listitem>Finish the text tool (Sven)</listitem>
+      <listitem>Documentation (more on this later)</listitem>
+      <listitem>Web-site (again, more on this later)</listitem>
+      <listitem>Some libgimp changes which need to be made now so that
+      we can havebinary compatibility across a 2.2 release</listitem>
+    </orderedlist>
+    </para>
+
+  </section>
+
+  <section id="documentation">
+    <title>Documentation</title>
+
+    <para>
+      We felt that with pre-releases, the documentation will become
+      more complete. There should, however, be an effort to actively
+      get people writing docs. The main requirement, then, for 2.0
+      pre-releases will be to have a working help framework, so that
+      when people hit F1 for help, they at least get a message saying
+      <quote>This help item does not exist yet.If you would like to
+      help write it, contact docs@gimp.org</quote> or some such.
+    </para>
+
+    <para>
+      If documentation is going to be released as a separate package,
+      as now seems likely, then we will need to define the interface
+      between the core and the help pages reasonably quickly. The
+      general idea is to more or less hard-code tagnames for a
+      particular help topic, and get the core and help using the same
+      tags, and agreeing on how they be communicated. This will
+      presumably require a considerable amount of communication with
+      the help team.
+    </para>
+
+    <para>
+      We also need to have the docs browsable online so that if people
+      want to browse them they can.
+    </para>
+
+  </section>
+
+  <section id="web">
+    <title>Web-site</title>
+
+    <para>
+      The new site should switch over to www.gimp.org soon. There will
+      obviously be quite a bit of pain involved as content gets added
+      and we get lots of <quote>your website sucks</quote> type
+      feedback, but this will only befor the short term. We should
+      switch to mmaybe as the main site before 2.0pre1. It was
+      suggested to do it even earlier than that, in the region of 2 to
+      3 weeks time.
+    </para>
+
+    <para>
+      It was also discussed whether it was a good idea to have a
+      separate coordinator for the website.
+    </para>
+
+  </section>
+
+  <section id="roadmap">
+    <title>Roadmap</title>
+
+    <para>
+      As an approximate set of ideals, it was agreed that we want
+      this: 2.0pre1 very soon, 2.0 soon, 2.2 next year, and Gegl
+      integration the end of next Summer.
+    </para>
+
+    <para>
+      More specifically, the near-term release schedule that we agreed
+      was reasonable is this:
+    </para>
+
+    <para>
+      1 or 2 developer releases (one now, more or less, and another
+      one in another 2 weeks). 6 weeks time (end of September 2003):
+      First pre-release of 2.0, including the features mentioned
+      above, and any other minor features that people code in the
+      meantime (hint, hint). Roughly 3 months later: 2.0
+    </para>
+
+    <para>
+      It was more or less agreed that 3 to 4 weeks was a nice
+      turnaround time for pre-releases, so that would imply between 4
+      and 6 (inclusive) pre-releases before 2.0.
+    </para>
+
+    <para>
+      The reason for not having a pre-release straight away was
+      mentioned above: to be feature complete, some features need a
+      little more than 2 weeks work, and people have real lives. So 6
+      weeks was felt to be a reasonable amount of time to have the
+      path tool and the help browser in place.
+    </para>
+
+  </section>
+
+  <section id="bugs">
+    <title>Bugs</title>
+
+    <para>
+      The developer release will also be a prelude to a bug week. We
+      would like people (that's you, in particular) to actively work
+      on bugzilla clean-up for 2.0 - bugs need to be prioritized,
+      unconfirmed bugs need confirming and milestoning (and if you're
+      feeling really helpful, fixing). The idea would more or less be
+      that the 2.0 milestone will be locked down for anything other
+      than serious bugs after this bug week, so if there are bugs that
+      are annoying you a lot, this is your chance to get them
+      considered and worked on for the 2.0 releases.
+    </para>
+
+    <para>
+      Just to spell that out - at the end of the bug week, any bugs
+      reported against The GIMP in CVS will be milestoned for 2.0.x,
+      or even 2.2, unless they are considered blockers for the
+      release. If we want to get a 2.0 release soon, we need to get
+      lots of testing done, and lots of bugfixing done, but we also
+      need to choose what to do and what not to do. We felt this was a
+      reasonable compromise.
+    </para>
+
+    <para>
+      It was also re-discussed whether it would make sense to have
+      module owners. The conclusion was that for certain components,
+      it makes sense to have a smaller group of people getting the bug
+      reports and having responsibility for them. This would be done
+      via mail aliases for the group of people guiding the component,
+      in a similar way to that which is used for (say) gtktreeview in
+      gtk+.
+    </para>
+
+    <para>
+      The module owner group wouldn't have to be technical, and we
+      should be actively recruiting people to do this kind of work and
+      leave more time for programmers to program.
+    </para>
+
+    <para>
+      This leads us on to...
+    </para>
+
+  </section>
+
+  <section id="tasks">
+    <title>Task list</title>
+
+    <para>
+      There are lots of non-technical jobs that need doing around the
+      gimp-docs, website, bugzilla triage, internationalisation,
+      etc. Often it is quite difficult to know what needs doing, and
+      who to contact about getting it done. We need a list of
+      bite-sized tasks that people can do, including the kinds of
+      tasks that only take a few hours a week to do, but are ongoing
+      tasks.
+    </para>
+
+    <para>
+      We used to have a TODO, and we could use that system again, if
+      someone were maintaining it. That could come under the remit of
+      the release manager to some extent, but since the mainenance of
+      the TODO list is mostly a non-technical task, anyone could do it
+      (in fact, as an example of a task, <quote>Maintaining the TODO
+      list</quote> would go in the TODO list).
+    </para>
+
+    <para>
+      We might do this through Bugzilla using a keyword to allow
+      getting at the list easily, which would imply getting more
+      people looking at bugzilla regularly. Then again, if there were
+      a link to a bugzilla query on the webpage marked <quote>GIMP
+      TODO list</quote> we could get that for free.
+    </para>
+
+  </section>
+
+  <section id="foundation">
+    <title>GIMP Foundation</title>
+
+    <para>
+      Basically, we're agreed this is a good idea to have some kind of
+      public face people and companies can contribute to. There is no
+      problem with having 2 foundations, one in Europe and one in the
+      US. It was more or less agreed that assigning copyright to the
+      foundation isn't going to happen soon (for a start, so many
+      plug-in authors have gone their merry way and are almost
+      unfindable) This may hapen in the future, but most people felt
+      that it would not be something they'd be happy doing personally.
+    </para>
+
+    <para>
+      Other people said they would prefer to assign copyright to an
+      organism under the jurisdiction of European law rather than
+      under US jurisdiction.
+    </para>
+
+    <para>
+      So, to sum up, there's no reason not to have one of
+      these. Daniel Rogers has agreed to do the necessary paperwork
+      and set up the foundation and the bank account for donations in
+      the US. Pretty quickly after getting that up and going, we will
+      need to get a board of directors and a set of by-laws. We know
+      lots of people who can help with this (in particular, the GNOME
+      foundation and the FSF).
+    </para>
+
+    <para>
+      If someone wants to set up an equivalent in Europe, we're all
+      ears. Currently no-one has said they'll do it, so it's an open
+      point. To start, the foundation will only be a board an a bank
+      account - in the future, we could expand its responsibilities to
+      promotional work, a single point where people could go to get
+      speakers, a group that does press releases and so on. It was
+      agreed that at least in the short term it is undesirable to have
+      the foundation have actual control of source code, just in case
+      the foundation then gets sued.
+    </para>
+
+    <para>
+      In brief, it's being set up with a very narrow remit, with the
+      possibility to expand later if it is felt that there is a need.
+    </para>
+
+  </section>
+
+  <section id="manager">
+    <title>Release manager</title>
+
+    <para>
+      The responsibilities are:
+    <itemizedlist>
+      <listitem>
+        Follow CVS so that he can write release notes, and knows at
+        any given time who is working on what, and at what stage it
+        is
+      </listitem>
+      <listitem>
+        Follow bugzilla closely
+      </listitem>
+      <listitem>
+        Make releases regularly, according to the roadmap (or make
+        sure releases get made)
+      </listitem>
+      <listitem>
+        Update the roadmap to reflect reality
+      </listitem>
+      <listitem>
+        Write release notes for the releases (keep NEWS up to date)
+      </listitem>
+      <listitem>
+        Generally annoy people sending mails to the mailing lists and
+        sending content to the website to explain the state of play
+        and get people to work on stuff.
+      </listitem>
+    </itemizedlist>
+    </para>
+
+    <para>
+      Dave Neary (me) agreed to do this. He already regrets it.
+    </para>
+
+    <para>
+      That's it folks - today, Sven and mitch are going to talk to us
+      about the major changes in the codebase and the general utility
+      stuff which exists now which has been written from scratch,
+      Calvin and Daniel are going to talk about Gegl and how we can
+      use it, and work towards having a Gegl that we can use in a
+      year. I'm going to lead a discussion on communication in the
+      GIMP, and how to maybe make it easier for people to contribute,
+      and jimmac is going to demonstrate what a power user really is.
+    </para>
+
+    <para>
+      Goodbye from everyone at camp. As usual, comments are welcome on
+      all this stuff. While on a philosophical level, we are agreed on
+      the direction things should take, all the details are open to
+      discussion, if there's any reason to change them.
+    </para>
+
+  <para>
+    Written by Dave Neary
+  </para>
+
+  </section>
+
+</webpage>

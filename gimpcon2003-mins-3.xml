@@ -1,0 +1,238 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" >
+
+<webpage id="gimpcon2003-mins-3" lang="en">
+
+  <head>
+    <title>The Third Big Serious Meeting of GIMPCon 2003</title>
+    <titleabbrev>Third Meeting</titleabbrev>
+    <summary>Minutes of the third GIMPCon 2003 Meeting</summary>
+  </head>
+
+  <para>
+    Here are the minutes of Yet Another Big Meeting that took place
+    this afternoon (9 Aug 03) in the GimpTent. The meeting was chaired
+    by Dave Neary and these minutes were written by Raphaël Quinet.
+  </para>
+
+  <para>
+    The title of this meeting was <quote>Communication</quote>. The
+    main topics were how to improve the communication between
+    developers and users or potential new developers. We also
+    discussed how to present The GIMP to the <quote>outside</quote>
+    and how to make it easier for new users to try out The GIMP or get
+    involved in GIMP development.
+  </para>
+
+  <para>
+    Altough there was no pre-defined agenda for this meeting,
+    the following topics were discussed:
+    <itemizedlist>
+      <listitem>
+        <link linkend="developers">How to get new developers?</link>
+      </listitem>
+      <listitem>
+        <link linkend="binary">De we need binary distributions?</link>
+      </listitem>
+      <listitem>
+        <link linkend="bugzilla">Is Bugzilla too hard to use for new
+        users?</link>
+      </listitem>
+      <listitem>
+        <link linkend="tasks">List of open tasks</link>
+      </listitem>
+      <listitem>
+        <link linkend="mailinglists">Mailing lists</link>
+      </listitem>
+    </itemizedlist>
+  </para>
+
+  <section id="developers">
+    <title>How to get new developers?</title>
+
+    <para>
+      Like in any Free Software project, developers are leaving from
+      time to time to pursue other projects. And from time to time,
+      new developersare joining the team and starting to contribute.
+      However, it looks like the number of new developers joining the
+      GIMP development has been decreasing in the recent years. This
+      may be due in part to the fact that there haven't been any major
+      changes in a stable release for a long time.
+    </para>
+
+    <para>
+      Another reason may be that it is difficult to build the
+      development version because it depends on released versions of
+      some libraries that are not included yet in the major GNU/Linux
+      distributions (e.g., GTK+ version 2.2.2). Also, the number of
+      dependencies for GIMP 1.3.x is much higher than the number of
+      dependencies for GIMP 1.2.x, so it ismore difficult to have a
+      working build environment for the 1.3.x version. This problem
+      may be solved as time passes, because more and more
+      distributions will include the required libraries.
+    </para>
+
+    <para>
+      There should be a section on www.gimp.org or developer.gimp.org
+      titled <quote>How to contribute?</quote> or <quote>How to get
+      involved?</quote>. It should be easy for potential new
+      developers to see where to start and how they can help. More on
+      that below.
+    </para>
+
+  </section>
+
+  <section id="binary">
+    <title>Do we need binary distributions?</title>
+
+    <para>
+      There was a discussion about binary distributions. This may help
+      people to try some versions of the GIMP (especially the
+      development versions) without having to compile everything.
+      However, maintaining binaries is a lot of work, even if we only
+      maintain binaries supplied by others. In addition, this would
+      bring some additional responsabilities that we do not want to
+      have. For these reasons, it was decided that www.gimp.org would
+      not host any binaries but would link to the pages of those who
+      are providing binaries for various platforms.
+    </para>
+
+    <para>
+      It would be very nice to have Windows binaries for the
+      development version.
+    </para>
+
+  </section>
+
+  <section id="bugzilla">
+    <title>Is Bugzilla too hard to use for new users?</title>
+
+    <para>
+      It was suggested to make it easier for users to submit bug
+      reports, for example by having an e-mail address to which bug
+      reports can be sent without having to register to Bugzilla (we
+      already have such an address, although it is not widely known).
+      This proposal was rejected because most of the bug reports
+      (especially from new users) are incomplete and require
+      additional information. If the user does nothave a Bugzilla
+      account, it is not possible to rely on the automatic
+      notification system to send messages to the user when a comment
+      is added to their bug report or when the status of their bug
+      report changes.
+    </para>
+
+    <para>
+      Most developers consider Bugzilla to be a very valuable tool
+      that works well. Instead of trying to hide Bugzilla from the
+      users, we should try to make it as easy as possible for the new
+      users to join. This is already done to some extent by the bug
+      submission wizard available from http://bugs.gimp.org/. There is
+      a small problem with the GNOME2 keyword that prevents the open
+      GIMP bugs from being displayed to the user and we should try to
+      get this fixed.
+    </para>
+
+  </section>
+
+  <section id="tasks">
+    <title>List of open tasks</title>
+
+    <para>
+      There are many open bug reports or proposals for enhancements
+      that would be relatively easy to fix or implement. We should
+      make it easier for potential contributors to see the list of
+      easy tasks that are open. The <quote>easy tasks</quote> should
+      include anything that can be done in one or two hours by an
+      average developer or maybe a bit more if the contributor is not
+      familiar with the code.
+    </para>
+
+    <para>
+      The best way to keep the list of open tasks up-to-date is
+      probably to base it on Bugzilla. We could for example use a
+      Bugzilla keyword for all bugs that are easy to fix (there is
+      already a keyword <quote>easy-fix</quote> reserved for that,
+      although we could invent our own). It would then be easy to
+      create a Bugzilla query showing the list of easy tasks. Another
+      solution would be to have a page on www.gimp.org or
+      developer.gimp.org containing a list of all these bugs, with
+      direct links to the corresponding bug reports. The second
+      solution may require a bit more work because it would have to be
+      maintained by someone, but it might be a bit easier to use.
+    </para>
+
+  </section>
+
+  <section id="mailinglists">
+    <title>Mailing lists</title>
+
+    <para>
+      Sometimes, there is a lack of communication between users and
+      developers of The GIMP. After some discussion, it was decided
+      that we should not merge the mailing lists gimp-user and
+      gimp-developer because this could cause various problems: the
+      combined amount of traffic may be too high for some subscribers,
+      the discussions among developers may be confusing for some
+      users, and in general we should let people subscribe to what
+      they are interested in, instead of removing this option by
+      merging the lists (we cannot force anybody to read what they do
+      not want to read).
+    </para>
+
+    <para>
+      But it would be very useful for the developers to get more
+      feedback from the users, especially about UI and usability
+      issues. For this reason, all developers are strongly encouraged
+      to subscribe to the gimp-user list.
+    </para>
+
+    <para>
+      The web site (www.gimp.org) should contain a list of the various
+      sources of information about the GIMP: mailing lists, newsgroup,
+      Yahoo group, GUG, other web sites such as linuxgraphic.org or
+      gimp.de, etc. The description of the mailing lists should
+      encourage people to subscribe to both the users and developers
+      lists.
+    </para>
+
+  </section>
+
+  <section>
+    <title>Summary</title>
+
+    <para>
+      We hope that the next stable release will attract new
+      developers. This has been the case when 1.0 and 1.2 were
+      released. The transition to the new web site will also help,
+      especially if the navigation menu contains some useful items
+      such as <quote>Bugs</quote>, <quote>FAQ</quote>, etc. The
+      following items should be available in the web site:
+    <itemizedlist>
+      <listitem>
+        <quote>How to contribute?</quote> or <quote>Getting involved</quote>
+      </listitem>
+      <listitem>
+        List of tasks
+      </listitem>
+      <listitem>
+        List of sources of information (mailing lists, newsgroup, ...)
+      </listitem>
+      <listitem>
+        FAQ
+      </listitem>
+    </itemizedlist>
+    </para>
+
+    <para>
+      As with the other documents summarizing what is happening here
+      at GimpCon, comments are welcome...
+    </para>
+
+    <para>
+      Written by Raphaël Quinet
+    </para>
+
+  </section>
+
+</webpage>

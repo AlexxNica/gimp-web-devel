@@ -1,0 +1,310 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" >
+
+<webpage id="gimpcon2003-mins-1" lang="en">
+
+  <head>
+    <title>The First Big Serious Meeting of GIMPCon 2003</title>
+    <titleabbrev>First Meeting</titleabbrev>
+    <summary>Minutes of the first GIMPCon 2003 Meeting</summary>
+  </head>
+
+  <para>
+    7 Aug 03, around 8pm
+  </para>
+
+  <para>
+    Discussion was led by Daniel Rogers (dsrogers) but stuff said is
+    for the most part anonymous. Partly because there shouldn't be any
+    ad hominem attacks that way, and partly because I didn't take down
+    any names.
+  </para>
+
+  <para>
+    Present: Daniel Rogers (dsrogers), Raphaël Quinet, Dave Neary
+    (bolsh), Sven Neumann (Sven), Michael Natterer (mitch), Henrik
+    Brix Andersen (brix), Jakub Steiner (jimmac), Simon Budig (nomis),
+    Marc Lehmann, Ville Pätsi (drc), Øyvind Kolås (pippin), Calvin
+    Williamson (calvin), Roman Joost (romanofski).
+  </para>
+
+  <para>
+    Absent but at camp: Maurits Rijk (Maurits), Branko Collins (bbc).
+  </para>
+
+  <para>
+    Topic discussion, in approximate chronological order:
+    <itemizedlist>
+      <listitem>
+        <link linkend="foundation">The GIMP foundation</link>
+      </listitem>
+      <listitem>
+        <link linkend="manager">Release manager</link>
+      </listitem>
+      <listitem>
+        <link linkend="decisions">Decision making (or lack of
+        it)</link>
+      </listitem>
+      <listitem>
+        <link linkend="general">General stuff about CVS,
+        Bugzilla</link>
+      </listitem>
+      <listitem>
+        <link linkend="communication">Communication</link>
+      </listitem>
+    </itemizedlist>
+  </para>
+
+  <section id="foundation">
+    <title>The GIMP Foundation</title>
+
+    <para>
+      The idea of a foundation was proposed. Lots of ideas were thrown
+      about as to what kind of remit it would have. If created, the
+      foundation would certainly have 2 things we don't have at the
+      moment - a bank account people could donate to, and a focus on
+      <quote>marketing</quote> in the broadest sense of the word.
+    </para>
+
+    <para>
+      Some of the issues were whether the foundation would be set up
+      in Europe or in the US (in the US it might make it easier to get
+      donations from US companies, but in Europe we're not as
+      litigious, so setting up would certainly cost less, but then we
+      probably wouldn't have NPO status in the US), whether it would
+      have any technical aspect (that is, would the foundation act as
+      a kind of steering committee for the general direction of the
+      GIMP?), and how, if the issue came up, we might pay someone.
+    </para>
+
+    <para>
+      This led onto a discussion of whether the foundation would be
+      responsible for setting release dates, or whether we would have
+      a separate...
+    </para>
+
+  </section>
+
+  <section id="manager">
+    <title>Release Manager</title>
+
+    <para>
+      The general consensus (more on that later) was that a release
+      manager is a good thing. There do seem to be a few different
+      ideas of what the role would entail. The general idea would be
+      that the release manager would be responsible for following CVS
+      and know at what stage a given feature is at, follow bugzilla
+      making sure that bugs got milestoned for some release in order
+      of their priority, would annoy people to get commits in before
+      feature freeze dates or postpone mercilessly features which are
+      not finished.
+    </para>
+
+    <para>
+      It was agreed that a release schedule would be helpful to define
+      the perimeters of responsibility of the release manager -
+      basically, some way to set up large milestones to aim for with
+      things to go into those milestones. This release schedule would
+      be subject to revision, and would be no more realistic than any
+      other release schedule, but it would serve as a guide for
+      development. Dan agreed to draw up a first draft of this, and
+      we'll have something more concrete before the end of the
+      weekend.
+    </para>
+
+    <para>
+      The questions that came up about the release manager were things
+      like where his authority comes from, how does he decide which
+      bugs are important and which features can be postponed and so
+      on. In other words, how do decisions get made. Is the release
+      manager a benevolent dictator, or does he answer to the larger
+      developer and user community? If so, to what extent? Is backing
+      out CVS commits OK, for example?
+    </para>
+
+    <para>
+      So we started talking about how to get contentious decisions
+      made.
+    </para>
+
+  </section>
+
+  <section id="decisions">
+    <title>Decision making (or lack of it)</title>
+
+    <para>
+      Currently, there are two ways to get something done in the
+      GIMP. First, you can write decent code and patches for a while,
+      until you get CVS commit access, then you write whatever feature
+      you're interested in, and commit it. If no-one backs it out,
+      then it's in.
+    </para>
+
+    <para>
+      Second, you can bring it up on the mailing list, or in bugzilla,
+      or in IRC (more on communication later), and discuss it until
+      there is a consensus. However, we tend to be pretty bad at
+      reaching consensus on anything even slightly contentious. The
+      important questions to be answered any time a discussion like
+      this comes up are what's going to be done, and who's going to do
+      it.
+    </para>
+
+    <para>
+      It was agreed that beyond a certain point, there is generally
+      very little technical merit to these types of discussions. It
+      was felt that about 5 days was enough for everyone with an
+      opinion on a given matter to make that opinion known, and that
+      after that point, it would be an idea to have a summary of the
+      salient points and close the discussion. That means, the people
+      here would stop posting to the discussion. Of course, if other
+      people want to keep on flaming, they're free to do so, but
+      people will just ignore the thread.
+    </para>
+
+    <para>
+      At this point, the summary should sum up the various points, and
+      finish with an answer to those two questions - what gets done,
+      and who's doing it.
+    </para>
+
+    <para>
+      We may even have a bake-off system. If there are two competing
+      ideas for the way something should be done, currently no-one
+      tends to do it. Ideally, both people would do it and we pick the
+      best one.
+    </para>
+
+    <para>
+      This brings up another point, though - in general, what is
+      authority? And in particular, at what point has someone gained
+      enough standing and authority to post one of these thread-ending
+      summaries? Some discussion is going to be had on that over the
+      weekend.
+    </para>
+
+  </section>
+
+  <section id="general">
+    <title>General stuff, about Bugzilla and CVS</title>
+
+    <para>
+      We talked about various ways of improving the way we use these
+      tools. First is whether it makes sense for us to have module
+      owners, and if so, who should they be? Should we use the system
+      of bug owners to track who is responsible for a bug at any given
+      time, or is the current scheme of bugs@gimp.org sufficient? Do
+      we need to change bugs@gimp.org to something else to avoid
+      confusion with the old bug reporting address? There were a few
+      open points in here.
+    </para>
+
+    <para>
+      Second, we talked about pre-release branches, and whether it
+      would be worthwhile having a mozilla style release cycle with
+      feature-freezes, followed by concurrent bug-fixing before
+      unstable releases, freeing up the branch for bigger stuff that
+      people want to start committing. In general, it was felt that
+      there was very little to be gained from that, and the current
+      system of a long-lived devel branch with self-imposed feature
+      freezes every few weeks was a better way to go.
+    </para>
+
+    <para>
+      We also expressed a desire to have more redundancy in the
+      non-technical aspects of The GIMP, things like the mailing lists
+      and ftp mirror lists should have more than one person with the
+      ability to change them so that if there's a problem, and that
+      person has no time to take care of it, then someone
+      will. Perhaps using a Debian or GNU style ticket system might
+      help here fro these particular tasks? In any case, everyone in a
+      given group should know everyone else in the group, and know
+      more or less that when an issue gets in, it will be handled by
+      at least one person.
+    </para>
+
+  </section>
+
+  <section id="communication">
+    <title>Communication</title>
+
+    <para>
+      It was agreed that we need to communicate better (that's a
+      no-brainer, really). For a start, every developer should be
+      subscribed to the userlist. gimp-devel (if it doesn't disappear
+      altogether) would only be used for technical discussions of
+      implementation details - all the philosophical level discussions
+      of new features, ui changes, release mechanisms and so on should
+      be discussed on the user list.
+    </para>
+
+    <para>
+      Basically, we're going to talk a lot more about how the
+      developers can interface better with the users.
+    </para>
+
+  </section>
+
+  <section>
+    <title>Decisions</title>
+
+    <para>
+      Not too many of these... we will have a release manager, but we
+      need to define exactly what his/her remit will be. And who it
+      will be. We agreed that the <quote>5 days and it's dead</quote>
+      rule for threads makes sense, so that will be done.
+    </para>
+
+  </section>
+
+  <section>
+    <title>Future</title>
+
+    <para>
+      <orderedlist>
+        <listitem>
+          Roadmap - rough release schedule, we will have a first draft
+          today.
+        </listitem>
+        <listitem>
+          GIMP Foundation - we need to define its responsibilities,
+          set up election rules, and get this set up. The principle of
+          the foundation is more or less agreed.
+        </listitem>
+        <listitem>
+          Communication
+        </listitem>
+        <listitem>
+          Release Manager - what'll he do, who'll he be. This should
+          be short once we have discussed communication channels a
+          bit.
+        </listitem>
+        <listitem>
+          Technie stuff - Sven and mitch are going to talk to us about
+          the re-organisation of the code, GObjectification of
+          everything, and other stuff. Daniel and Calvin are going to
+          talk to us about Gegl and how they feel The GIMP could use
+          it. This will probably be a two-way discussion about what
+          kind of things we expect Gegl to furnish as well.
+        </listitem>
+        <listitem>
+          GIMP tutorials - jimmac and nomis are going to do some
+          presentations for people, which should be good.
+        </listitem>
+        <listitem>
+          Plug-in distribution - 3 years ago this was discussion, yosh
+          has been working on something as a proof-of-concept, it
+          would be nice to address this and get something in place
+          soon.
+        </listitem>
+      </orderedlist>
+    </para>
+
+  </section>
+
+  <para>
+    Written by Dave Neary
+  </para>
+
+</webpage>

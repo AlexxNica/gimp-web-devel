@@ -1,0 +1,151 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" [
+<!ENTITY gimpcon2003-mins-1 SYSTEM "gimpcon2003-mins-1.xml" NDATA XML>
+<!ENTITY gimpcon2003-mins-2 SYSTEM "gimpcon2003-mins-2.xml" NDATA XML>
+<!ENTITY gimpcon2003-mins-3 SYSTEM "gimpcon2003-mins-3.xml" NDATA XML>
+]>
+
+<webpage id="minutes" lang="en">
+
+  <head>
+    <title>Minutes of The GIMP Developers Conference 2003</title>
+    <titleabbrev>Minutes</titleabbrev>
+    <summary>Minutes of the GIMPCon 2003 Meetings</summary>
+  </head>
+
+  <para>
+    Three big meetings were held at GIMPCon 2003. The topics of these
+    meetings are listed below along with links to the minutes of the
+    meetings.
+  </para>
+
+  <section>
+    <title>The First Big Serious Meeting</title>
+
+    <para>
+      This meeting was held in the evening of August 7th, 2003. The main
+      issues discussed were:
+      <itemizedlist>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-1"
+          localinfo="foundation">The GIMP foundation</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-1"
+          localinfo="manager">Release manager</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-1"
+          localinfo="decisions">Decision making (or lack of
+          it)</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-1"
+          localinfo="general">General stuff about CVS,
+          Bugzilla</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-1"
+          localinfo="communication">Communication</olink>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <para>
+      The minutes from this meeting can be found <olink
+      targetdocent="gimpcon2003-mins-1">here</olink>.
+    </para>
+
+  </section>
+
+  <section>
+    <title>The Second Big Serious Meeting</title>
+
+    <para>
+      This meeting was held in the evening of August 8th, 2003. The
+      main issues discussed were:
+      <itemizedlist>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="features">Features required for 2.0</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="documentation">Documentation</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="web">Web-site</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="roadmap">Roadmap</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="bugs">Bugs</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="tasks">Task List</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="foundation">GIMP Foundation</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-2"
+          localinfo="manager">Release manager</olink>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <para>
+      The minutes from this meeting can be found <olink
+      targetdocent="gimpcon2003-mins-2">here</olink>.
+    </para>
+
+  </section>
+
+  <section>
+    <title>The Third Big Serious Meeting</title>
+
+    <para>
+      This meeting was held in the afternoon of August 9th, 2003. The
+      main issues discussed were:
+      <itemizedlist>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-3"
+          localinfo="developers">How to get new
+          developers?</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-3"
+          localinfo="binary">De we need binary
+          distributions?</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-3"
+          localinfo="bugzilla">Is Bugzilla too hard to use for new
+          users?</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-3"
+          localinfo="tasks">List of open tasks</olink>
+        </listitem>
+        <listitem>
+          <olink targetdocent="gimpcon2003-mins-3"
+          localinfo="mailinglists">Mailing lists</olink>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <para>
+      The minutes from this meeting can be found <olink
+      targetdocent="gimpcon2003-mins-3">here</olink>.
+    </para>
+
+  </section>
+
+</webpage>

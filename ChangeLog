@@ -1,3 +1,15 @@
+2003-11-27  Henrik Brix Andersen  <brix@gimp.org>
+
+	* layout.xml
+	* minutes.xml
+	* gimpcon2003-mins-1.xml
+	* gimpcon2003-mins-2.xml
+	* gimpcon2003-mins-3.xml: added the minutes from GIMPCon 2003.
+
+	* TODO: updated to reflect the above mentioned change.
+
+	* style/default.css: added span.shrink2 styling.
+
 2003-11-27  Sven Neumann  <sven@gimp.org>
 
 	* TODO: added another idea.
