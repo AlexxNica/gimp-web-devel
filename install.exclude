@@ -4,6 +4,8 @@ Makefile
 /ChangeLog
 /install.sh
 /install.exclude
+/dtd
+/xsl
 *.*~
 *~
 .#*

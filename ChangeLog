@@ -1,5 +1,13 @@
 2003-11-12  Sven Neumann  <sven@gimp.org>
 
+	* install.exclude: don't install the docbook website stuff that is
+	only needed for processing the XML to HTML.
+
+	* scripts/cl2rdf
+	* scripts/cvsmail2rss: removed, they aren't used.
+
+2003-11-12  Sven Neumann  <sven@gimp.org>
+
 	* Makefile: removed unused cruft.
 
 	* gimpcon.xml: rewrote in past tense and removed links to pictures.
