@@ -1,5 +1,9 @@
 2004-03-09  Simon Budig  <simon@gimp.org>
 
+	* bugs.xml: Some more changes to the milestone link.
+
+2004-03-09  Simon Budig  <simon@gimp.org>
+
 	* bugs.xml: removed milestone 1.3.x, since there are no
 	longer any bugs on it...
 
