@@ -1,5 +1,9 @@
 2003-11-27  Henrik Brix Andersen  <brix@gimp.org>
 
+	* TODO: added a note about xsl templates.
+
+2003-11-27  Henrik Brix Andersen  <brix@gimp.org>
+
 	* Makefile: depends.tabular should be rebuilt when layout.xml
 	changes.
 

@@ -23,3 +23,6 @@ Just some ideas in case anyone feels bored. Feel free to add more.
   (gimp/devel-docs) so they fit better into the look of the
   site. Alternatively hack gtk-doc to allow for external CSS
   stylesheets.
+
+- add custom xsl templates for mediaobject, orderedlist and itemized
+  list to produce valid xhtml (remove the <div></div> stuff).
