@@ -21,7 +21,7 @@
     Berlin, Germany.
   </para>
 
-  <para>
+  <para role="images">
     <ulink url="people.png">
       <mediaobject>
         <imageobject>
@@ -32,7 +32,9 @@
         </textobject>
       </mediaobject>
     </ulink>
+  </para>
 
+  <para>
     The GIMP developers joined this event and set up a GIMP tent to
     get together and discuss the future of GIMP development.
     Summaries of some of the discussions held there are available
