@@ -11,14 +11,12 @@
   </head>
 
   <para>
-    The look of this site was borrowed from
-    <ulink url="http://mmmaybe.gimp.org/">mmmaybe.gimp.org</ulink> 
-    which will hopefully replace 
-    <ulink url="http://www.gimp.org/">www.gimp.org</ulink> anytime soon.
-    Under the hood it is based on 
-    <ulink url="http://docbook.sourceforge.net/projects/website/">DocBook Website</ulink>.
-    If you are curious, have a look at the
-    <ulink url="about.xml">XML source</ulink> of the page you are reading.
+    The look of this site was borrowed from <ulink
+    url="http://www.gimp.org/">www.gimp.org</ulink>.  Under the hood
+    it is based on <ulink
+    url="http://docbook.sourceforge.net/projects/website/">DocBook
+    Website</ulink>.  If you are curious, have a look at the <ulink
+    url="about.xml">XML source</ulink> of the page you are reading.
   </para>
 
 </webpage>

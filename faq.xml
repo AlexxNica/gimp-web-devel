@@ -160,7 +160,7 @@
           <para>
             An introduction to how this is done can be found in the
             <ulink
-            url="http://mmmaybe.gimp.org/bugs/howtos/submit-patch.html">
+            url="http://www.gimp.org/bugs/howtos/submit-patch.html">
             How To Create and Submit a Patch</ulink> document.
           </para>
         </answer>
@@ -532,7 +532,7 @@
           <para>
             A beginners tutorial describing how to report a bug can be
             found in the <ulink
-            url="http://mmmaybe.gimp.org/bugs/howtos/bugzilla.html">
+            url="http://www.gimp.org/bugs/howtos/bugzilla.html">
             How To Report GIMP Bugs</ulink> document.
           </para>
           <para>
