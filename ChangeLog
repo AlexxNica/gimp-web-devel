@@ -1,5 +1,10 @@
 2004-10-07  Sven Neumann  <sven@gimp.org>
 
+	* cvs.xml: switched links to ViewCVS since it doesn't look as if
+	LXR would return anytime soon.
+
+2004-10-07  Sven Neumann  <sven@gimp.org>
+
 	* cvs.xml: added gimp-tiny-fu.
 
 2004-10-06  Sven Neumann  <sven@gimp.org>

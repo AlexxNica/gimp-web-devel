@@ -34,7 +34,7 @@
       <tbody>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gegl/">gegl</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gegl/">gegl</ulink>
           </entry>
 	  <entry>
             Generic Graphical Library
@@ -42,7 +42,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp/">gimp</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp/">gimp</ulink>
           </entry>
 	  <entry>
             GIMP and the standard set of plug-ins
@@ -50,7 +50,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-data-extras/">gimp-data-extras</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-data-extras/">gimp-data-extras</ulink>
           </entry>
 	  <entry>
             GIMP Data files such as brushes, gradients, patterns and the like
@@ -58,7 +58,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-freetype/">gimp-freetype</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-freetype/">gimp-freetype</ulink>
           </entry>
 	  <entry>
             GIMP FreeType plug-in, does some fancy text rendering
@@ -66,7 +66,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gap/">gimp-gap</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gap/">gimp-gap</ulink>
           </entry>
 	  <entry>
             GIMP Animation Package, a set of plug-ins that provide
@@ -75,7 +75,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-help/">gimp-help</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-help/">gimp-help</ulink>
           </entry>
 	  <entry>
             GIMP help pages for gimp 1.2
@@ -83,7 +83,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-help-2/">gimp-help-2</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-help-2/">gimp-help-2</ulink>
           </entry>
 	  <entry>
             GIMP help pages, a rewrite for 2.0
@@ -91,7 +91,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-perl/">gimp-perl</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-perl/">gimp-perl</ulink>
           </entry>
 	  <entry>
             GIMP Perl bindings and a bunch of nice gimp-perl scripts
@@ -99,7 +99,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-plugin-template/">gimp-plugin-template</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-plugin-template/">gimp-plugin-template</ulink>
           </entry>
 	  <entry>
             GIMP Plug-In Template, a starting ground for plug-in developers
@@ -107,7 +107,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-plugins-unstable/">gimp-plugins-unstable</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-plugins-unstable/">gimp-plugins-unstable</ulink>
           </entry>
 	  <entry>
             GIMP plug-ins from the past, a collection of unstable and
@@ -116,7 +116,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-tiny-fu/">gimp-tiny-fu</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-tiny-fu/">gimp-tiny-fu</ulink>
           </entry>
 	  <entry>
             GIMP Tiny-Fu, a drop-in replacement for Script-Fu
@@ -124,7 +124,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-web/">gimp-web</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-web/">gimp-web</ulink>
           </entry>
 	  <entry>
             the GIMP web site, available at <ulink url="http://www.gimp.org">www.gimp.org</ulink>
@@ -132,7 +132,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/gimp-web-devel/">gimp-web-devel</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-web-devel/">gimp-web-devel</ulink>
           </entry>
 	  <entry>
             the source of the pages you are reading right now
@@ -140,7 +140,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://cvs.gnome.org/lxr/source/libpdb/">libpdb</ulink>
+            <ulink url="http://cvs.gnome.org/viewcvs/libpdb/">libpdb</ulink>
           </entry>
 	  <entry>
             a rewrite of the GIMP Plugin Procedural Database
