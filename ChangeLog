@@ -1,6 +1,7 @@
 2004-01-22  Henrik Brix Andersen  <brix@gimp.org>
 
 	* layout.xml
+	* style/default.css
 	* faq.xml: added initial revision of the GIMP Developer FAQ.
 
 2004-01-22  Henrik Brix Andersen  <brix@gimp.org>
