@@ -132,7 +132,8 @@
 	<para>
 	  This spec describes desktop entries: files describing
 	  information about an application such as the name, icon, and
-	  description.
+	  description. GIMP installs such a <filename>.desktop</filename>
+	  file.
 	</para>
       </listitem>
     </varlistentry>
@@ -144,7 +145,7 @@
       <listitem>
 	<para>
 	  Specifies how URIs for normal UNIX filenames (file: URIs)
-	  are interpreted and created.
+	  are interpreted and created. This functionality is provided by GLib,
 	</para>
       </listitem>
     </varlistentry>
@@ -168,22 +169,37 @@
       <listitem>
 	<para>
 	  Provides a standard mechanism for storing a list of recently
-	  used files (really, URIs). Supported since GIMP version 2.1.6.
+	  used files. Supported since GIMP version 2.1.6.
 	</para>
       </listitem>
    </varlistentry>
 
    <varlistentry>
       <term>
-	<ulink url="http://freedesktop.org/Standards/shared-mime-info-spec/"> Shared MIME Database</ulink>
+	<ulink url="http://freedesktop.org/Standards/shared-mime-info-spec/">Shared MIME Database</ulink>
       </term>
       <listitem>
 	<para>
 	  The shared MIME database contains common MIME types, descriptions,
-	  and rules for determining the types of files.
+	  and rules for determining the types of files. GIMP file plug-ins
+	  should use the MIME types and descriptions defined here.
 	</para>
       </listitem>
     </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/startup-notification-spec/"> Startup Notification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Specifies a mechanism allowing a desktop environment to
+	  track application startup to provide user feedback. GTK+
+	  provides support for this protocol.
+	</para>
+      </listitem>
+    </varlistentry>
+
    <varlistentry>
       <term>
 	<ulink url="http://triq.net/~jens/thumbnail-spec/">Thumbnail Managing Standard</ulink>
@@ -192,7 +208,9 @@
 	<para>
 	  Deals with the permanent storage of previews for file
 	  content. In particular, it tries to define a general and
-	  widely accepted standard for this task.
+	  widely accepted standard for this task. GIMP 2.0 implements
+	  this standard and dropped support for the old-fashioned
+	  <filename>.xvpics</filename>.
 	</para>
       </listitem>
     </varlistentry>
