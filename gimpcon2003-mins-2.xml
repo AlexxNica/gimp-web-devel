@@ -98,6 +98,13 @@
       when people hit F1 for help, they at least get a message saying
       <quote>This help item does not exist yet.If you would like to
       help write it, contact docs@gimp.org</quote> or some such.
+      <footnote>
+	<para>
+          That email address doesn't exist (yet). People interested in
+          helping with the documentation should have a look at the
+          <ulink url="http://wiki.gimp.org/gimp/GimpDocs">Wiki</ulink>.
+        </para>
+      </footnote>
     </para>
 
     <para>

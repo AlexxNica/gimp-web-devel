@@ -1,5 +1,10 @@
 2003-11-30  Sven Neumann  <sven@gimp.org>
 
+	* gimpcon2003-mins-2.xml: added a footnote about docs@gimp.org
+	being nonfunctional.
+
+2003-11-30  Sven Neumann  <sven@gimp.org>
+
 	* gimpcon/2003/people-small.png
 	* gimpcon/2003/people.png: added these images. As a side-effect
 	creates the directory structure.
