@@ -22,6 +22,18 @@
   <variablelist>
     <title>File Formats</title>
 
+   <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/XML/">Extensible Markup Language (XML)</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes the XML markup language, used to store the menu layout,
+	  the startup tips, help indices and other things.
+	</para>
+      </listitem>
+    </varlistentry>
+
     <varlistentry>
       <term>
 	<ulink url="http://www.w3.org/Graphics/GIF/spec-gif89a.txt">Graphics Interchange Format</ulink>
@@ -47,7 +59,7 @@
 
     <varlistentry>
       <term>
-	<ulink url="http://www.libpng.org/pub/mng/spec/jng.html">JNG (JPEG Network Graphics) Format Version 1.0</ulink>
+	<ulink url="http://www.libpng.org/pub/mng/spec/jng.html">JNG (JPEG Network Graphics) Format</ulink>
       </term>
       <listitem>
 	<para>
@@ -60,7 +72,7 @@
 
     <varlistentry>
       <term>
-	<ulink url="http://www.libpng.org/pub/mng/spec/">MNG (Multiple-image Network Graphics) Format Version 1.0</ulink>
+	<ulink url="http://www.libpng.org/pub/mng/spec/">MNG (Multiple-image Network Graphics) Format</ulink>
       </term>
       <listitem>
 	<para>
@@ -102,18 +114,6 @@
       <listitem>
 	<para>
 	  Describes the TIFF file format, used in the TIFF plug-in.
-	</para>
-      </listitem>
-    </varlistentry>
-
-   <varlistentry>
-      <term>
-	<ulink url="http://www.w3.org/XML/">Extensible Markup Language (XML)</ulink>
-      </term>
-      <listitem>
-	<para>
-	  Describes the XML markup language, used to store the menu layout,
-	  the startup tips, help indices and other things.
 	</para>
       </listitem>
     </varlistentry>
@@ -171,8 +171,19 @@
 	  used files (really, URIs). Supported since GIMP version 2.1.6.
 	</para>
       </listitem>
-    </varlistentry>
+   </varlistentry>
 
+   <varlistentry>
+      <term>
+	<ulink url="http://freedesktop.org/Standards/shared-mime-info-spec/"> Shared MIME Database</ulink>
+      </term>
+      <listitem>
+	<para>
+	  The shared MIME database contains common MIME types, descriptions,
+	  and rules for determining the types of files.
+	</para>
+      </listitem>
+    </varlistentry>
    <varlistentry>
       <term>
 	<ulink url="http://triq.net/~jens/thumbnail-spec/">Thumbnail Managing Standard</ulink>
