@@ -40,14 +40,12 @@
 
       <tocentry page="changelog.xml" filename="changelog.html" />
 
-      <tocentry id="news"
-                href="http://cvs.gnome.org/lxr/source/gimp/NEWS">
+      <tocentry id="news" href="NEWS">
         <title>News</title>
         <summary>The NEWS file in CVS</summary>
       </tocentry>
 
-      <tocentry id="hacking"
-	        href="http://cvs.gnome.org/lxr/source/gimp/HACKING">
+      <tocentry id="hacking" href="HACKING">
         <title>Hacking</title>
 	<summary>The HACKING file in CVS</summary>
       </tocentry>

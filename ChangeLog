@@ -1,3 +1,9 @@
+2004-01-07  Sven Neumann  <sven@gimp.org>
+
+	* layout.xml: LXR seems to have problems, use local versions of
+	NEWS and HACKING. On Wilber these are linked to a CVS checkout
+	that is updated daily.
+
 2003-12-19  Sven Neumann  <sven@gimp.org>
 
 	* gimpcon2000.xml: removed the link from the image to itself.
