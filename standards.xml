@@ -118,6 +118,18 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>
+	<ulink url="http://www.adobe.com/products/xmp/main.html">Extensible Metadata Platform (XMP)</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes XMP, a labeling technology that allows to embed
+	  data about a file, known as metadata, into the file itself.
+	</para>
+      </listitem>
+    </varlistentry>
+
   </variablelist>
 
 
