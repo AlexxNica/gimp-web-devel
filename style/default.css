@@ -179,6 +179,11 @@ span.shrink2 {
   font-size: 90%;
 }
 
+span.shrink3 {
+  padding-left: 30px;
+  font-size: 85%;
+}
+
 /* doing this for all feeds is not a good idea ...
  * div.rss dd {
  *   font-family: monospace;

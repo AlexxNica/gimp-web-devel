@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" >
+
+<webpage id="gimpcon2003" lang="en">
+
+  <head>
+    <title>The GIMP Developers Conference 2003</title>
+    <titleabbrev>2003</titleabbrev>
+    <summary>What the GIMP developers did this summer</summary>
+  </head>
+
+  <para>
+    This year's GIMP developers conference took place the
+    <emphasis>7/8/9/10th August 2003</emphasis> at the
+    <ulink url="http://www.ccc.de/camp/2003/">Chaos Communication Camp</ulink>.
+  </para>
+
+</webpage>

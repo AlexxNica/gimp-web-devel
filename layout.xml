@@ -71,15 +71,19 @@
 
     </tocentry>
 
-    <tocentry page="gimpcon.xml" filename="gimpcon.html">
+    <tocentry page="gimpcon.xml" filename="gimpcon/index.html">
 
-      <tocentry page="minutes.xml" filename="minutes.html">
+      <tocentry page="gimpcon2003.xml" filename="gimpcon/2003/index.html">
 
-        <tocentry page="gimpcon2003-mins-1.xml" filename="gimpcon2003-mins-1.html" />
+        <tocentry page="gimpcon2003-mins.xml" filename="gimpcon/2003/minutes.html">
 
-        <tocentry page="gimpcon2003-mins-2.xml" filename="gimpcon2003-mins-2.html" />
+          <tocentry page="gimpcon2003-mins-1.xml" filename="gimpcon/2003/minutes-1.html" />
 
-        <tocentry page="gimpcon2003-mins-3.xml" filename="gimpcon2003-mins-3.html" />
+          <tocentry page="gimpcon2003-mins-2.xml" filename="gimpcon/2003/minutes-2.html" />
+
+          <tocentry page="gimpcon2003-mins-3.xml" filename="gimpcon/2003/minutes-3.html" />
+
+        </tocentry>
 
       </tocentry>
 

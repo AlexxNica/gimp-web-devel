@@ -1,14 +1,21 @@
 
 SUBDIRS=screenshots
 
+MKDIRS=gimpcon gimpcon/2003
+
 PROC=xsltproc
 STYLEDIR=xsl
 SCRIPTDIR=scripts
 STYLESHEET=$(STYLEDIR)/mine.xsl
 
-all: subdirs website
+all: mkdir subdirs website
 
 include depends.tabular
+
+mkdir: $(MKDIRS)
+
+$(MKDIRS):
+	mkdir -p $@
 
 subdirs: $(SUBDIRS)
 
@@ -29,4 +36,4 @@ depends.tabular: layout.xml
 	touch $@
 	$(MAKE) depends
 
-.PHONY: clean subdirs $(SUBDIRS)
+.PHONY: clean subdirs $(SUBDIRS) mkdir
