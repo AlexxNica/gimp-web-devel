@@ -1,5 +1,9 @@
 2004-07-20  Sven Neumann  <sven@gimp.org>
 
+	* index.xml
+	* gimpcon2004.xml: use past tense when talking about GIMPCon 2004.
+	Will need more work...
+
 	* api/2.0/index.html: attempt to clarify that 2.0 is the API version.
 
 2004-06-10  Sven Neumann  <sven@gimp.org>
