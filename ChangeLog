@@ -1,3 +1,7 @@
+2004-06-02  Sven Neumann  <sven@gimp.org>
+
+	* layout.xml: use absolute links to NEWS and ChangeLog.
+
 2004-04-17  Henrik Brix Andersen  <brix@gimp.org>
 
 	* bugs.xml: updated link to weekly bug summary to work with the
