@@ -14,7 +14,9 @@
     The GIMP source code lives in module <emphasis>gimp</emphasis> on the
     <ulink url="http://cvs.gnome.org/">GNOME CVS server</ulink>.
     The GIMP website has detailed information on
-    <ulink url="http://www.gimp.org/devel_cvs.html">how to get GIMP from CVS</ulink>.
+    <ulink url="http://www.gimp.org/devel_cvs.html">
+      how to get GIMP from CVS
+    </ulink>.
   </para>
 
   <para>
@@ -108,8 +110,24 @@
             <ulink url="http://cvs.gnome.org/lxr/source/gimp-plugins-unstable/">gimp-plugins-unstable</ulink>
           </entry>
 	  <entry>
-            GIMP plug-ins from the past, a collection of unstable,
+            GIMP plug-ins from the past, a collection of unstable and
             unmaintained plug-ins
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-web/">gimp-web</ulink>
+          </entry>
+	  <entry>
+            a rewrite of the GIMP frontpage, at the moment hosted at <ulink url="http://mmmaybe.gimp.org">mmmaybe.gimp.org</ulink>
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-web-devel/">gimp-web-devel</ulink>
+          </entry>
+	  <entry>
+            the source of the pages you are reading right now
           </entry>
 	</row>
 	<row>
