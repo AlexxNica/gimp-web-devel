@@ -150,7 +150,7 @@
 
     <para>
       As an approximate set of ideals, it was agreed that we want
-      this: 2.0pre1 very soon, 2.0 soon, 2.2 next year, and Gegl
+      this: 2.0pre1 very soon, 2.0 soon, 2.2 next year, and GEGL
       integration the end of next Summer.
     </para>
 
@@ -351,8 +351,8 @@
       That's it folks - today, Sven and mitch are going to talk to us
       about the major changes in the codebase and the general utility
       stuff which exists now which has been written from scratch,
-      Calvin and Daniel are going to talk about Gegl and how we can
-      use it, and work towards having a Gegl that we can use in a
+      Calvin and Daniel are going to talk about GEGL and how we can
+      use it, and work towards having a GEGL that we can use in a
       year. I'm going to lead a discussion on communication in the
       GIMP, and how to maybe make it easier for people to contribute,
       and jimmac is going to demonstrate what a power user really is.
