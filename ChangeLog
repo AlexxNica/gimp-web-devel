@@ -1,3 +1,7 @@
+2003-11-14  Sven Neumann  <sven@gimp.org>
+
+	* plug-ins.xml: link to the API reference and to Simon's talk.
+
 2003-11-13  Sven Neumann  <sven@gimp.org>
 
 	* TODO: added a list of things that could be done sooner or later.
