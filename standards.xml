@@ -268,6 +268,47 @@
     </varlistentry>
 
   </variablelist>
+ 
+  <variablelist>
+    <title>Programming Standards</title>
 
+   <varlistentry>
+      <term>
+	<ulink url="http://developer.gimp.org/HACKING">GIMP Hackordnung</ulink>
+      </term>
+      <listitem>
+	<para>
+	  The last section from the file HACKING as found in the GIMP
+	  source tree explains how the GIMP source code should be
+	  formatted.
+	</para>
+      </listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://www.gnu.org/prep/standards/">GNU coding standards</ulink>
+      </term>
+      <listitem>
+	<para>
+	  A guide to writing portable, robust and reliable
+	  programs. Also defines the
+	  <ulink url="http://www.gnu.org/prep/standards/standards.html#Formatting">GNU coding style</ulink>.
+	</para>
+      </listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://www.nirvani.net/docs/ansi_c.pdf/">ISO/IEC 9899</ulink>
+      </term>
+      <listitem>
+	<para>
+	  ISO 9899 is the international standard for the C programming language.
+	</para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
 
 </webpage>
