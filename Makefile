@@ -7,6 +7,7 @@ STYLESHEET=$(STYLEDIR)/mine.xsl
 
 all:
 	make website
+	make -C screenshots all
 
 include depends.tabular
 

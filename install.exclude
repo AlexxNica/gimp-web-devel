@@ -22,6 +22,7 @@ Makefile
 /api/1.3/libgimpwidgets
 /api/1.3/pango
 /dtd
+/scripts
 /xsl
 *.*~
 *~

@@ -10,57 +10,215 @@
   </head>
 
   <para>
-    Here are some screenshots of the development version:
+    Here are some screenshots of the development version for your
+    viewing pleasure.
   </para>
-  
-  <simplelist>
-    <member>
-      The
-      <ulink url="screenshots/gimp-text.jpeg">new text tool</ulink>
-      is shaping up and thanks to Pango it also handles
-      <ulink url="screenshots/gimp-unicode.png">arabic scripts</ulink>
-      quite nicely.
-    </member>
-    <member>
-      GIMP runs on
-      <ulink url="screenshots/gimp-osx.jpeg">MacOS X</ulink>
-      and <ulink url="screenshots/gimp-winxp.png">Win32</ulink>
-      as well.
-    </member>
-    <member>
-      Standard document sizes are available as
-      <ulink url="screenshots/gimp-templates.png">templates</ulink>
-      now.
-    </member>
-    <member>
-      Almost all GIMP windows can be grouped together using the
-      <ulink url="screenshots/gimp-docks.png">GIMP docks</ulink>.
-    </member>
-    <member>
-      The 
-      <ulink url="screenshots/gimp-brush-preview.png">brush shaped cursor</ulink>
-      shows the area that will be affected by the next paint operation.
-    </member>
-    <member>
-      If you need to do pixel-precise work, you will like the new
-      <ulink url="screenshots/gimp-grid.png">image grid</ulink>.
-    </member>
-    <member>
-      The
-      <ulink url="screenshots/gimp-file-open.png">File Open dialog</ulink>
-      shows a nicer preview now thanks to the adaption of the Free Desktop
-      Thumbnail Managing Standard.
-    </member>
-    <member>
-      Almost all changes done in the 
-      <ulink url="screenshots/gimp-prefs.png">Preferences dialog</ulink>
-      apply instantly.
-    </member>
-    <member>
-	Starting with version 1.3.21, The GIMP allows to export paths as
-	Scalable Vector Graphics and it also
-        <ulink url="screenshots/gimp-svg-import.png">imports SVG</ulink>.
-    </member>
-  </simplelist>
+
+  <section>
+    <title>The New Text Tool</title>
+    <para>
+      The new text tool is shaping up:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-text.jpeg">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-text-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>The Text Tool</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+     Thanks to Pango it also handles Arabic scripts quite nicely:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-unicode.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-unicode-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Unicode</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Cross Platform</title>
+    <para>
+      GIMP runs on MacOS X:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-osx.jpeg">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-osx-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>MacOS X</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+      ... and on Win32 as well:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-winxp.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-winxp-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>WinXP</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Templates</title>
+    <para>
+      Standard document sizes are available as templates:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-templates.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-templates-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Templates</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Docks</title>
+    <para>
+      Almost all GIMP windows can be grouped together using the GIMP docks:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-docks.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-docks-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Docks</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Brush Preview</title>
+    <para>
+      The brush shaped cursor shows the area that will be affected by
+      the next paint operation:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-brush-preview.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-brush-preview-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Brush Preview</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Image Grid</title>
+    <para>
+      If you need to do pixel-precise work, you will like the new image
+      grid:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-grid.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-grid-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Image Grid</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Better Thumbnails</title>
+    <para>
+      The File Open Dialog shows a nicer preview now thanks to the
+      adaption of the Free Desktop Thumbnail Managing Standard:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-file-open.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-file-open-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>File Open Dialog</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Instant Apply</title>
+    <para>
+      Almost all changes done in the Preferences Dialog apply instantly:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-prefs.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-prefs-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Preferences Dialog</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Scalable Vector Graphics</title>
+    <para>
+      Starting with version 1.3.21, The GIMP allows to export paths as
+      Scalable Vector Graphics and it also imports SVG:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-svg-import.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-svg-import-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>SVG</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+  </section>
 
 </webpage>
