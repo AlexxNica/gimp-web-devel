@@ -11,12 +11,43 @@
   </head>
 
   <para>
-    Not much is decided yet about this year's GIMP developers
-    conference execpt that there should be one. We are still looking
-    for a host for GIMPCon 2004. It is our goal to bring all active
-    GIMP and GEGL developers together. So we are looking for sponsors
-    to fund travel costs and accommodation. If you think you can help,
-    please let us know.
+    The GIMP Developers Conference 2004 will be held as a
+    sub-event of <ulink url="http://2004.guadec.org">GUADEC
+    5</ulink> in Kristiansand, Norway, on the 28th, 29th and 30th
+    of June, 2004.
   </para>
+
+  <para>
+    Our goal is to have all the active GIMP and GEGL developers
+    present to chart a course for the GIMP for the next year and
+    beyond.
+  </para>
+
+  <para>
+    We are currently looking for sponsors to help finance the
+    travel and accommodation costs of the developers. If you
+    would like to help us, please contact <ulink
+    url="mailto:bolsh@gimp.org">Dave Neary</ulink> or <ulink
+    url="mailto:dsrogers@phasevelocity.org">Daniel Rogers</ulink>
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <ulink url="http://2004.guadec.org">
+        The main GUADEC website
+      </ulink>
+    </listitem>
+    <listitem>
+      <ulink url="http://www.hia.no/oksam/inf-vit/travel.php3">
+        Getting there
+      </ulink>
+    </listitem>
+    <listitem>
+      <ulink
+        url="http://www.hia.no/oksam/inf-vit/accomodation.php3">
+        Accommodation
+      </ulink>
+    </listitem>
+  </itemizedlist>
 
 </webpage>
