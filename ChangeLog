@@ -1,3 +1,7 @@
+2004-10-06  Sven Neumann  <sven@gimp.org>
+
+	* bugs.xml: updated.
+
 2004-10-06  Øyvind Kolås  <pippin@gimp.org>
 
 	* style/default.css: added padding to the content area, and removed
