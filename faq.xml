@@ -98,13 +98,18 @@
         </question>
         <answer>
           <para>
-            If you have <ulink
+            If building from CVS you can pass
+            <command>--enable-gtk-doc</command> to the gimp
+            <filename>configure</filename> script.  This requires
+            having <ulink
             url="ftp://ftp.gtk.org/pub/gtk-doc/">gtk-doc</ulink>
-            installed you can pass <command>--enable-gtk-doc</command>
-            to the gimp <filename>configure</filename> script.  After
-            running <command>make</command> you can find the GIMP API
-            reference in the <filename>devel-docs</filename>
-            directory.
+            installed.  After running <command>make</command> you can
+            find the GIMP API reference in the
+            <filename>devel-docs</filename> directory.
+          </para>
+          <para>
+            Pre-generated API documentation is included in the
+            official GIMP tarballs.
           </para>
           <para>
             The API reference will normally be installed in
