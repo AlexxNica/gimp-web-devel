@@ -1,5 +1,8 @@
 2004-02-10  Sven Neumann  <sven@gimp.org>
 
+	* gimpcon2004.xml: changed next year to this year. Someone should
+	write something about Guadec here...
+
 	* cvs.xml: added the gimp-web and gimp-web-devel modules.
 
 2004-01-29  Henrik Brix Andersen  <brix@gimp.org>
