@@ -1,3 +1,8 @@
+2003-12-03  Henrik Brix Andersen  <brix@gimp.org>
+
+	* bugs.xml: added a section with links to the mmmaybe.gimp.org bug
+	howtos. Added a couple of links to bugzilla queries.
+
 2003-12-02  Sven Neumann  <sven@gimp.org>
 
 	* style/default.css: improved the look of the ChangeLog feed.
