@@ -1,5 +1,7 @@
 2003-11-13  Sven Neumann  <sven@gimp.org>
 
+	* README: added with info to get you started.
+
 	* install.exclude: added the API docs directories so they don't
 	get removed when rsync is run.
 
