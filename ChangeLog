@@ -1,5 +1,7 @@
 2004-02-26  Sven Neumann  <sven@gimp.org>
 
+	* install.exclude: exclude the libgimpthumb directory.
+
 	* plug-ins.xml: point to the 2.0 API reference.
 
 2004-02-26  Sven Neumann  <sven@gimp.org>
