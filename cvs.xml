@@ -116,6 +116,14 @@
 	</row>
 	<row>
 	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-tiny-fu/">gimp-tiny-fu</ulink>
+          </entry>
+	  <entry>
+            GIMP Tiny-Fu, a drop-in replacement for Script-Fu
+          </entry>
+	</row>
+	<row>
+	  <entry>
             <ulink url="http://cvs.gnome.org/lxr/source/gimp-web/">gimp-web</ulink>
           </entry>
 	  <entry>
