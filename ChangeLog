@@ -1,5 +1,7 @@
 2003-11-26  Henrik Brix Andersen  <brix@gimp.org>
 
+	* scripts/thumb.sh: simplified
+
 	* screenshots/.cvsignore: ignore all thumbnails
 
 	* xsl/mine.xsl: reverted my last change since it broke the build
