@@ -1,3 +1,7 @@
+2005-03-26  Sven Neumann  <sven@gimp.org>
+
+	* standards.xml: added a link to the XDS spec.
+
 2005-03-17  Øyvind Kolås  <pippin@gimp.org>
 
 	* style/default.css: Cancel out inherited margin-top spacing from

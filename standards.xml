@@ -259,6 +259,19 @@
 
    <varlistentry>
       <term>
+	<ulink url="http://www.newplanetsoftware.com/xds">Direct Save Protocol for the X Window System</ulink>
+      </term>
+      <listitem>
+	<para>
+	  XDS defines an extension to XDND that allow users to save a file by
+	  simply dragging it to a file manager window. GIMP 2.4 will support
+	  this protocol.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
 	<ulink url="http://standards.freedesktop.org/wm-spec/wm-spec-latest.html">Extended Window Manager Hints</ulink>
       </term>
       <listitem>
