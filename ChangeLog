@@ -1,3 +1,8 @@
+2003-11-13  Sven Neumann  <sven@gimp.org>
+
+	* install.exclude: added the API docs directories so they don't
+	get removed when rsync is run.
+
 2003-11-12  Sven Neumann  <sven@gimp.org>
 
 	* install.exclude: don't install the docbook website stuff that is

@@ -1,0 +1,55 @@
+developer.gimp.org
+------------------
+
+This CVS module holds the source for the developer.gimp.org website.
+CVS commits to this module cause the website to be updated immidately.
+So please do test all your changes locally before you commit them.  A
+prerequisite for local tests is that you can build the website. This
+file will try to teach you how to do that...
+
+First of all some background information: The website is build using
+DocBook XML. In particular we are using the WebSite doctype and
+stylesheets. See http://docbook.sourceforge.net/projects/website/ for
+more information on DocBook Website.
+
+In order to create HTML pages from the XML sources, you will need a
+working DocBook XML setup. The default Makefile uses xsltproc as the
+XSLT processor. This is a fairly common tool that you probably have
+installed already; see http://xmlsoft.org/XSLT/xsltproc2.html. In
+addition to the XSLT processor you need to have the DocBook DTDs and
+stylesheets installed. And then, and that's often the problematic
+part, you need an XML catalog (usually /etc/xml/catalog) that refers
+the XSLT processors to the locally installed files. If that catalog is
+missing or incomplete, xsltproc will try to download stylesheets
+on-the-fly. This slows down processing considerably and since some
+stylesheets are not always available online (mainly due to being
+hosted on sourceforge) you should make sure that your catalog file is
+complete.
+
+Assuming your setup is complete, all you need to do is to type 'make'
+in the toplevel directory. The HTML files are created in the source
+tree (but should not be checked into CVS). We also put the XML files
+online. This allows to show people how easy the source for the HTML
+pages looks like and to allow them to provide patches on the XML
+sources w/o checking the whole thing out of CVS.
+
+The structure of the site is defined in the file layout.xml. Here the
+hierarchy and relation of all pages is defined. If you want to add new
+pages, start by adding a new tocentry here. Then, each XML file
+corresponds to a HTML file in the generated site. We name the XML file
+just like the HTML file in order to make our lifes easier. Please
+stick to this rule if possible.
+
+If you want to add images, especially screenshots, please use the PNG
+format (or JPEG if appropriate). Please add binary files such as
+images with the -kb option so that the CVS server knows that the files
+are binary and shouldn't attempt to create diffs.
+
+If you think there's info missing here, feel free to add it or send me
+a mail with your questions. Before you do any commits to this CVS
+module, please get in contact with me or write to the gimp-web
+mailing-list. The only exception to this rule is an obvious build fix.
+You are encouraged to not ask but simply do the fix then.
+
+
+  Sven Neumann  <sven@gimp.org>
