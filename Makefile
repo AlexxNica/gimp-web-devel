@@ -10,9 +10,6 @@ all: subdirs website
 
 include depends.tabular
 
-$(MKDIRS):
-	mkdir -p $@
-
 subdirs: $(SUBDIRS)
 
 $(SUBDIRS):
@@ -32,4 +29,4 @@ depends.tabular: layout.xml
 	touch $@
 	$(MAKE) depends
 
-.PHONY: clean subdirs $(SUBDIRS) mkdir
+.PHONY: clean subdirs $(SUBDIRS)
