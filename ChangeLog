@@ -1,5 +1,9 @@
 2005-02-23  Sven Neumann  <sven@gimp.org>
 
+	* install.exclude: same for README.win32
+
+2005-02-23  Sven Neumann  <sven@gimp.org>
+
 	* install.exclude: keep the ChangeLog-2.2 and NEWS-2.2 symlinks
 	from being overwritten.
 

@@ -5,7 +5,7 @@ Makefile
 /ChangeLog-2.2
 /README
 /README.i18n
-/TODO
+/README.win32
 /NEWS
 /NEWS-2.2
 /HACKING
