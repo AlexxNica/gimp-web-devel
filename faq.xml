@@ -15,7 +15,7 @@
 
   <para>
     Below you will find a collection of frequently asked questions
-    regarding development of The GIMP.
+    regarding development of the GIMP.
   </para>
 
   <qandaset defaultlabel="number">
@@ -169,7 +169,7 @@
       <qandaentry>
         <question>
           <para>
-            What is the preferred coding style used in The GIMP?
+            What is the preferred coding style used in the GIMP?
           </para>
         </question>
         <answer>
@@ -268,7 +268,7 @@
       <qandaentry>
         <question>
           <para>
-            Who coordinates the translation of The GIMP?
+            Who coordinates the translation of the GIMP?
           </para>
         </question>
         <answer>
@@ -281,7 +281,7 @@
             efforts in the GNOME CVS tree.
           </para>
           <para>
-            More information about The GIMP and localisation can be
+            More information about the GIMP and localisation can be
             found in the file <ulink
             url="README.i18n">README.i18n</ulink>.
           </para>
@@ -296,7 +296,7 @@
         </question>
         <answer>
           <para>
-            By using The GIMP and reporting any bugs you find to
+            By using the GIMP and reporting any bugs you find to
             <ulink url="http://bugzilla.gnome.org">Bugzilla</ulink>
             you're helping a great deal.  But there are other
             non-technical ways of supporting the development of The
@@ -326,7 +326,39 @@
       <qandaentry>
         <question>
           <para>
-            How do I get my plug-in included in The GIMP?
+            Is there a plug-in template available?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Yes.  An official GIMP plug-in template is available in
+            the <ulink
+            url="http://cvs.gnome.org/lxr/source/gimp-plugin-template/">gimp-plugin-template
+            CVS module</ulink>.  Snapshots are available at <ulink
+            url="ftp://ftp.gimp.org/pub/gimp/plugin-template/">ftp.gimp.org</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How about a Script-Fu template?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Yes.  Simon Budig has written a fill-in-the-blanks
+            Script-Fu template which is available <ulink
+            url="http://www.home.unix-ag.org/simon/files/script-fu-template.scm">here</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            How do I get my plug-in included in the GIMP?
           </para>
         </question>
         <answer>
@@ -335,12 +367,12 @@
             Bugzilla and attach your plug-in there asking for it to be
             included in the GIMP.  If your plug-in is generally useful
             the GIMP developers might decide to include it in an
-            upcoming release of The GIMP.
+            upcoming release of the GIMP.
           </para>
           <para>
             Another way of making your plug-in available to the World
             is to submit it to <ulink
-            url="http://registry.gimp.org">The GIMP Plug-In
+            url="http://registry.gimp.org">the GIMP Plug-In
             Registry</ulink>.
           </para>
         </answer>
@@ -425,7 +457,7 @@
           <para>
             GEGL is the <ulink url="http://www.gegl.org">Generic
             Graphical Library</ulink>.  It is supposed to replace the
-            handling of various image processing tasks in The GIMP in
+            handling of various image processing tasks in the GIMP in
             a not too distant future.
           </para>
         </answer>
@@ -459,18 +491,18 @@
       <qandaentry>
         <question>
           <para>
-            What does all that gibberish mean for The GIMP?
+            What does all that gibberish mean for the GIMP?
           </para>
         </question>
         <answer>
           <para>
-            Many highly requested features of The GIMP will be easier
+            Many highly requested features of the GIMP will be easier
             to do using GEGL.  Layer effects, layer groups, and
             adjustment layers are quite easily represented (and
             efficiently calculated) using the DAG organization of GEGL.
             CMYK and high bit depth support will be easier because
             GEGL does not make the same assumptions about color spaces
-            and data types that The GIMP does.
+            and data types that the GIMP does.
           </para>
           <para>
             The reusability of image processing operations means that
@@ -619,6 +651,54 @@
     </qandadiv>
     <qandadiv>
       <title>Miscellaneous</title>
+
+      <qandaentry>
+        <question>
+          <para>
+            Where can I learn more about the GObject system used by
+            the GIMP?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Mathieu Lacage has written a nice <ulink
+            url="http://www.le-hacker.org/papers/gobject/">article</ulink>
+            about the Glib Object System.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            Where can I learn more about color spaces etc?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Charles Poynton has collected a set of <ulink
+            url="http://www.poynton.com/ColorFAQ.html">Frequently
+            Asked Questions about Color</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
+            Where can I learn more about image manipulation
+            algorithms?
+          </para>
+        </question>
+        <answer>
+          <para>
+            A good source of information is the
+            comp.graphics.algorithms list of <ulink
+            url="http://www.faqs.org/faqs/graphics/algorithms-faq/">Frequently
+            Asked Questions</ulink>.
+          </para>
+        </answer>
+      </qandaentry>
 
       <qandaentry>
         <question>
