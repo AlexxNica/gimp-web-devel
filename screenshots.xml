@@ -15,7 +15,7 @@
   </para>
 
   <section>
-    <title>There's lots of new stuff to discover in GIMP 2.1.</title>
+    <title>There's lots of new stuff to discover in GIMP 2.1 / GIMP 2.2.</title>
 
     <para>
       How many changes can you find in this screenshot?
@@ -75,6 +75,26 @@
           <textobject>
             <phrase>Opening a file with GIMP 2.1.</phrase>
           </textobject>
+	</mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+      Previews have been added to lots of plug-ins:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-preview-cartoon.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-preview-cartoon-thumb.png"/>
+          </imageobject>
+	</mediaobject>
+      </ulink>
+      <ulink url="screenshots/gimp-preview-neon.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-preview-neon-thumb.png"/>
+          </imageobject>
 	</mediaobject>
       </ulink>
     </para>

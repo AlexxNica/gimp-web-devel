@@ -1,3 +1,11 @@
+2004-11-02  Sven Neumann  <sven@gimp.org>
+
+	* screenshots.xml
+	* screenshots/Makefile
+	* screenshots/gimp-preview-cartoon.png
+	* screenshots/gimp-preview-neon.png: started to add some more
+	screenshots (bug #156758).
+
 2004-10-07  Sven Neumann  <sven@gimp.org>
 
 	* cvs.xml: switched links to ViewCVS since it doesn't look as if
