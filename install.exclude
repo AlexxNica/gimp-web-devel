@@ -1,0 +1,9 @@
+CVS
+.cvsignore
+Makefile
+/ChangeLog
+/install.sh
+/install.exclude
+*.*~
+*~
+.#*
