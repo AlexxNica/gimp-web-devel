@@ -1,3 +1,7 @@
+2005-01-16  Sven Neumann  <sven@gimp.org>
+
+	* faq.xml: fixed some glitches in the new entry.
+
 2005-01-04  Dave Neary <bolsh@gimp.org>
 
 	* faq.xml: Add a FAQ for the changed behaviour of libgimp
