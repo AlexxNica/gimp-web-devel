@@ -3,6 +3,7 @@
                          "dtd/website.dtd" [
 <!ENTITY gimpcon2000 SYSTEM "gimpcon2000.xml" NDATA XML>
 <!ENTITY gimpcon2003 SYSTEM "gimpcon2003.xml" NDATA XML>
+<!ENTITY gimpcon2004 SYSTEM "gimpcon2004.xml" NDATA XML>
 ]>
 
 <webpage id="gimpcon" lang="en">
