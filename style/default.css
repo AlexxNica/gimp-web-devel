@@ -34,6 +34,17 @@ img.map {
   padding: 0px;
 }
 
+p {
+  margin: 1.33em 0px;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: justify;
+}
+
+p.title {
+  font-size: 110%;
+}
+
 p.images img {
   border: solid black 2px;
 }
@@ -43,17 +54,14 @@ p.images {
   text-align: center;
 }
 
-p {
-  margin: 1.33em 0px;
+li {
   margin-left: 40px;
   margin-right: 40px;
   text-align: justify;
 }
 
-li {
+dt {
   margin-left: 40px;
-  margin-right: 40px;
-  text-align: justify;
 }
 
 td {

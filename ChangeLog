@@ -1,5 +1,10 @@
 2004-09-28  Sven Neumann  <sven@gimp.org>
 
+	* style/default.css: tweaked the stylesheet to make the Standards
+	page look less crappy.
+
+2004-09-28  Sven Neumann  <sven@gimp.org>
+
 	* layout.xml
 	* standards.xml: added a new page with links to all(?) the specs
 	and standards that we try to obey.
