@@ -6,14 +6,35 @@
 
   <head>
     <title>The GIMP Developers Conference 2003</title>
-    <titleabbrev>2003</titleabbrev>
+    <titleabbrev>GimpCon 2003</titleabbrev>
     <summary>What the GIMP developers did this summer</summary>
   </head>
 
   <para>
     This year's GIMP developers conference took place the
-    <emphasis>7/8/9/10th August 2003</emphasis> at the
-    <ulink url="http://www.ccc.de/camp/2003/">Chaos Communication Camp</ulink>.
+    <emphasis>7/8/9/10th August 2003</emphasis> at the <ulink
+    url="http://www.ccc.de/camp/2003/">Chaos Communication
+    Camp</ulink>.  The Camp was an international, four-day open-air
+    event for hackers and associated life-forms on a field near
+    Berlin, Germany.
+  </para>
+
+  <para>
+    <ulink url="people.png">
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="people-small.png"/>
+        </imageobject>
+        <textobject>
+          <phrase>The People at GimpCon 2003</phrase>
+        </textobject>
+      </mediaobject>
+    </ulink>
+
+    The GIMP developers joined this event and set up a GIMP tent to
+    get together and discuss the future of GIMP development.
+    Summaries of some of the discussions held there are available
+    <olink targetdocent="minutes">here</olink>.
   </para>
 
 </webpage>

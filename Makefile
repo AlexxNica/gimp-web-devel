@@ -1,18 +1,14 @@
 
 SUBDIRS=screenshots
 
-MKDIRS=gimpcon gimpcon/2003
-
 PROC=xsltproc
 STYLEDIR=xsl
 SCRIPTDIR=scripts
 STYLESHEET=$(STYLEDIR)/mine.xsl
 
-all: mkdir subdirs website
+all: subdirs website
 
 include depends.tabular
-
-mkdir: $(MKDIRS)
 
 $(MKDIRS):
 	mkdir -p $@
