@@ -23,6 +23,7 @@ Makefile
 /api/2.0/libgimp
 /api/2.0/libgimpbase
 /api/2.0/libgimpcolor
+/api/2.0/libgimpconfig
 /api/2.0/libgimpmath
 /api/2.0/libgimpmodule
 /api/2.0/libgimpthumb
