@@ -1,3 +1,10 @@
+2004-10-06  Øyvind Kolås  <pippin@gimp.org>
+
+	* style/default.css: added padding to the content area, and removed
+	margin-left from a lot of contained elements. Completely removed
+	styles for FAQ since they were just workarounds added due to missing
+	padding on container.
+
 2004-10-05  Sven Neumann  <sven@gimp.org>
 
 	* screenshots/Makefile
