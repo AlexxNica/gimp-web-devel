@@ -192,6 +192,14 @@ div.rss img {
   float: right;
 }
 
+div.qandaset tr.question td {
+    padding-top: 15px;
+}
+
+div.qandaset tr.question p {
+    margin: 0px;
+}
+
 @media print {
 
 div.navbar, div.linkbar, td.menu {
