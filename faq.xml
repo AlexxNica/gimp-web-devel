@@ -30,9 +30,9 @@
         </question>
         <answer>
           <para>
-            GIMP Development is coordinated by Wilber the GIMP along
-            with a loosely knit team of GIMP Developers.  The
-            developers can be reached through the GIMP Developer
+            GIMP development is coordinated by Wilber the GIMP along
+            with a loosely knit team of GIMP developers.  The
+            developers can be reached through the GIMP developer
             <olink targetdocent="lists">mailing list</olink>.
           </para>
         </answer>
@@ -312,7 +312,7 @@
           </para>
           <para>
             If you're interested in helping out you should drop an
-            e-mail to the GIMP Developer <olink
+            e-mail to the GIMP developer <olink
             targetdocent="lists">mailing list</olink> offering your
             help.
           </para>
@@ -737,7 +737,7 @@
             There is no user FAQ available at the moment.  However
             there has been discussions about creating one.  If you
             would like to help with this please drop a mail on the
-            GIMP Developer <olink targetdocent="lists">mailing
+            GIMP developer <olink targetdocent="lists">mailing
             list</olink>.
           </para>
         </answer>
