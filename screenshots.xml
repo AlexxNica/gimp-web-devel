@@ -109,10 +109,10 @@
         The transform tools have attained interactive previews.
     </para>
     <para role="images">
-      <ulink url="screenshots/gimp-preview-transform.png">
+      <ulink url="screenshots/gimp-preview-rotate.png">
 	<mediaobject>
           <imageobject>
-            <imagedata fileref="screenshots/gimp-preview-transform-thumb.png"/>
+            <imagedata fileref="screenshots/gimp-preview-rotate-thumb.png"/>
           </imageobject>
           <textobject>
             <phrase>Rotate tool</phrase>
