@@ -93,6 +93,8 @@
 
     </tocentry>
 
+    <tocentry page="faq.xml" filename="faq.html" />
+
     <tocentry page="about.xml" filename="about.html" />
 
   </toc>

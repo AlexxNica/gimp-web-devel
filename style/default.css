@@ -95,7 +95,6 @@ h3 {
   font-size: 105%;
 }
 
-
 td.menu {
   background: #dce5d4;
   color: black;
@@ -135,6 +134,35 @@ div.informaltable table {
 
 div.informaltable table tr td, div.informaltable table tr th {
   padding: 5px;
+}
+
+div.qandaset dl {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+div.qandaset dl dl {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+tr.question p, tr.answer p {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+tr.answer li {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+tr.answer li p {
+  margin: 0px;
+}
+
+tr.answer li li {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 img.titlebarleft {

@@ -1,5 +1,10 @@
 2004-01-22  Henrik Brix Andersen  <brix@gimp.org>
 
+	* layout.xml
+	* faq.xml: added initial revision of the GIMP Developer FAQ.
+
+2004-01-22  Henrik Brix Andersen  <brix@gimp.org>
+
 	* install.exclude: added README.i18n and debug-plug-ins.txt to
 	prepare for the addition of the FAQ.
 
