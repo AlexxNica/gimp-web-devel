@@ -1,0 +1,87 @@
+#!/usr/bin/perl
+
+use XML::RSS;
+use Digest::MD5;
+
+$count = 15;
+
+my $rss = new XML::RSS (version => '1.0', encoding=>"ISO-8859-1");
+
+#$rss->add_module (prefix => "html",
+#		  uri    => "http://www.w3.org/1999/xhtml");
+
+# dc:date wants the time as defined in ISO 8601, see http://www.w3.org/TR/NOTE-datetime
+($sec,$min,$hour,$mday,$mon,$year,$wday,$yday) = gmtime (time);
+$now = sprintf ("%4d-%02d-%02dT%02d:%02dZ",
+		1900 + $year, $mon + 1, $mday, $hour, $min);
+
+$rss->channel (title        => "GIMP ChangeLog",
+	       link         => "http://cvs.gnome.org/lxr/source/gimp/ChangeLog",
+	       description  => "Latest $count ChangeLog entries for module gimp",
+	       dc => {
+		   date       => $now,
+		   subject    => "GIMP ChangeLog",
+		   creator    => "webmaster\@gimp.org",
+		   publisher  => "webmaster\@gimp.org",
+		   language   => "en",
+	       },
+	       syn => {
+		   updatePeriod     => "hourly",
+		   updateFrequency  => "1",
+		   updateBase       => "2000-01-01T00:00+00:00",
+	       },
+	       taxo => [
+		   "http://dmoz.org/Computers/Software/Graphics/Image_Editing/The_GIMP/",
+		   "http://dmoz.org/Computers/Software/Configuration_Management/Tools/Concurrent_Versions_System/" ]
+	       );
+
+$rss->image (title => "Wilber The GIMP",
+	     url   => "http://developer.gimp.org/wilber.png",
+	     link  => "http://developer.gimp.org/");
+
+
+while (<>) {
+    
+    s/&/&amp;/g;
+    s/</&lt;/g;
+    s/>/&gt;/g;
+
+    if (/^\S/) {
+
+	if ($title) {
+
+	    $md5 = Digest::MD5->new;
+	    $md5->add ($title);
+	    $md5->add ($desc);
+	    
+	    $link = "http://cvs.gnome.org/";
+	    $link .= $md5->hexdigest;
+
+	    $rss->add_item (title       => $title,
+			    link        => $link,
+			    description => $desc);
+
+	    last if (--$count <= 0);
+
+	    $title = '';
+	    $desc  = '';
+	}
+
+	s/^\s+//;
+	s/\s+$//;
+	s/\t//g;
+	$title = $_;
+
+    } else {
+	s/^\s+//;
+	s/\s+$//;
+	s/\t//g;
+	if (/\S/) {
+	    $desc .= $_;
+	    $desc .= "\n";
+	}
+    }
+}
+
+print $rss->as_string;
+

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout PUBLIC "-//Norman Walsh//DTD Website Layout V2.4.1//EN"
+          "dtd/layout.dtd">
+
+<layout>
+
+  <config param="title" value="GIMP Developer Resources" />
+  <config param="banner-left"  value="images/developer-left.png"  />
+  <config param="banner-right" value="images/developer-right.png" />
+
+  <copyright>
+    <year>2003</year>
+    <holder role="http://www.gimp.org/">The GIMP Team</holder>
+  </copyright>
+
+  <headlink rel="icon"
+            href="images/wilber-icon.png"
+            type="image/png" />
+  <headlink rel="bookmark"
+            href="http://developer.gimp.org/"
+            title="GIMP Developer Resources"
+            type="text/html" />
+  <headlink rel="bookmark"
+            href="http://www.gimp.org/"
+            title="GIMP Website"
+            type="text/html" />
+  <headlink rel="bookmark"
+            href="http://www.gegl.org/"
+            title="GEGL Website"
+            type="text/html" />
+  <headlink rel="author"
+            href="mailto:webmaster@gimp.org"
+            title="webmaster@gimp.org" />
+
+  <style src="style/default.css" type="text/css" />
+
+  <toc page="index.xml" filename="index.html">
+
+    <tocentry page="cvs.xml" filename="cvs.html">
+
+      <tocentry page="changelog.xml" filename="changelog.html" />
+
+      <tocentry id="news" href="NEWS">
+        <title>News</title>
+        <summary>The NEWS file (updated daily)</summary>
+      </tocentry>
+
+      <tocentry id="hacking" href="HACKING">
+        <title>Hacking</title>
+	<summary>The HACKING file</summary>
+      </tocentry>
+    
+    </tocentry>
+
+    <tocentry page="bugs.xml" filename="bugs.html"/>
+
+    <tocentry page="mailing-lists.xml" filename="lists.html" />
+
+    <tocentry page="screenshots.xml" filename="screenshots.html" />
+
+    <tocentry page="plug-ins.xml" filename="plug-ins.html">
+
+      <tocentry id="api" href="api/1.3">
+	<title>API Reference</title>
+	<summary>GIMP Reference Manuals</summary>
+      </tocentry>
+
+      <tocentry page="plug-in-template.xml" filename="plug-in-template.html" />
+
+    </tocentry>
+
+    <tocentry page="gimpcon.xml" filename="gimpcon.html">
+       <tocentry id="pics" href="gimpcon-pics">
+         <title>GimpCon Pictures</title>
+	 <summary>Pictures from GimpCon 2003</summary>
+       </tocentry>
+    </tocentry>
+    
+    <tocentry page="about.xml" filename="about.html" />
+
+  </toc>
+
+</layout>
+

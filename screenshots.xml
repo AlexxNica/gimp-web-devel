@@ -1,0 +1,66 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd">
+
+<webpage id="screenshots" lang="en">
+
+  <head>
+    <title>Screenshots</title>
+    <summary>What everyone is after...</summary>
+  </head>
+
+  <para>
+    Here are some screenshots of the development version:
+  </para>
+  
+  <simplelist>
+    <member>
+      The
+      <ulink url="screenshots/gimp-text.jpeg">new text tool</ulink>
+      is shaping up and thanks to Pango it also handles
+      <ulink url="screenshots/gimp-unicode.png">arabic scripts</ulink>
+      quite nicely.
+    </member>
+    <member>
+      GIMP runs on
+      <ulink url="screenshots/gimp-osx.jpeg">MacOS X</ulink>
+      and <ulink url="screenshots/gimp-winxp.png">Win32</ulink>
+      as well.
+    </member>
+    <member>
+      Standard document sizes are available as
+      <ulink url="screenshots/gimp-templates.png">templates</ulink>
+      now.
+    </member>
+    <member>
+      Almost all GIMP windows can be grouped together using the
+      <ulink url="screenshots/gimp-docks.png">GIMP docks</ulink>.
+    </member>
+    <member>
+      The 
+      <ulink url="screenshots/gimp-brush-preview.png">brush shaped cursor</ulink>
+      shows the area that will be affected by the next paint operation.
+    </member>
+    <member>
+      If you need to do pixel-precise work, you will like the new
+      <ulink url="screenshots/gimp-grid.png">image grid</ulink>.
+    </member>
+    <member>
+      The
+      <ulink url="screenshots/gimp-file-open.png">File Open dialog</ulink>
+      shows a nicer preview now thanks to the adaption of the Free Desktop
+      Thumbnail Managing Standard.
+    </member>
+    <member>
+      Almost all changes done in the 
+      <ulink url="screenshots/gimp-prefs.png">Preferences dialog</ulink>
+      apply instantly.
+    </member>
+    <member>
+	Starting with version 1.3.21, The GIMP allows to export paths as
+	Scalable Vector Graphics and it also
+        <ulink url="screenshots/gimp-svg-import.png">imports SVG</ulink>.
+    </member>
+  </simplelist>
+
+</webpage>

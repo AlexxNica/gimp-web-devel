@@ -1,0 +1,127 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd">
+
+<webpage id="cvs" lang="en">
+
+  <head>
+    <title>Concurrent Versions System</title>
+    <titleabbrev>CVS</titleabbrev>
+    <summary>Living on the bleeding edge</summary>
+  </head>
+
+  <para>
+    The GIMP source code lives in module <emphasis>gimp</emphasis> on the
+    <ulink url="http://cvs.gnome.org/">GNOME CVS server</ulink>.
+    The GIMP website has detailed information on
+    <ulink url="http://www.gimp.org/devel_cvs.html">how to get GIMP from CVS</ulink>.
+  </para>
+
+  <para>
+    The GNOME CVS server hosts a couple of GIMP related modules:
+  </para>
+
+  <informaltable>
+    <tgroup cols="2" align="left">
+      <thead>
+	<row>
+	  <entry>CVS module</entry>
+	  <entry>Description</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gegl/">gegl</ulink>
+          </entry>
+	  <entry>
+            Generic Graphical Library
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp/">gimp</ulink>
+          </entry>
+	  <entry>
+            GIMP and the standard set of plug-ins
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-data-extras/">gimp-data-extras</ulink>
+          </entry>
+	  <entry>
+            GIMP Data files such as brushes, gradients, patterns and the like
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-freetype/">gimp-freetype</ulink>
+          </entry>
+	  <entry>
+            GIMP FreeType plug-in, does some fancy text rendering
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gap/">gimp-gap</ulink>
+          </entry>
+	  <entry>
+            GIMP Animation Package, a set of plug-ins that provide
+            video editing functionality
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-help/">gimp-help</ulink>
+          </entry>
+	  <entry>
+            GIMP help pages for gimp 1.2
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-help-2/">gimp-help-2</ulink>
+          </entry>
+	  <entry>
+            GIMP help pages, a rewrite for 2.0
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-perl/">gimp-perl</ulink>
+          </entry>
+	  <entry>
+            GIMP Perl bindings and a bunch of nice gimp-perl scripts
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-plugin-template/">gimp-plugin-template</ulink>
+          </entry>
+	  <entry>
+            GIMP Plug-In Template, a starting ground for plug-in developers
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/gimp-plugins-unstable/">gimp-plugins-unstable</ulink>
+          </entry>
+	  <entry>
+            GIMP plug-ins from the past, a collection of unstable,
+            unmaintained plug-ins
+          </entry>
+	</row>
+	<row>
+	  <entry>
+            <ulink url="http://cvs.gnome.org/lxr/source/libpdb/">libpdb</ulink>
+          </entry>
+	  <entry>
+            a rewrite of the GIMP Plugin Procedural Database
+          </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+</webpage>

@@ -1,0 +1,108 @@
+#!/usr/bin/perl
+
+use XML::RSS;
+
+
+my $maxitems   = 15;
+my $timeoffset = "-04:00";
+my $tmpfile    = "/home/rss/rss-temp";
+my $rssfile    = "/home/rss/public_html/gimp-cvs.rdf";
+my $logfile    = "/home/rss/rss-log";
+my %modules    = ( "gegl"                 => 1,
+             	   "gimp"                 => 1,
+		   "gimp-freetype"        => 1,
+		   "gimp-gap"             => 1,
+		   "gimp-help"            => 1,
+		   "gimp-help2"           => 1,
+		   "gimp-perl"            => 1,
+   		   "gimp-plugin-template" => 1,
+		   "gimp-web"             => 1,
+		   "libpdb"               => 1 );
+
+# open (LOGFILE, ">>$logfile");
+
+while (<>) {
+
+# print LOGFILE;
+
+    chomp;
+
+    ($root)          = /^CVSROOT:\s+(.+)/            if (/^CVSROOT:/);
+    ($module)        = /^Module name:\s+(.+)/        if (/^Module name:/);
+    ($author, $date) = /^Changes by:\s+(\w+)\s+(.+)/ if (/^Changes by:/);
+
+    if (/^URL :/ && $modules{$module}) {
+	($link) = /^URL :\s*(.+)/;
+	
+	$link =~ s/\\//g;
+	$link =~ s/&/&amp;/g;
+        $link =~ s/</&lt;/g;
+        $link =~ s/>/&gt;/g;
+
+	$_ = $date;
+	($year, $month, $day, $hour, $min, $sec) = /(\d+)\/(\d+)\/(\d+) (\d+):(\d+):(\d+)/;
+	$dcdate = "20".$year."-".$month."-".$day."T".$hour.":".$min.":".$sec.$timeoffset;
+
+	($sec,$min,$hour,$mday,$mon,$year,$wday,$yday) = gmtime (time);
+	$now = sprintf ("%4d-%02d-%02dT%02d:%02dZ",
+			1900 + $year, $mon + 1, $mday, $hour, $min);
+	
+	my $rss = new XML::RSS (version => '1.0', encoding=>"UTF-8");
+	$rss->add_module (prefix=>'cvs', uri=>'http://nwalsh.com/rdf/cvs#');
+	
+	$rss->parsefile ($rssfile) if (-s $rssfile);
+
+	$rss->channel (title        => "GIMP CVS Commits",
+		       link         => "http://developer.gimp.org/cvs.html",
+		       description  => "The latest commits to GIMP modules on the GNOME CVS server",
+		       dc => {
+			   date       => $now,
+			   subject    => "GIMP CVS Commits",
+			   creator    => "rss\@gimp.org",
+			   publisher  => "rss\@gimp.org",
+			   language   => "en"
+		       },
+		       taxo => [
+			   "http://dmoz.org/Computers/Software/Graphics/Image_Editing/The_GIMP/",
+                           "http://dmoz.org/Computers/Open_Source/Software/",
+			   "http://dmoz.org/Computers/Software/Configuration_Management/Tools/Concurrent_Versions_System/" ]
+		       );
+
+        $rss->image (title       => 'Construction Wilber',
+		     url         => 'http://developer.gimp.org/images/wilber.png',
+		     link        => 'http://developer.gimp.org/',
+		     );
+
+	pop (@{$rss->{'items'}}) if (@{$rss->{'items'}} >= $maxitems);
+	
+	$title = $module." changed by ".$author;
+
+	$rss->add_item (title       => $title,
+			link        => $link,
+			description => $desc,
+			dc => {
+                            subject => "Changes to module ".$module." in GNOME CVS",
+			    creator => $author,
+			    date    => $dcdate
+			},
+			cvs => {
+			    author  => "\$Author$author \$",
+			    date    => "\$Date$date \$"
+			},
+			mode        => 'insert');
+	
+	$rss->save ($tmpfile);
+        rename ($tmpfile, $rssfile);
+
+	last;
+    }
+
+    s/&/&amp;/g;
+    s/</&lt;/g;
+    s/>/&gt;/g;
+    ($desc) .= $_."\n" if ($log && /\S/);
+
+    $log = true if (/^Log message:/);
+}
+
+# close (LOGFILE);

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" >
+
+<webpage id="changelog" lang="en">
+
+  <head>
+    <headlink rel="alternate"
+              type="application/rss+xml"
+              title="RSS"
+              href="gimp-cvs.rdf" />
+
+    <title>GIMP ChangeLog</title>
+    <titleabbrev>ChangeLog</titleabbrev>
+    <summary>Keeping an eye on CVS</summary>
+  </head>
+
+  <para>
+    The <ulink url="ChangeLog">GIMP ChangeLog</ulink> lists all changes in
+    all details. The list below shows the latest commits to GIMP CVS modules.
+    It is generated using an experimental
+    <ulink url="http://web.resource.org/rss/1.0/spec">RSS 1.0</ulink>
+    feed which is available
+    <ulink url="http://www.gimp.org/~rss/gimp-cvs.rdf" mimetype="application/rss+xml">here</ulink>.
+  </para>
+  
+  This needs some more work...
+
+  <rss feed="http://www.gimp.org/~rss/gimp-cvs.rdf" />
+
+</webpage>

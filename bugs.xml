@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd">
+
+<webpage id="bugs" lang="en">
+
+  <head>
+    <title>Bug Tracking System</title>
+    <titleabbrev>Bugzilla</titleabbrev>
+    <summary>Bugs, bugs, bugs</summary>
+  </head>
+
+  <para>
+    The GIMP project uses <ulink url="http://bugzilla.gnome.org/">GNOME
+    Bugzilla</ulink>, a bug-tracking system that allows us to coordinate bug
+    reports. Bugzilla is also used for enhancement requests and the preferred
+    way to submit patches for The GIMP is to open a bug report and attach the
+    patch to it.
+  </para>
+
+  <simplelist>
+    <member>
+      www.gimp.org has some  
+      <ulink url="http://www.gimp.org/devel_ver.html">
+        links for queries on the bug database
+      </ulink>
+    </member>
+    <member>
+      <ulink url="http://bugzilla.gnome.org/weekly-bug-summary.html">
+        Bugzilla Weekly Summary
+      </ulink>
+    </member>
+  </simplelist>
+</webpage>

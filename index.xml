@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" [
+  <!ENTITY plug-ins SYSTEM "plug-ins.xml" NDATA XML>
+]>
+
+<webpage id="home" lang="en">
+
+  <head>
+    <title>What is this site all about?</title>
+    <summary>Online Resources for GIMP Developers</summary>
+  </head>
+
+  <para>
+    This site tries to provides useful information for GIMP developers.
+    No matter whether you are into <olink targetdocent="plug-ins">plug-in
+    development</olink> or want to dive into the internals of the GIMP core,
+    you should find your way from here.
+  </para>
+
+</webpage>
