@@ -38,6 +38,7 @@ p.images img {
   border: solid black 2px;
 }
 
+p.framelessimages,
 p.images {
   text-align: center;
 }

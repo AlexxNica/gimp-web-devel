@@ -1,3 +1,14 @@
+2004-06-09  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gimpcon/2004/Dave_Neary.jpg
+	* gimpcon/2004/Oyvind_Kolas.png
+	* gimpcon/2004/gnu-head-sm.jpg
+	* gimpcon/2004/mac_gimp_logo4.png
+	* gimpcon/2004/macosx_screenshot1_thumb.jpg
+	* style/default.css
+	* gimpcon2004.xml: added GIMPCon2004 content provided by Dave
+	Neary.
+
 2004-06-02  Sven Neumann  <sven@gimp.org>
 
 	* layout.xml: use absolute links to NEWS and ChangeLog.
