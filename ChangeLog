@@ -1,3 +1,8 @@
+2005-01-04  Dave Neary <bolsh@gimp.org>
+
+	* faq.xml: Add a FAQ for the changed behaviour of libgimp
+	functions when a drawable doesn't belong to an image.
+
 2004-12-20  Sven Neumann  <sven@gimp.org>
 
 	* bugs.xml: removed bug query for 2.0.6 milestone.

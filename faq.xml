@@ -403,6 +403,31 @@
         </answer>
       </qandaentry>
 
+      <qandaentry>
+        <question>
+          <para>
+            Will the plug-in I compiled against 2.0 work with the
+            GIMP 2.2?
+          </para>
+        </question>
+        <answer>
+          <para>
+	    The short answer is yes. The GIMP 2.2 is binary
+            compatible with plug-ins compiled for the GIMP 2.2,
+            as well as being backwards compatible with the API.
+          </para>
+          <para>
+            If the plug-in you compiled for 2.0 does not work
+            with 2.2, there is one change which has been made
+            which is not backwards compatible, since the old behaviour was
+            considered incorrect. If you create a temporary layer with
+            gimp_drawable_new() in a plug-in, you are now required to add it
+            to an image with gimp_image_add_layer() before calling any
+            functions with the drawable as an argument.
+          </para>
+        </answer>
+      </qandaentry>
+
     </qandadiv>
     <qandadiv>
       <title>CVS</title>
