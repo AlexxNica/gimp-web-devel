@@ -16,9 +16,14 @@
   </head>
 
   <para>
-    The <ulink url="ChangeLog">GIMP ChangeLog</ulink> lists all changes in
-    all details. The list below shows the latest commits to GIMP CVS modules.
-    It is generated using an experimental
+    The
+    <ulink url="http://cvs.gnome.org/lxr/source/gimp/ChangeLog">
+      GIMP ChangeLog
+    </ulink>
+    
+    lists all changes in all details. The list below shows the latest
+    commits to GIMP CVS modules.  It is generated using an
+    experimental
     <ulink url="http://web.resource.org/rss/1.0/spec">RSS 1.0</ulink>
     feed which is available
     <ulink url="http://www.gimp.org/~rss/gimp-cvs.rdf" mimetype="application/rss+xml">here</ulink>.

@@ -1,5 +1,7 @@
 2003-12-02  Sven Neumann  <sven@gimp.org>
 
+	* changelog.xml: fixed the link to the ChangeLog.
+
 	* layout.xml: use absolute links for the API reference and to the
 	images directory so they work on the gimpcon pages as well.
 
