@@ -1,3 +1,15 @@
+2004-09-21  Sven Neumann  <sven@gimp.org>
+
+	* screenshots/Makefile
+	* screenshots/gimp-new-image-dialog-expanded.png
+	* screenshots/gimp-new-image-dialog.png
+	* screenshots/gimp-save-as-jpeg.png
+	* screenshots/gimp-various.png: added some new screenshots, removed
+	thumbnailing rules for the old ones. Didn't remove the old shots yet.
+
+	* screenshots.xml: removed references to old screenshots, show the
+	new ones.
+
 2004-07-20  Sven Neumann  <sven@gimp.org>
 
 	* index.xml
