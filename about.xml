@@ -19,4 +19,9 @@
     url="about.xml">XML source</ulink> of the page you are reading.
   </para>
 
+  <para>
+    If you want to help us with developer.gimp.org, check out the
+    module <emphasis>gimp-web-devel</emphasis> from GNOME CVS.
+  </para>
+
 </webpage>
