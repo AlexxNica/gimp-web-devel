@@ -1,6 +1,12 @@
+2004-02-11  Sven Neumann  <sven@gimp.org>
+
+	* bugs.xml: exclude NEEDINFO from the query for "Open bugs w/o
+	enhancement requests" so it matches the number from the weekly
+	bug summary that we are not any longer participating in.
+
 2004-02-10  Simon Budig  <simon@gimp.org>
 
-        * bugs.xml: added some more bugzilla queries
+	* bugs.xml: added some more bugzilla queries
 
 2004-02-10  Sven Neumann  <sven@gimp.org>
 

@@ -40,7 +40,7 @@
         List of Open Bugs</ulink>
       </listitem>
       <listitem>
-        <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial">
+        <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;&amp;bug_status=REOPENED&amp;bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial">
         List of Open Bugs (excluding enhancement requests)</ulink>
       </listitem>
       <listitem>
