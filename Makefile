@@ -21,6 +21,6 @@ autolayout.xml: layout.xml
 depends: autolayout.xml
 	$(PROC) $(STYLEDIR)/makefile-dep.xsl $< > depends.tabular
 
-depends.tabular:
+depends.tabular: layout.xml
 	touch $@
 	make depends
