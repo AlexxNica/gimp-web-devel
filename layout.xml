@@ -14,7 +14,7 @@
   </copyright>
 
   <headlink rel="icon"
-            href="images/wilber-icon.png"
+            href="/images/wilber-icon.png"
             type="image/png" />
   <headlink rel="bookmark"
             href="http://developer.gimp.org/"
@@ -62,7 +62,7 @@
 
     <tocentry page="plug-ins.xml" filename="plug-ins.html">
 
-      <tocentry id="api" href="api/1.3/index.html">
+      <tocentry id="api" href="/api/1.3/index.html">
 	<title>API Reference</title>
 	<summary>GIMP Reference Manuals</summary>
       </tocentry>

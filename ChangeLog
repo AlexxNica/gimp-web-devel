@@ -1,5 +1,10 @@
 2003-12-02  Sven Neumann  <sven@gimp.org>
 
+	* layout.xml: use absolute links for the API reference and to the
+	images directory so they work on the gimpcon pages as well.
+
+2003-12-02  Sven Neumann  <sven@gimp.org>
+
 	* layout.xml
 	* gimpcon.xml
 	* gimpcon2004.xml
