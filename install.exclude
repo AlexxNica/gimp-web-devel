@@ -3,9 +3,11 @@ CVS
 Makefile
 /ChangeLog
 /README
+/README.i18n
 /TODO
 /NEWS
 /HACKING
+/debug-plug-ins.txt
 /install.sh
 /install.exclude
 /api/1.3/app

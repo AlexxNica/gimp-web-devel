@@ -1,3 +1,8 @@
+2004-01-22  Henrik Brix Andersen  <brix@gimp.org>
+
+	* install.exclude: added README.i18n and debug-plug-ins.txt to
+	prepare for the addition of the FAQ.
+
 2004-01-07  Sven Neumann  <sven@gimp.org>
 
 	* install.exclude: added NEWS and HACKING so the links don't get
