@@ -1,5 +1,8 @@
 2004-01-07  Sven Neumann  <sven@gimp.org>
 
+	* install.exclude: added NEWS and HACKING so the links don't get
+	removed by rsync.
+
 	* layout.xml: LXR seems to have problems, use local versions of
 	NEWS and HACKING. On Wilber these are linked to a CVS checkout
 	that is updated daily.
