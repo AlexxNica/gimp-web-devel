@@ -11,8 +11,8 @@
 
   <para>
     Here should be more info soon, but for now we refer you to the
-    <ulink url="api/1.3">API reference</ulink> and to a talk about
-    <ulink url="http://www.home.unix-ag.org/simon/gimp/guadec2002/gimp-plugin/html/">GIMP plug-in programming</ulink> that Simon gave last year.
+    <ulink url="api/2.0">GIMP 2.0 API reference</ulink> and to a talk about
+    <ulink url="http://www.home.unix-ag.org/simon/gimp/guadec2002/gimp-plugin/html/">GIMP plug-in programming</ulink> that Simon gave at GUADEC in Sevilla.
   </para>
 
 </webpage>

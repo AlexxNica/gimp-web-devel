@@ -1,5 +1,9 @@
 2004-02-26  Sven Neumann  <sven@gimp.org>
 
+	* plug-ins.xml: point to the 2.0 API reference.
+
+2004-02-26  Sven Neumann  <sven@gimp.org>
+
 	* api/1.3/index.html: removed 1.3 API reference ...
 
 	* api/2.0/index.html: ... and added an index for the 2.0 API.
