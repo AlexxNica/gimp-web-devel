@@ -7,27 +7,13 @@
   <head>
     <title>The GIMP Developers Conference 2003</title>
     <titleabbrev>Conference</titleabbrev>
-    <summary>What to do this summer</summary>
+    <summary>What the GIMP developers did this summer</summary>
   </head>
 
   <para>
-    This year's GIMP developers conference is going to take place the
+    This year's GIMP developers conference took place the
     <emphasis>7/8/9/10th August 2003</emphasis> at the
     <ulink url="http://www.ccc.de/camp/2003/">Chaos Communication Camp</ulink>.
-  </para>
-
-  <para>
-    There's a Wiki system dedicated to the camp at
-    <ulink url="https://wiki.camp.ccc.de/" />. You might want to go there and
-    check the 
-    <ulink
-    url="https://wiki.camp.ccc.de/Camp/view/Main/GIMPDevelopersConference">GIMPDevelopersConference</ulink>
-    Wiki item.
-  </para>
-    
-  <para>
-    Here's the Camp Wiki news feed for your consideration:
-    <rss feed="http://wiki.camp.ccc.de/twiki-camp/pub/rss/Main/WebChanges.rss" />
   </para>
 
 </webpage>

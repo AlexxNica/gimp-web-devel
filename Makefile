@@ -2,8 +2,6 @@ PROC=xsltproc
 STYLEDIR=xsl
 SCRIPTDIR=scripts
 STYLESHEET=$(STYLEDIR)/mine.xsl
-#TIDY= | tidy -xml -quiet -indent
-GIMP_CHANGELOG=/home/neo/gnomecvs/gimp/ChangeLog
 
 .PHONY : clean
 
@@ -25,6 +23,3 @@ depends: autolayout.xml
 depends.tabular:
 	touch $@
 	make depends
-
-gimp-cvs.rdf: $(GIMP_CHANGELOG)
-	$(SCRIPTDIR)/cl2rdf $< > $@

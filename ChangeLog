@@ -1,4 +1,17 @@
 2003-11-12  Sven Neumann  <sven@gimp.org>
 
+	* Makefile: removed unused cruft.
+
+	* gimpcon.xml: rewrote in past tense and removed links to pictures.
+	To be replaced by a GimpCon gallery with links to external image
+	catalogs.
+
+	* layout.xml: link to LXR for NEWS and Hacking
+
+	* api/1.3/index.html: added API reference index until we get around
+	to integrate this better.
+
+2003-11-12  Sven Neumann  <sven@gimp.org>
+
 	Initial import of web-gimp-devel, the sources for
 	http://developer.gimp.org/

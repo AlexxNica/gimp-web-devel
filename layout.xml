@@ -40,14 +40,16 @@
 
       <tocentry page="changelog.xml" filename="changelog.html" />
 
-      <tocentry id="news" href="NEWS">
+      <tocentry id="news"
+                href="http://cvs.gnome.org/lxr/source/gimp/NEWS">
         <title>News</title>
-        <summary>The NEWS file (updated daily)</summary>
+        <summary>The NEWS file in CVS</summary>
       </tocentry>
 
-      <tocentry id="hacking" href="HACKING">
+      <tocentry id="hacking"
+	        href="http://cvs.gnome.org/lxr/source/gimp/HACKING">
         <title>Hacking</title>
-	<summary>The HACKING file</summary>
+	<summary>The HACKING file in CVS</summary>
       </tocentry>
     
     </tocentry>
@@ -69,12 +71,7 @@
 
     </tocentry>
 
-    <tocentry page="gimpcon.xml" filename="gimpcon.html">
-       <tocentry id="pics" href="gimpcon-pics">
-         <title>GimpCon Pictures</title>
-	 <summary>Pictures from GimpCon 2003</summary>
-       </tocentry>
-    </tocentry>
+    <tocentry page="gimpcon.xml" filename="gimpcon.html" />
     
     <tocentry page="about.xml" filename="about.html" />
 
