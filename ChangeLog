@@ -1,6 +1,11 @@
+2004-09-30  Sven Neumann  <sven@gimp.org>
+
+	* standards.xml: fixed a broken link.
+
 2004-09-28  Carol Spears  <carol@gimp.org>
 
-	* style/default.css: removed some of the contradictory style suggestions.
+	* style/default.css: removed some of the contradictory style
+	suggestions.
 
 2004-09-28  Sven Neumann  <sven@gimp.org>
 
