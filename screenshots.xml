@@ -88,6 +88,9 @@
           <imageobject>
             <imagedata fileref="screenshots/gimp-preview-cartoon-thumb.png"/>
           </imageobject>
+          <textobject>
+            <phrase>Cartoon filter</phrase>
+          </textobject>
 	</mediaobject>
       </ulink>
       <ulink url="screenshots/gimp-preview-neon.png">
@@ -95,6 +98,25 @@
           <imageobject>
             <imagedata fileref="screenshots/gimp-preview-neon-thumb.png"/>
           </imageobject>
+          <textobject>
+            <phrase>Neon filter</phrase>
+          </textobject>
+	</mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+      GIMP 2.2-pre1 running on Win XP:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-winxp.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-winxp-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>GIMP XP</phrase>
+          </textobject>
 	</mediaobject>
       </ulink>
     </para>

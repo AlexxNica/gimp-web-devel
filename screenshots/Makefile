@@ -2,7 +2,8 @@ THUMBS = \
 	gimp-open-dialog-thumb.png	\
 	gimp-preview-cartoon-thumb.png	\
 	gimp-preview-neon-thumb.png	\
-	gimp-various-thumb.png
+	gimp-various-thumb.png		\
+	gimp-winxp-thumb.png
 
 all: thumbs
 
