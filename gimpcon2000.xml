@@ -29,16 +29,14 @@
   </para>
 
   <para role="images">
-    <ulink url="people-small.jpg">
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="people-small.jpg"/>
-        </imageobject>
-        <textobject>
-          <phrase>The People at GIMPCon 2000</phrase>
-        </textobject>
-      </mediaobject>
-    </ulink>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="people-small.jpg"/>
+      </imageobject>
+      <textobject>
+        <phrase>The People at GIMPCon 2000</phrase>
+      </textobject>
+    </mediaobject>
   </para>
 
   <para>
