@@ -1,3 +1,13 @@
+2003-12-01  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gimpcon2003.xml: capitalize GIMPCon as done in the rest of the
+	.xml files.
+
+	* gimpcon2003-mins-1.xml
+	* gimpcon2003-mins-2.xml
+	* gimpcon2003-mins-3.xml: mispelled name corrected, use proper
+	date format
+
 2003-11-30  Henrik Brix Andersen  <brix@gimp.org>
 
 	* gimpcon2003.xml: use role="images" for paragraphs that contain
