@@ -1,4 +1,5 @@
 THUMBS = \
+	gimp-open-dialog-thumb.png	\
 	gimp-various-thumb.png
 
 all: thumbs

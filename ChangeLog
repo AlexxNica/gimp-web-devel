@@ -1,3 +1,9 @@
+2004-10-05  Sven Neumann  <sven@gimp.org>
+
+	* screenshots/Makefile
+	* screenshots/gimp-open-dialog.png
+	* screenshots.xml: added new screenshot, rearranged things a bit.
+
 2004-10-05  Niklas M <scizzo@gimp.org>
 
 	* standards.xml: fixed a broken link.

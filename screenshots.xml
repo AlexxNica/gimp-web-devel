@@ -17,6 +17,9 @@
   <section>
     <title>There's lots of new stuff to discover in GIMP 2.1.</title>
 
+    <para>
+      How many changes can you find in this screenshot?
+    </para>
     <para role="images">
       <ulink url="screenshots/gimp-various.png">
 	<mediaobject>
@@ -29,35 +32,21 @@
 	</mediaobject>
       </ulink>
     </para>
-    <para>
-      How many changes can you find in this screenshot?
-    </para>
-
-  </section>
-
-  <section>
-    <title>The user interface tries to focus on the important bits.</title>
 
     <para>
       Create a new image using a template:
     </para>
     <para role="images">
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="screenshots/gimp-new-image-dialog.png"/>
-        </imageobject>
-        <textobject>
-          <phrase>Creating a new image.</phrase>
-        </textobject>
-      </mediaobject>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="screenshots/gimp-new-image-dialog-expanded.png"/>
-        </imageobject>
-        <textobject>
-          <phrase>The same dialog with advanced options.</phrase>
-        </textobject>
-      </mediaobject>
+      <ulink url="screenshots/gimp-new-image-dialog-expanded.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-new-image-dialog.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Creating a new image.</phrase>
+          </textobject>
+	</mediaobject>
+      </ulink>
     </para>
 
     <para>
@@ -72,6 +61,22 @@
           <phrase>Saving a JPEG image.</phrase>
         </textobject>
       </mediaobject>
+    </para>
+
+    <para>
+      GIMP 2.1 uses the new GtkFileChooser dialog:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-open-dialog.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-open-dialog-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Opening a file with GIMP 2.1.</phrase>
+          </textobject>
+	</mediaobject>
+      </ulink>
     </para>
 
   </section>
