@@ -1,3 +1,7 @@
+2004-02-10  Simon Budig  <simon@gimp.org>
+
+        * bugs.xml: added some more bugzilla queries
+
 2004-02-10  Sven Neumann  <sven@gimp.org>
 
 	* gimpcon2003.xml: changed this year to last year. Will have to be
