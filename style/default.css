@@ -95,9 +95,6 @@ h3 {
   font-size: 105%;
 }
 
-/* Changing info in the below values will change the layout of the whole
- * site and you should not change this unless you actually know what you are
- * changing. Please keep a backup of this file if you are doing changes here. */
 
 td.menu {
   background: #dce5d4;
@@ -184,14 +181,11 @@ span.shrink3 {
   font-size: 85%;
 }
 
-/* doing this for all feeds is not a good idea ...
- * div.rss dd {
- *   font-family: monospace;
- *   white-space: pre;
- *   border-width: 0px;
- *   padding: 0px;
- * }
- */
+div.rss dd p {
+  white-space: pre;
+  border-width: 0px;
+  padding: 0px;
+}
 
 div.rss img {
   border: none;

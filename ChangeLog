@@ -1,5 +1,9 @@
 2003-12-02  Sven Neumann  <sven@gimp.org>
 
+	* style/default.css: improved the look of the ChangeLog feed.
+
+2003-12-02  Sven Neumann  <sven@gimp.org>
+
 	* changelog.xml: fixed the link to the ChangeLog.
 
 	* layout.xml: use absolute links for the API reference and to the
