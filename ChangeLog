@@ -1,5 +1,19 @@
 2003-12-01  Henrik Brix Andersen  <brix@gimp.org>
 
+	* gimpcon2000.xml: ported the contents from
+	http://www.gimp.org/gimpcon/2000/ to this new layout.
+
+	* gimpcon/2000/people-small.jpg: added the photo of the GIMP
+	developers who attended GIMPCon 2000.
+
+	* gimpcon/2000/.cvsignore: file added.
+
+	* gimpcon.xml: include a link to gimpcon2000.
+
+	* layout.xml: updated to reflect the above changes.
+
+2003-12-01  Henrik Brix Andersen  <brix@gimp.org>
+
 	* gimpcon2003.xml: capitalize GIMPCon as done in the rest of the
 	.xml files.
 

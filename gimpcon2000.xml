@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" [
+<!ENTITY minutes SYSTEM "gimpcon2003-mins.xml" NDATA XML>
+]>
+
+<webpage id="gimpcon2000" lang="en">
+
+  <head>
+    <title>The GIMP Developers Conference 2000</title>
+    <titleabbrev>GIMPCon 2000</titleabbrev>
+    <summary>The first official GIMPCon</summary>
+  </head>
+
+  <para>
+    The first official GIMP Developers Conference took place
+    <emphasis>June 2nd - 4th 2000</emphasis> in <ulink
+    url="http://www.berlin.de">Berlin</ulink>.
+  </para>
+
+  <para>
+     The <ulink url="http://berlin.ccc.de/">Chaos Computer Club
+     Berlin</ulink> was so kind to allow us to use their rooms for the
+     conference. The <ulink url="https://www.ccc.de">Chaos Computer
+     Club</ulink> is a galactic community of human beings including
+     all ages, genders, races and social positions. They demand
+     unlimited freedom and flow of information without censorship.
+
+  </para>
+
+  <para role="images">
+    <ulink url="people-small.jpg">
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="people-small.jpg"/>
+        </imageobject>
+        <textobject>
+          <phrase>The People at GIMPCon 2000</phrase>
+        </textobject>
+      </mediaobject>
+    </ulink>
+  </para>
+
+  <para>
+    From left to right, top to bottom: Calvin, Simon, Seth, Jakub,
+    Lauri, Austin, Tigert, Tim, Jens, Tor, Jay, Daniel, Sven, Adam,
+    Mitch, Garry, Marc, Caroline, Andy, Yosh.
+  </para>
+
+  <para>
+    We'd like to thank the <ulink url="http://www.fsf.org">Free
+    Software Foundation</ulink>, the <ulink
+    url="https://www.ccc.de">Chaos Computer Club</ulink> and <ulink
+    url="http://www.oreilly.de">O'Reilly Germany</ulink> for their
+    help that made this meeting possible.
+  </para>
+
+</webpage>

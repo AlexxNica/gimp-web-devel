@@ -73,6 +73,8 @@
 
     <tocentry page="gimpcon.xml" filename="gimpcon/index.html">
 
+      <tocentry page="gimpcon2000.xml" filename="gimpcon/2000/index.html" />
+
       <tocentry page="gimpcon2003.xml" filename="gimpcon/2003/index.html">
 
         <tocentry page="gimpcon2003-mins.xml" filename="gimpcon/2003/minutes.html">

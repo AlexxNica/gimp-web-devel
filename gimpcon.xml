@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd" [
+<!ENTITY gimpcon2000 SYSTEM "gimpcon2000.xml" NDATA XML>
 <!ENTITY gimpcon2003 SYSTEM "gimpcon2003.xml" NDATA XML>
 ]>
 
@@ -12,10 +13,13 @@
     <summary>Hanging out with the GIMP developers</summary>
   </head>
 
-  <simplelist>
-    <member>
-      <olink targetdocent="gimpcon2003">GimpCon 2003</olink>
-    </member>
-  </simplelist>
+  <itemizedlist>
+    <listitem>
+      <olink targetdocent="gimpcon2000">GIMPCon 2000</olink>
+    </listitem>
+    <listitem>
+      <olink targetdocent="gimpcon2003">GIMPCon 2003</olink>
+    </listitem>
+  </itemizedlist>
 
 </webpage>
