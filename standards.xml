@@ -20,7 +20,7 @@
   </para>
 
   <variablelist>
-    <title>File Formats</title>
+    <title>Image File Formats</title>
 
    <varlistentry>
       <term>
@@ -126,6 +126,38 @@
 	<para>
 	  Describes XMP, a labeling technology that allows to embed
 	  data about a file, known as metadata, into the file itself.
+	</para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+
+  <variablelist>
+    <title>Color Management</title>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://www.w3.org/Graphics/Color/sRGB">sRGB Color Space</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Describes sRGB, a color space proposed as a standard default
+	  color space for the Internet and other interested vendors.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
+	<ulink url="http://www.color.org/icc_specs2.html">ICC Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Specifies the profile format defined by the International
+	  Color Consortium (ICC). The intent of this format is to
+	  provide a cross-platform device profile format that can be
+	  used to translate color data between device colorspaces.
 	</para>
       </listitem>
     </varlistentry>
