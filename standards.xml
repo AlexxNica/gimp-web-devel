@@ -83,7 +83,7 @@
 
     <varlistentry>
       <term>
-	<ulink url="http://www.w3.org/TR/PNG/">Portable Network Graphics (PNG) Specification</ulink>
+	<ulink url="http://www.w3.org/TR/PNG/">Portable Network Graphics (PNG)</ulink>
       </term>
       <listitem>
 	<para>
@@ -96,7 +96,7 @@
 
     <varlistentry>
       <term>
-	<ulink url="http://www.w3.org/TR/SVG/">Scalable Vector Graphics (SVG) 1.1 Specification</ulink>
+	<ulink url="http://www.w3.org/TR/SVG/">Scalable Vector Graphics (SVG) 1.1</ulink>
       </term>
       <listitem>
 	<para>
@@ -109,7 +109,7 @@
     
     <varlistentry>
       <term>
-	<ulink url="http://partners.adobe.com/asn/developer/PDFS/TN/TIFF6.pdf">TIFF 6.0 Specification</ulink>
+	<ulink url="http://partners.adobe.com/asn/developer/PDFS/TN/TIFF6.pdf">TIFF 6.0</ulink>
       </term>
       <listitem>
 	<para>
