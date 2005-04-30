@@ -130,6 +130,18 @@
       </listitem>
     </varlistentry>
 
+    <varlistentry>
+      <term>
+	<ulink url="http://www.adobe.com/products/dng/pdfs/dng_spec.pdf">Digital Negative (DNG)</ulink>
+      </term>
+      <listitem>
+	<para>
+	  Specifies DNG, a format, proposed by Adobe, aiming to become
+	  a standard for storing raw data from digital cameras.
+	</para>
+      </listitem>
+    </varlistentry>
+    
   </variablelist>
 
 
