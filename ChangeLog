@@ -1,5 +1,7 @@
 2005-04-30  Sven Neumann  <sven@gimp.org>
 
+	* layout.xml: changed year in copyright footer.
+
 	* standards.xml: added a link to the DNG spec.
 
 2005-04-10  Sven Neumann  <sven@gimp.org>
