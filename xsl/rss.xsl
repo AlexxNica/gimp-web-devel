@@ -49,8 +49,10 @@
     </xsl:choose>
   </xsl:if>
 
+<!--  not used for CVS commits feed
   <xsl:apply-templates select="rss:title"/>
   <xsl:apply-templates select="rss:description"/>
+ -->
   <xsl:apply-templates select="rss:items"/>
 
 </xsl:template>
@@ -71,6 +73,7 @@
     </xsl:choose>
 
     <xsl:if test="../dc:date|../cvs:date">
+      <br />
       <xsl:choose>
         <xsl:when test="../dc:date">
           <xsl:text> (</xsl:text>
@@ -105,8 +108,8 @@
 
 <xsl:template match="rss:items">
   <dl>
-    <xsl:for-each select="rdf:Seq/rdf:li[@rdf:resource and @rdf:resource != '']">
-      <xsl:variable name="resource" select="@rdf:resource"/>
+    <xsl:for-each select="rdf:Seq/rdf:li[@resource and @resource != '']">
+      <xsl:variable name="resource" select="@resource"/>
       <xsl:variable name="item" select="//rss:item[@rdf:about = $resource]"/>
       <xsl:if test="not($item)">
         <xsl:message>
@@ -127,15 +130,21 @@
 
 <xsl:template match="rss:item">
   <xsl:message>RSS item: <xsl:value-of select="rss:title"/></xsl:message>
-
-  <xsl:apply-templates select="rss:title">
-    <xsl:with-param name="wrapper" select="'dt'"/>
-  </xsl:apply-templates>
-  <xsl:if test="rss:description">
-    <dd>
-      <xsl:apply-templates select="rss:description"/>
-    </dd>
-  </xsl:if>
+  <xsl:apply-templates select="rss:description"/>
 </xsl:template>
+
+<!-- Unescape markup  -->
+<xsl:template match="text()">
+  <xsl:value-of disable-output-escaping="yes" select="."/>
+</xsl:template>
+
+<xsl:template priority="-1"
+              match="@* | * | text() | processing-instruction() | comment()">
+  <!-- Identity transformation. -->
+  <xsl:copy>
+    <xsl:apply-templates
+       select="@* | * | text() | processing-instruction() | comment()"/>
+  </xsl:copy>
+  </xsl:template>
 
 </xsl:stylesheet>

@@ -1,3 +1,9 @@
+2005-05-01  Sven Neumann  <sven@gimp.org>
+
+	* changelog.xml: use the CVS commits feed from cia.navi.cx.
+
+	* xsl/rss.xsl: adopted to deal with the CIA's RSS feed.
+
 2005-04-30  Sven Neumann  <sven@gimp.org>
 
 	* layout.xml: changed year in copyright footer.
