@@ -192,12 +192,18 @@ div.rss img {
   float: right;
 }
 
+span.date {
+  font-size: 75%;
+  float: right;
+  clear: both;
+}
+
 div.qandaset tr.question td {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 div.qandaset tr.question p {
-    margin: 0px;
+  margin: 0px;
 }
 
 @media print {

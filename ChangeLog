@@ -1,5 +1,10 @@
 2005-05-01  Sven Neumann  <sven@gimp.org>
 
+	* style/default.css
+	* xsl/rss.xsl: show the date of the CVS commit.
+
+2005-05-01  Sven Neumann  <sven@gimp.org>
+
 	* changelog.xml: use the CVS commits feed from cia.navi.cx.
 
 	* xsl/rss.xsl: adopted to deal with the CIA's RSS feed.

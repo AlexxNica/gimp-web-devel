@@ -59,7 +59,6 @@
 
 <xsl:template match="rss:title">
   <xsl:param name="wrapper" select="'h3'"/>
-
   <xsl:element name="{$wrapper}">
     <xsl:choose>
       <xsl:when test="../rss:link">
@@ -71,61 +70,59 @@
         <xsl:apply-templates/>
       </xsl:otherwise>
     </xsl:choose>
-
-    <xsl:if test="../dc:date|../cvs:date">
-      <br />
-      <xsl:choose>
-        <xsl:when test="../dc:date">
-          <xsl:text> (</xsl:text>
-          <xsl:value-of select="../dc:date[1]"/>
-          <xsl:text>)</xsl:text>
-        </xsl:when>
-        <xsl:when test="function-available('cvsf:localTime')">
-          <xsl:variable name="timeString" select="cvsf:localTime(../cvs:date[1])"/>
-          <xsl:text> (</xsl:text>
-          <xsl:value-of select="substring($timeString, 1, 3)"/>
-          <xsl:text>, </xsl:text>
-          <xsl:value-of select="substring($timeString, 9, 2)"/>
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="substring($timeString, 5, 3)"/>
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="substring($timeString, 25, 4)"/>
-          <xsl:text>)</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="../cvs:date[1]"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:if>
   </xsl:element>
 </xsl:template>
 
 <xsl:template match="rss:description">
   <p>
+    <xsl:if test="../dc:date|../cvs:date">
+      <span class="date">
+	<xsl:choose>
+          <xsl:when test="../dc:date">
+            <xsl:text> (</xsl:text>
+            <xsl:value-of select="../dc:date[1]"/>
+            <xsl:text>)</xsl:text>
+          </xsl:when>
+          <xsl:when test="function-available('cvsf:localTime')">
+            <xsl:variable name="timeString" select="cvsf:localTime(../cvs:date[1])"/>
+            <xsl:text> (</xsl:text>
+            <xsl:value-of select="substring($timeString, 1, 3)"/>
+            <xsl:text>, </xsl:text>
+            <xsl:value-of select="substring($timeString, 9, 2)"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="substring($timeString, 5, 3)"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="substring($timeString, 25, 4)"/>
+            <xsl:text>)</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="../cvs:date[1]"/>
+          </xsl:otherwise>
+	</xsl:choose>
+      </span>
+    </xsl:if>
     <xsl:apply-templates/>
   </p>
 </xsl:template>
 
 <xsl:template match="rss:items">
-  <dl>
-    <xsl:for-each select="rdf:Seq/rdf:li[@resource and @resource != '']">
-      <xsl:variable name="resource" select="@resource"/>
-      <xsl:variable name="item" select="//rss:item[@rdf:about = $resource]"/>
-      <xsl:if test="not($item)">
-        <xsl:message>
-          <xsl:text>RSS Warning: there is no item labelled: </xsl:text>
-          <xsl:value-of select="$resource"/>
-        </xsl:message>
-      </xsl:if>
-      <xsl:if test="count($item) &gt; 1">
-        <xsl:message>
-          <xsl:text>RSS Warning: there is more than one item labelled: </xsl:text>
-          <xsl:value-of select="$resource"/>
-        </xsl:message>
-      </xsl:if>
-      <xsl:apply-templates select="$item"/>
-    </xsl:for-each>
-  </dl>
+  <xsl:for-each select="rdf:Seq/rdf:li[@resource and @resource != '']">
+    <xsl:variable name="resource" select="@resource"/>
+    <xsl:variable name="item" select="//rss:item[@rdf:about = $resource]"/>
+    <xsl:if test="not($item)">
+      <xsl:message>
+        <xsl:text>RSS Warning: there is no item labelled: </xsl:text>
+        <xsl:value-of select="$resource"/>
+      </xsl:message>
+    </xsl:if>
+    <xsl:if test="count($item) &gt; 1">
+      <xsl:message>
+        <xsl:text>RSS Warning: there is more than one item labelled: </xsl:text>
+        <xsl:value-of select="$resource"/>
+      </xsl:message>
+    </xsl:if>
+    <xsl:apply-templates select="$item"/>
+  </xsl:for-each>
 </xsl:template>
 
 <xsl:template match="rss:item">
