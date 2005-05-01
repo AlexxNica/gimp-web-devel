@@ -1,5 +1,7 @@
 2005-05-01  Sven Neumann  <sven@gimp.org>
 
+	* install.sh: touch changelog.xml to force an update of this page.
+
 	* style/default.css
 	* xsl/rss.xsl: show the date of the CVS commit.
 
