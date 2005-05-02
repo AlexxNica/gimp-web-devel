@@ -1,3 +1,7 @@
+2005-05-02  Sven Neumann  <sven@gimp.org>
+
+	* index.xml: removed outdated reference to gimpcon.
+
 2005-05-01  Sven Neumann  <sven@gimp.org>
 
 	* install.sh: touch changelog.xml to force an update of this page.
