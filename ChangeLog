@@ -1,5 +1,10 @@
 2005-05-02  Sven Neumann  <sven@gimp.org>
 
+	* xsl/rss.xsl: slightly better error message in case the RSS feed
+	fails to download.
+
+2005-05-02  Sven Neumann  <sven@gimp.org>
+
 	* index.xml: removed outdated reference to gimpcon.
 
 2005-05-01  Sven Neumann  <sven@gimp.org>

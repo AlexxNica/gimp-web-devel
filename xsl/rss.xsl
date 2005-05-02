@@ -18,8 +18,9 @@
     <xsl:choose>
       <xsl:when test="not($rss)">
         <xsl:message>RSS Failed: <xsl:value-of select="@feed"/></xsl:message>
-        <xsl:text>[RSS Failed: </xsl:text>
+        <xsl:text>[ RSS Failed: </xsl:text>
         <xsl:value-of select="@feed"/>
+	<xsl:text> ]</xsl:text>
       </xsl:when>
       <xsl:when test="$rss/rdf:RDF">
         <xsl:apply-templates select="$rss/*/rss:channel"/>
