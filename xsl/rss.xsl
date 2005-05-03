@@ -80,9 +80,12 @@
       <span class="date">
 	<xsl:choose>
           <xsl:when test="../dc:date">
-            <xsl:text> (</xsl:text>
-            <xsl:value-of select="../dc:date[1]"/>
-            <xsl:text>)</xsl:text>
+            <xsl:variable name="timeString" select="../dc:date[1]"/>
+            <xsl:text>(</xsl:text>
+            <xsl:value-of select="substring($timeString, 1, 10)"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="substring($timeString, 12, 5)"/>
+            <xsl:text> UTC)</xsl:text>
           </xsl:when>
           <xsl:when test="function-available('cvsf:localTime')">
             <xsl:variable name="timeString" select="cvsf:localTime(../cvs:date[1])"/>
