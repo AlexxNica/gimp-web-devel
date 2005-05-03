@@ -8,7 +8,7 @@
     <headlink rel="alternate"
               type="application/rss+xml"
               title="RSS"
-              href="gimp-cvs.rdf" />
+              href="http://cia.navi.cx/stats/project/gnome/gimp/.rss" />
 
     <title>GIMP ChangeLog</title>
     <titleabbrev>ChangeLog</titleabbrev>

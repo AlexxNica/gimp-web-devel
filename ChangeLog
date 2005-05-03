@@ -1,3 +1,7 @@
+2005-05-04  Sven Neumann  <sven@gimp.org>
+
+	* changelog.xml: link to the CIA feed as alternate source.
+
 2005-05-03  Øyvind Kolås  <pippin@gimp.org>
 
 	* style/default.css: dress up CIA RSS feed.
