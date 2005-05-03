@@ -7,7 +7,7 @@
   <head>
     <headlink rel="alternate"
               type="application/rss+xml"
-              title="GIMP CVS commits"
+              title="GIMP CVS commits (cia.navi.cx)"
               href="http://cia.navi.cx/stats/project/gnome/gimp/.rss" />
 
     <title>GIMP ChangeLog</title>
@@ -21,7 +21,7 @@
       GIMP ChangeLog
     </ulink>
     
-    lists all changes in all details. The list below shows the latest
+    lists all changes in detail. The list below shows the latest
     commits to the gimp CVS module.  It is generated from the RSS feed
     delivered by the <ulink url="http://cia.navi.cx/">CIA</ulink>.
   </para>
