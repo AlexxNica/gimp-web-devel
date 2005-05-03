@@ -1,6 +1,7 @@
 2005-05-03  Sven Neumann  <sven@gimp.org>
 
-	* xsl/rss.xsl: nicer formatting of the date string.
+	* xsl/rss.xsl: nicer formatting of the date string. Removed useless
+	identity transform that used to break the HTML we create.
 
 2005-05-02  Sven Neumann  <sven@gimp.org>
 

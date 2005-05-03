@@ -139,13 +139,4 @@
   <xsl:value-of disable-output-escaping="yes" select="."/>
 </xsl:template>
 
-<xsl:template priority="-1"
-              match="@* | * | text() | processing-instruction() | comment()">
-  <!-- Identity transformation. -->
-  <xsl:copy>
-    <xsl:apply-templates
-       select="@* | * | text() | processing-instruction() | comment()"/>
-  </xsl:copy>
-  </xsl:template>
-
 </xsl:stylesheet>
