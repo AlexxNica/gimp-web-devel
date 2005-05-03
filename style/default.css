@@ -181,21 +181,68 @@ span.shrink3 {
   font-size: 85%;
 }
 
+div.rss {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
 div.rss dd p {
   white-space: pre;
   border-width: 0px;
   padding: 0px;
+  border: 2px solid red;
 }
 
 div.rss img {
   border: none;
   float: right;
+  border: 2px solid red;
+}
+
+div.rss p {
+  background-color: green;
+  display: inline;
 }
 
 span.date {
+  display: block;
   font-size: 75%;
-  float: right;
-  clear: both;
+  padding-right: 1em;
+  font-style: italic;
+  background-color: #ddd;
+  text-align: right;
+  border-left: 1px solid #888;
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+}
+
+div.rss ul {
+  padding-right: 1em;
+  margin-top: -0.1em;
+  padding-left: 2.0em;
+}
+
+div.rss strong {
+  font-weight: bold;
+  font-style: italic;
+  color: #566e41;
+}
+div.rss b {
+  font-weight : normal;
+  color: #000:
+}
+
+
+div.rss b {
+  font-weight: normal;
+}
+
+div.rss ul li {
+  text-align: left;
+}
+
+div.rss_entry {
+  margin-bottom: 1em;
 }
 
 div.qandaset tr.question td {

@@ -1,5 +1,9 @@
 2005-05-03  Øyvind Kolås  <pippin@gimp.org>
 
+	* style/default.css: dress up CIA RSS feed.
+
+2005-05-03  Øyvind Kolås  <pippin@gimp.org>
+
 	* xsl/rss.xsl: wrap items in named classes.
 
 2005-05-03  Sven Neumann  <sven@gimp.org>
