@@ -7,7 +7,7 @@
   <head>
     <headlink rel="alternate"
               type="application/rss+xml"
-              title="RSS"
+              title="GIMP CVS commits"
               href="http://cia.navi.cx/stats/project/gnome/gimp/.rss" />
 
     <title>GIMP ChangeLog</title>
