@@ -75,21 +75,20 @@
 </xsl:template>
 
 <xsl:template match="rss:description">
-  <p>
+    <div class='rss_entry'>
     <xsl:if test="../dc:date|../cvs:date">
       <span class="date">
-	<xsl:choose>
+        <xsl:choose>
           <xsl:when test="../dc:date">
             <xsl:variable name="timeString" select="../dc:date[1]"/>
-            <xsl:text>(</xsl:text>
             <xsl:value-of select="substring($timeString, 1, 10)"/>
             <xsl:text> </xsl:text>
             <xsl:value-of select="substring($timeString, 12, 5)"/>
-            <xsl:text> UTC)</xsl:text>
+            <xsl:text> UTC</xsl:text>
           </xsl:when>
           <xsl:when test="function-available('cvsf:localTime')">
             <xsl:variable name="timeString" select="cvsf:localTime(../cvs:date[1])"/>
-            <xsl:text> (</xsl:text>
+            <xsl:text> </xsl:text>
             <xsl:value-of select="substring($timeString, 1, 3)"/>
             <xsl:text>, </xsl:text>
             <xsl:value-of select="substring($timeString, 9, 2)"/>
@@ -97,7 +96,6 @@
             <xsl:value-of select="substring($timeString, 5, 3)"/>
             <xsl:text> </xsl:text>
             <xsl:value-of select="substring($timeString, 25, 4)"/>
-            <xsl:text>)</xsl:text>
           </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="../cvs:date[1]"/>
@@ -106,7 +104,7 @@
       </span>
     </xsl:if>
     <xsl:apply-templates/>
-  </p>
+  </div>
 </xsl:template>
 
 <xsl:template match="rss:items">

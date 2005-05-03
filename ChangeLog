@@ -1,3 +1,7 @@
+2005-05-03  Øyvind Kolås  <pippin@gimp.org>
+
+	* xsl/rss.xsl: wrap items in named classes.
+
 2005-05-03  Sven Neumann  <sven@gimp.org>
 
 	* xsl/rss.xsl: nicer formatting of the date string. Removed useless
