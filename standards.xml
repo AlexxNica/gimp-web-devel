@@ -109,11 +109,13 @@
     
     <varlistentry>
       <term>
-	<ulink url="http://partners.adobe.com/asn/developer/PDFS/TN/TIFF6.pdf">TIFF 6.0</ulink>
+	<ulink url="http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf">TIFF 6.0</ulink>
       </term>
       <listitem>
 	<para>
-	  Describes the TIFF file format, used in the TIFF plug-in.
+	  Describes the TIFF file format, used in the TIFF plug-in. See also
+	  the 
+	  <ulink url="http://home.earthlink.net/~ritter/tiff/">Unofficial TIFF Home Page</ulink>.
 	</para>
       </listitem>
     </varlistentry>
