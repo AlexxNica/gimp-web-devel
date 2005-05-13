@@ -1,3 +1,10 @@
+2005-05-14  Sven Neumann  <sven@gimp.org>
+
+	* screenshots.xml: 
+	* screenshots/gimp-misc.png
+	* screenshots/gimp-prefs-color-management.png: started from
+	scratch with screenshots for the development version.
+
 2005-05-09  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: updated link to the TIFF spec and added a link to

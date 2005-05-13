@@ -1,10 +1,6 @@
 THUMBS = \
-	gimp-open-dialog-thumb.png	\
-	gimp-preview-cartoon-thumb.png	\
-	gimp-preview-neon-thumb.png	\
-	gimp-preview-rotate-thumb.png	\
-	gimp-various-thumb.png		\
-	gimp-winxp-thumb.png
+	gimp-misc-thumb.png			\
+	gimp-prefs-color-management-thumb.png
 
 all: thumbs
 

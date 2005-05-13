@@ -10,21 +10,20 @@
   </head>
 
   <para>
-    Here are some screenshots of the development version for your
-    viewing pleasure.
+    Here are a few screenshots of the development version. More should
+    be added...
   </para>
 
   <section>
-    <title>There's lots of new stuff to discover in GIMP 2.1 / GIMP 2.2.</title>
-
+ 
     <para>
-      How many changes can you find in this screenshot?
+      This screenshot shows off some of the changes in GIMP 2.3:
     </para>
     <para role="images">
-      <ulink url="screenshots/gimp-various.png">
+      <ulink url="screenshots/gimp-misc.png">
 	<mediaobject>
           <imageobject>
-            <imagedata fileref="screenshots/gimp-various-thumb.png"/>
+            <imagedata fileref="screenshots/gimp-misc-thumb.png"/>
           </imageobject>
           <textobject>
             <phrase>Showing off some new stuff.</phrase>
@@ -34,104 +33,18 @@
     </para>
 
     <para>
-      Create a new image using a template:
+      The new Color Management section in the preferences. The image
+      display does already respect these settings but there's still a
+      lot to do to integate color management into GIMP.
     </para>
     <para role="images">
-      <ulink url="screenshots/gimp-new-image-dialog-expanded.png">
+      <ulink url="screenshots/gimp-prefs-color-management.png">
 	<mediaobject>
           <imageobject>
-            <imagedata fileref="screenshots/gimp-new-image-dialog.png"/>
+            <imagedata fileref="screenshots/gimp-prefs-color-management-thumb.png"/>
           </imageobject>
           <textobject>
-            <phrase>Creating a new image.</phrase>
-          </textobject>
-	</mediaobject>
-      </ulink>
-    </para>
-
-    <para>
-      Saving has never been easier:
-    </para>
-    <para role="images">
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="screenshots/gimp-save-as-jpeg.png"/>
-        </imageobject>
-        <textobject>
-          <phrase>Saving a JPEG image.</phrase>
-        </textobject>
-      </mediaobject>
-    </para>
-
-    <para>
-      GIMP 2.1 uses the new GtkFileChooser dialog:
-    </para>
-    <para role="images">
-      <ulink url="screenshots/gimp-open-dialog.png">
-	<mediaobject>
-          <imageobject>
-            <imagedata fileref="screenshots/gimp-open-dialog-thumb.png"/>
-          </imageobject>
-          <textobject>
-            <phrase>Opening a file with GIMP 2.1.</phrase>
-          </textobject>
-	</mediaobject>
-      </ulink>
-    </para>
-
-    <para>
-      Previews have been added to lots of plug-ins:
-    </para>
-    <para role="images">
-      <ulink url="screenshots/gimp-preview-cartoon.png">
-	<mediaobject>
-          <imageobject>
-            <imagedata fileref="screenshots/gimp-preview-cartoon-thumb.png"/>
-          </imageobject>
-          <textobject>
-            <phrase>Cartoon filter</phrase>
-          </textobject>
-	</mediaobject>
-      </ulink>
-      <ulink url="screenshots/gimp-preview-neon.png">
-	<mediaobject>
-          <imageobject>
-            <imagedata fileref="screenshots/gimp-preview-neon-thumb.png"/>
-          </imageobject>
-          <textobject>
-            <phrase>Neon filter</phrase>
-          </textobject>
-	</mediaobject>
-      </ulink>
-    </para>
-
-    <para>
-        The transform tools have attained interactive previews.
-    </para>
-    <para role="images">
-      <ulink url="screenshots/gimp-preview-rotate.png">
-	<mediaobject>
-          <imageobject>
-            <imagedata fileref="screenshots/gimp-preview-rotate-thumb.png"/>
-          </imageobject>
-          <textobject>
-            <phrase>Rotate tool</phrase>
-          </textobject>
-	</mediaobject>
-      </ulink>
-    </para>
-
-    <para>
-      GIMP 2.2-pre1 running on Win XP:
-    </para>
-    <para role="images">
-      <ulink url="screenshots/gimp-winxp.png">
-	<mediaobject>
-          <imageobject>
-            <imagedata fileref="screenshots/gimp-winxp-thumb.png"/>
-          </imageobject>
-          <textobject>
-            <phrase>GIMP XP</phrase>
+            <phrase>Configuration of color management.</phrase>
           </textobject>
 	</mediaobject>
       </ulink>
