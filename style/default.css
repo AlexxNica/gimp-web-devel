@@ -53,6 +53,24 @@ p.images {
   text-align: center;
 }
 
+p.screenshot {
+  clear:both;
+  padding: 1em;
+}
+
+p.screenshot .mediaobject {
+  float: left;
+  background: url(/images/shadow.png) no-repeat bottom right !important;
+  background: url(/images/shadow.gif) no-repeat bottom right;
+  margin: 0 0 6px 6px;
+  padding: 4px;
+}
+
+p.screenshot .mediaobject img {
+  border: none;
+  margin: -6px 2px -2px -6px;
+}
+
 li {
   text-align: justify;
 }

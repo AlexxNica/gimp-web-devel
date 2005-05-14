@@ -1,5 +1,13 @@
 2005-05-14  Sven Neumann  <sven@gimp.org>
 
+	* screenshots.xml
+	* style/default.css
+	* images/shadow.gif
+	* images/shadow.png: changed the layout of the screenshot page,
+	added drop-shadows to the thumbnails.
+
+2005-05-14  Sven Neumann  <sven@gimp.org>
+
 	* screenshots.xml: 
 	* screenshots/gimp-help-browser.png: added another screenshot.
 
