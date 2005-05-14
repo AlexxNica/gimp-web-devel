@@ -1,4 +1,5 @@
 THUMBS = \
+	gimp-help-browser-thumb.png		\
 	gimp-misc-thumb.png			\
 	gimp-prefs-color-management-thumb.png
 

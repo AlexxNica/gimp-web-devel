@@ -1,6 +1,11 @@
 2005-05-14  Sven Neumann  <sven@gimp.org>
 
 	* screenshots.xml: 
+	* screenshots/gimp-help-browser.png: added another screenshot.
+
+2005-05-14  Sven Neumann  <sven@gimp.org>
+
+	* screenshots.xml: 
 	* screenshots/gimp-misc.png
 	* screenshots/gimp-prefs-color-management.png: started from
 	scratch with screenshots for the development version.

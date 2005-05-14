@@ -17,7 +17,7 @@
   <section>
  
     <para>
-      This screenshot shows off some of the changes in GIMP 2.3:
+      This desktop shows off some of the changes in GIMP 2.3:
     </para>
     <para role="images">
       <ulink url="screenshots/gimp-misc.png">
@@ -26,7 +26,7 @@
             <imagedata fileref="screenshots/gimp-misc-thumb.png"/>
           </imageobject>
           <textobject>
-            <phrase>Showing off some new stuff.</phrase>
+            <phrase>Showing off some new stuff</phrase>
           </textobject>
 	</mediaobject>
       </ulink>
@@ -35,7 +35,7 @@
     <para>
       The new Color Management section in the preferences. The image
       display does already respect these settings but there's still a
-      lot to do to integate color management into GIMP.
+      lot to do to fully integate color management into GIMP.
     </para>
     <para role="images">
       <ulink url="screenshots/gimp-prefs-color-management.png">
@@ -44,7 +44,23 @@
             <imagedata fileref="screenshots/gimp-prefs-color-management-thumb.png"/>
           </imageobject>
           <textobject>
-            <phrase>Configuration of color management.</phrase>
+            <phrase>Configuration of color management</phrase>
+          </textobject>
+	</mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+      The Help Browser plug-in has undergone some usability improvements:
+    </para>
+    <para role="images">
+      <ulink url="screenshots/gimp-help-browser.png">
+	<mediaobject>
+          <imageobject>
+            <imagedata fileref="screenshots/gimp-help-browser-thumb.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>GIMP Help Browser</phrase>
           </textobject>
 	</mediaobject>
       </ulink>
