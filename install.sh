@@ -7,4 +7,7 @@ export PATH=/home/neo/bin:$PATH
 touch changelog.xml
 make
 
+# seems to fix a bug somewhere else
+chmod 644 changelog.html
+
 rsync -rlt --delete --exclude-from=install.exclude ./ $1

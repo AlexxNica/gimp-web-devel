@@ -1,3 +1,8 @@
+2005-06-15  Sven Neumann  <sven@gimp.org>
+
+	* install.sh: fiddle with the permissions of changelog.html to
+	work around a bug elsewhere.
+
 2005-05-26  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: changed XDS link to point to the page on
