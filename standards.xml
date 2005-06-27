@@ -176,8 +176,19 @@
       </listitem>
     </varlistentry>
 
-  </variablelist>
+   <varlistentry>
+      <term>
+	<ulink url="http://www.burtonini.com/computing/x-icc-profiles-spec-latest.html">ICC Profiles In X Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  This is a specification for associating ICC colour profiles
+	  with X screens. GIMP 2.4 will support this proposed standard. 
+	</para>
+      </listitem>
+    </varlistentry>
 
+  </variablelist>
 
   <variablelist>
     <title>Desktop Standards</title>

@@ -1,3 +1,7 @@
+2005-06-28  Sven Neumann  <sven@gimp.org>
+
+	* standards.xml: added the ICC Profiles In X Specification.
+
 2005-06-15  Sven Neumann  <sven@gimp.org>
 
 	* install.sh: fiddle with the permissions of changelog.html to
