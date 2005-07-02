@@ -182,7 +182,7 @@
       </term>
       <listitem>
 	<para>
-	  This is a specification for associating ICC colour profiles
+	  This is a specification for associating ICC color profiles
 	  with X screens. GIMP 2.4 will support this proposed standard. 
 	</para>
       </listitem>
