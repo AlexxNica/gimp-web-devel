@@ -4,7 +4,7 @@
 export PATH=/home/neo/bin:$PATH
 
 # force rebuild of changelog.html to update RSS feed
-rm changelog.xml
+rm changelog.html
 make
 
 # seems to fix a bug somewhere else
