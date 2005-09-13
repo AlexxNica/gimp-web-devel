@@ -1,3 +1,17 @@
+2005-09-13  Sven Neumann  <sven@gimp.org>
+
+	* writing-a-plug-in/1/architecture-small.png
+	* writing-a-plug-in/1/architecture.png
+	* writing-a-plug-in/1/hello.png
+	* writing-a-plug-in/1/plug-in-details-small.png
+	* writing-a-plug-in/1/plug-in-details.png
+	* writing-a-plug-in/1/plug-in-menu-small.png
+	* writing-a-plug-in/1/plug-in-menu.png
+	* writing-a-plug-in-1.xml
+	* layout.xml
+	* plug-ins.xml: added first part of a tutorial on how to write a
+	GIMP plug-in, written by Dave Neary, translated by Karine Delvare.
+
 2005-07-01  Sven Neumann  <sven@gimp.org>
 
 	* install.sh: try a different fix for the changelog.html problem.

@@ -1,6 +1,8 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
-                         "dtd/website.dtd">
+                         "dtd/website.dtd" [
+<!ENTITY writing-a-plug-in-1 SYSTEM "writing-a-plug-in-1.xml" NDATA XML>
+]>
 
 <webpage id="plug-ins" lang="en">
 
@@ -8,6 +10,14 @@
     <title>Plug-In Development</title>
     <summary>Writing GIMP plug-ins</summary>
   </head>
+
+  <para>
+    <itemizedlist>
+      <listitem>
+        <olink targetdocent="writing-a-plug-in-1">Writing a GIMP Plug-In Part I</olink>
+      </listitem>
+    </itemizedlist>
+  </para>
 
   <para>
     Here should be more info soon, but for now we refer you to the
