@@ -60,13 +60,13 @@
 
     <tocentry page="plug-ins.xml" filename="plug-ins.html">
 
-      <tocentry page="writing-a-plug-in-1.xml"
-	        filename="writing-a-plug-in/1/index.html" />
-
       <tocentry id="api" href="/api/2.0/index.html">
 	<title>API Reference</title>
 	<summary>GIMP Reference Manuals</summary>
       </tocentry>
+
+      <tocentry page="writing-a-plug-in-1.xml"
+	        filename="writing-a-plug-in/1/index.html" />
 
       <tocentry page="plug-in-template.xml" filename="plug-in-template.html" />
 

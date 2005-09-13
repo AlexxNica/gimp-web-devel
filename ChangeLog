@@ -1,5 +1,11 @@
 2005-09-13  Sven Neumann  <sven@gimp.org>
 
+	* layout.xml: resorted.
+
+	* writing-a-plug-in-1.xml: minor changes, rewrapped lines.
+
+2005-09-13  Sven Neumann  <sven@gimp.org>
+
 	* writing-a-plug-in/1/architecture-small.png
 	* writing-a-plug-in/1/architecture.png
 	* writing-a-plug-in/1/hello.png

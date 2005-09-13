@@ -15,25 +15,25 @@
   </para>
 
   <para>
-    In this article, I present GIMP plug-ins basis and introduce the libgimp
-    API.  I will also show how to use the PDB to make our plug-in available to
-    other script authors.
+    In this article, I present GIMP plug-ins basis and introduce the
+    libgimp API.  I will also show how to use the PDB to make our
+    plug-in available to other script authors.
   </para>
 
   <section>
     <title>Introduction</title>
 
     <para>
-      New developpers are often intimidated by The GIMP size and its reputation.
-      They think that writing a plug-in would be a difficult task. The goal of
-      these articles is to dumb this feeling down, by showing how easily one can
-      make a C plug-in.
+      New developpers are often intimidated by The GIMP size and its
+      reputation.  They think that writing a plug-in would be a
+      difficult task. The goal of these articles is to dumb this
+      feeling down, by showing how easily one can make a C plug-in.
     </para>
 
     <para>
-      In this part, I present a plug-in's basic elements. We will see how to
-      install a plug-in and how to get data from an image and directly
-      manipulate it.
+      In this part, I present a plug-in's basic elements. We will see
+      how to install a plug-in and how to get data from an image and
+      directly manipulate it.
     </para>
   </section>
 
@@ -55,33 +55,34 @@
     </para>
 
     <para>
-      The GIMP script interface is centered on the Procedural database (PDB). At
-      startup, The GIMP looks into a predefinite set of places for scripts and
-      plug-ins, and asks each new script to identify itself.
+      The GIMP script interface is centered on the Procedural database
+      (PDB). At startup, The GIMP looks into a predefinite set of
+      places for scripts and plug-ins, and asks each new script to
+      identify itself.
     </para>
 
     <para>
       The plug-in declares itself to the PDB at that time, and passes
-      informations like the position it wishes to get in the menu hierarchy,
-      input parameters, and output parameters.
+      informations like the position it wishes to get in the menu
+      hierarchy, input parameters, and output parameters.
     </para>
 
     <para>
-      When a script or a plug-in wants to use our plug-in, it gets through the
-      PDB, which manages communicating parameters in one direction and the other
-      in a transparent way.
+      When a script or a plug-in wants to use our plug-in, it gets
+      through the PDB, which manages communicating parameters in one
+      direction and the other in a transparent way.
     </para>
 
     <para>
-      Internal functions that wish to get exposed to plug-ins have to be
-      packaged first in the core, that will register them in the PDB, and
-      secondly in the libgimp that will allow the function to be called as a
-      normal one.
+      Internal functions that wish to get exposed to plug-ins have to
+      be packaged first in the core, that will register them in the
+      PDB, and secondly in the libgimp that will allow the function to
+      be called as a normal one.
     </para>
 
     <para>
-      This was the introduction - now, we will look closer at our first plug-in,
-      a "Hello, world!".
+      This was the introduction - now, we will look closer at our
+      first plug-in, a "Hello, world!".
     </para>
   </section>
 
@@ -89,13 +90,15 @@
     <title>Compiling the plug-in</title>
 
     <para>
-      To be able to compile simple plug-ins for The GIMP, one needs libgimp
-      headers, as well as an associated utility named gimptool.
+      To be able to compile simple plug-ins for The GIMP, one needs
+      libgimp headers, as well as an associated utility named
+      gimptool.
     </para>
 
     <para>
-      With that utility, one can install a plug-in either in a private directory
-      (~/.gimp-2.0/plug-ins), or in the global plug-in directory.
+      With that utility, one can install a plug-in either in a private
+      directory (~/.gimp-2.0/plug-ins), or in the global plug-in
+      directory.
     </para>
 
     <para>
@@ -109,8 +112,8 @@
     </programlisting>
 
     <para>
-      This utility, with other options, can also be used to install scripts, or
-      uninstall plug-ins.
+      This utility, with other options, can also be used to install
+      scripts, or uninstall plug-ins.
     </para>
   </section>
 
@@ -118,11 +121,12 @@
     <title>Behavior</title>
 
     <para>
-      A GIMP plug-in can typically behave three different ways. It can take
-      image data, modify it, and send back the modified image, like edge
-      detection. It can generate an image and send it back, like some
-      script-fus, or file reading plug-ins like jpeg. Or it can get an image,
-      and process it without modifying its data, like a file saver plug-in.
+      A GIMP plug-in can typically behave three different ways. It can
+      take image data, modify it, and send back the modified image,
+      like edge detection. It can generate an image and send it back,
+      like some script-fus, or file reading plug-ins like jpeg. Or it
+      can get an image, and process it without modifying its data,
+      like a file saver plug-in.
     </para>
   </section>
 
@@ -151,37 +155,39 @@
     </programlisting>
 
     <para>
-      This structure has to have that name. It contains four pointers to
-      functions, which will be called at set times of the plug-in life. init and
-      quit are optional, and thus can hold NULL values, but the last two
-      functions, query and run, are mandatory.
+      This structure has to have that name. It contains four pointers
+      to functions, which will be called at set times of the plug-in
+      life. init and quit are optional, and thus can hold NULL values,
+      but the last two functions, query and run, are mandatory.
     </para>
 
     <para>
-      The init() function is called each time The GIMP starts up. This function
-      is not typically used. Some plug-ins use it to make a secondary search
-      that is not done by the core. This function is not used by any standard
-      GIMP plug-in, but could be useful for example for a plug-in that would
-      like to register some procedure conditionally on some files presence.
+      The init() function is called each time The GIMP starts up. This
+      function is not typically used. Some plug-ins use it to make a
+      secondary search that is not done by the core. This function is
+      not used by any standard GIMP plug-in, but could be useful for
+      example for a plug-in that would like to register some procedure
+      conditionally on some files presence.
     </para>
 
     <para>
-      The quit() function is not used much either. It is called when The GIMP is
-      about to be closed, to allow it to free some ressources. It is used in the
-      script-fu plug-in.
+      The quit() function is not used much either. It is called when
+      The GIMP is about to be closed, to allow it to free some
+      ressources. It is used in the script-fu plug-in.
     </para>
 
     <para>
-      The query() function is called the first time the plug-in is present, and
-      then each time the plug-in changes. Its prototype is void query(void);
+      The query() function is called the first time the plug-in is
+      present, and then each time the plug-in changes.
     </para>
 
     <para>
-      The run() function is the plug-in's centerpiece. It is called when the
-      plug-in is asked to run. It gets the plug-in name (as a plug-in can
-      register several procedures), input parameters, and a pointer to output
-      parameters, then determines if it is launched in a interactive way or by a
-      script, and does all the plug-in processing. Its prototype is
+      The run() function is the plug-in's centerpiece. It is called
+      when the plug-in is asked to run. It gets the plug-in name (as a
+      plug-in can register several procedures), input parameters, and
+      a pointer to output parameters, then determines if it is
+      launched in a interactive way or by a script, and does all the
+      plug-in processing. Its prototype is
     </para>
 
     <programlisting>
@@ -200,9 +206,9 @@
     <title>MAIN ()</title>
 
     <para>
-      MAIN is a C macro that holds a bit of dark magic to initialize arguments.
-      It also calls the appropriate PLUG_IN_INFO function depending on the
-      timing. Your plug-in needs it.
+      MAIN is a C macro that holds a bit of dark magic to initialize
+      arguments.  It also calls the appropriate PLUG_IN_INFO function
+      depending on the timing. Your plug-in needs it.
     </para>
   </section>
 
@@ -210,13 +216,14 @@
     <title>The query() function</title>
 
     <para>
-      query() deals with the procedure registration and input arguments
-      definition.  These informations are saved to speed up startup time, and
-      refreshed only when the plug-in is modified.
+      query() deals with the procedure registration and input
+      arguments definition.  These informations are saved to speed up
+      startup time, and refreshed only when the plug-in is modified.
     </para>
 
     <para>
-      For our "Hello, world!" plug-in, the query function will look like this:
+      For our "Hello, world!" plug-in, the query function will look
+      like this:
     </para>
 
     <programlisting>
@@ -258,32 +265,33 @@
     </programlisting>
 
     <para>
-      GimpParamDef contains three things - the parameter type, its name, and a
-      string describing the parameter.
+      GimpParamDef contains three things - the parameter type, its
+      name, and a string describing the parameter.
     </para>
 
     <para>
-      gimp_install_procedure declares the procedure name, some description and
-      help strings, menu path where the plug-in should sit, image types handled
-      by the plug-in, and at the end, input and output parameters number, as
-      well as the parameters descriptors.
+      gimp_install_procedure declares the procedure name, some
+      description and help strings, menu path where the plug-in should
+      sit, image types handled by the plug-in, and at the end, input
+      and output parameters number, as well as the parameters
+      descriptors.
     </para>
 
     <para>
-      "RGB*, GRAY*" declares the image types handled. It can be RGB, INDEXED or
-      GRAY, with or without Alpha. So "RGB*, GRAY*" describes RGB, RGBA, GRAY or
-      GRAY image type.
+      "RGB*, GRAY*" declares the image types handled. It can be RGB,
+      INDEXED or GRAY, with or without Alpha. So "RGB*, GRAY*"
+      describes RGB, RGBA, GRAY or GRAY image type.
     </para>
 
     <para>
-      GIMP_PLUGIN declares this procedure to be external, and not to be executed
-      in The GIMP core.
+      GIMP_PLUGIN declares this procedure to be external, and not to
+      be executed in The GIMP core.
     </para>
 
     <para>
-      By adding a stub run function now, we can check that our plug-in has all
-      the essential elements, and test that it registers itself in the PDB with
-      the "Xtns->Plug-in Details" plug-in.
+      By adding a stub run function now, we can check that our plug-in
+      has all the essential elements, and test that it registers
+      itself in the PDB with the "Xtns->Plug-in Details" plug-in.
     </para>
 
     <para role="images">
@@ -319,14 +327,14 @@
     <title>The run() function</title>
 
     <para>
-      The other required function for PLUG_IN_INFO is run. The core of the
-      plug-in stands there.
+      The other required function for PLUG_IN_INFO is run. The core of
+      the plug-in stands there.
     </para>
 
     <para>
-      Output values (return_vals in the prototype) must have at least one value
-      associated - the plug-in status. Typically, this parameter will hold
-      "GIMP_PDB_SUCCESS".
+      Output values (return_vals in the prototype) must have at least
+      one value associated - the plug-in status. Typically, this
+      parameter will hold "GIMP_PDB_SUCCESS".
     </para>
   </section>
 
@@ -334,9 +342,9 @@
     <title>Run-modes</title>
 
     <para>
-      One can run a plug-in in several different ways, it can be run from a GIMP
-      menu if The GIMP is run interactively, or from a script or a batch, or
-      from the "Filters->Repeat Last" shortcut.
+      One can run a plug-in in several different ways, it can be run
+      from a GIMP menu if The GIMP is run interactively, or from a
+      script or a batch, or from the "Filters->Repeat Last" shortcut.
     </para>
 
     <para>
@@ -346,15 +354,15 @@
     </para>
 
     <para>
-      "GIMP_RUN_INTERACTIVE" is typically the only case where one creates an
-      options dialog. Otherwise, one directly calls the processing with values
-      from input parameters or from memory.
+      "GIMP_RUN_INTERACTIVE" is typically the only case where one
+      creates an options dialog. Otherwise, one directly calls the
+      processing with values from input parameters or from memory.
     </para>
 
     <para>
-      For our test plug-in, we will simply display a dialog containing a "Hello,
-      world!" message. Thankfully, this is really easy with GTK+. Our run
-      function could be:
+      For our test plug-in, we will simply display a dialog containing
+      a "Hello, world!" message. Thankfully, this is really easy with
+      GTK+. Our run function could be:
     </para>
 
     <programlisting>
@@ -387,8 +395,7 @@
     </programlisting>
 
     <para>
-      Now, when we run our plug-in, there is action.  [screenshot: Bonjour,
-      monde!: bonjour.png]
+      Now, when we run our plug-in, there is action:
     </para>
     
     <para role="images">
@@ -407,9 +414,10 @@
     <title>Next part</title>
 
     <para>
-      In next part we will go on, making a more useful plug-in that will get its
-      hands on image data. We will see how to use The GIMP image architecture to
-      make the plug-in perform better, processing the image tile by tile.
+      In next part we will go on, making a more useful plug-in that
+      will get its hands on image data. We will see how to use The
+      GIMP image architecture to make the plug-in perform better,
+      processing the image tile by tile.
     </para>
   </section>
 
@@ -428,8 +436,12 @@
     </para>
 
     <para>
-This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License</ulink>.
+      This work is licensed under a <ulink
+      url="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative
+      Commons Attribution-NonCommercial-ShareAlike 2.5
+      License</ulink>.
     </para>
   </section>
+
 </webpage>
 
