@@ -1,3 +1,7 @@
+2005-09-16  Alex Duggan  <aldug@astrolinux.com>
+
+	* faq.xml: update capturing stack traces url
+
 2005-09-13  Sven Neumann  <sven@gimp.org>
 
 	* layout.xml: resorted.
