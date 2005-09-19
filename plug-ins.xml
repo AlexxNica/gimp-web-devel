@@ -16,12 +16,18 @@
       <listitem>
         <olink targetdocent="writing-a-plug-in-1">Writing a GIMP Plug-In Part I</olink>
       </listitem>
+      <listitem>
+        Writing a GIMP Plug-In Part II (coming soon)
+      </listitem>
+      <listitem>
+        Writing a GIMP Plug-In Part III (coming soon)
+      </listitem>
     </itemizedlist>
   </para>
 
   <para>
-    Here should be more info soon, but for now we refer you to the
-    <ulink url="api/2.0">GIMP 2.0 API reference</ulink> and to a talk about
+    Make good use of the <ulink url="api/2.0">GIMP 2.0 API reference</ulink>,
+    and you can also have a look at a talk about
     <ulink url="http://www.home.unix-ag.org/simon/gimp/guadec2002/gimp-plugin/html/">GIMP plug-in programming</ulink> that Simon gave at GUADEC in Sevilla.
   </para>
 
