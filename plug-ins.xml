@@ -2,6 +2,7 @@
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd" [
 <!ENTITY writing-a-plug-in-1 SYSTEM "writing-a-plug-in-1.xml" NDATA XML>
+<!ENTITY writing-a-plug-in-2 SYSTEM "writing-a-plug-in-2.xml" NDATA XML>
 ]>
 
 <webpage id="plug-ins" lang="en">
@@ -17,7 +18,7 @@
         <olink targetdocent="writing-a-plug-in-1">Writing a GIMP Plug-In Part I</olink>
       </listitem>
       <listitem>
-        Writing a GIMP Plug-In Part II (coming soon)
+        <olink targetdocent="writing-a-plug-in-2">Writing a GIMP Plug-In Part II</olink>
       </listitem>
       <listitem>
         Writing a GIMP Plug-In Part III (coming soon)

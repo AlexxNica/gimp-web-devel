@@ -1,0 +1,518 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" [
+<!ENTITY writing-a-plug-in-1 SYSTEM "writing-a-plug-in-1.xml" NDATA XML>
+]>
+
+<webpage id="writing-a-plug-in-2" lang="en">
+
+  <head>
+    <title>How to write a GIMP plug-in, part II</title>
+    <titleabbrev>Part II</titleabbrev>
+    <summary>Write your own</summary>
+  </head>
+
+  <para>
+    Written By <ulink url="mailto:bolsh@NOSPAM.gimp.org">Dave Neary</ulink>
+  </para>
+
+  <para>
+    In the <olink targetdocent="writing-a-plug-in-1">first
+    part</olink>, I presented essential elements to build a plug-in
+    interface with The GIMP. Now we will produce a simple but useful
+    algorithm that we could use in our plug-in.
+  </para>
+
+  <section>
+    <title>Introduction</title>
+
+    <para>
+      The algorithm we are going to implement is a simple blur. It is
+      included in The GIMP as "Filters->Blur->Blur" with default
+      parameters.
+    </para>
+
+    <para>
+      That algorithm is very simple. Each pixel in our image is
+      replaced by a mean value of its neighbors. For example, if we
+      look at the simplest case where the neighborhood is 3x3 (see
+      figure 1), in that case the center value will be replaced with
+      5, the mean of the 9 numbers in its neighborhood.
+    </para>
+
+    <para>
+      With this method, edge differences are splatted, giving a
+      blurred result. One can choose another radius, using a (2r + 1)
+      x (2r + 1) matrix.
+    </para>
+  </section>
+
+  <section>
+    <title>Image structure</title>
+
+    <para>
+      Last month, we wrote a run() function that did nothing useful.
+      Let's look again at run() prototype:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static void run (const gchar     *name,
+                       gint             nparams,
+                       const GimpParam *param,
+                       gint            *nreturn_vals,
+                       GimpParam      **return_vals);
+     ]]>
+    </programlisting>
+
+    <para>
+      We saw that for a filter (i.e. a plug-in that modifies the
+      image), the first three input parameters were the run mode, an
+      identifier for the image, and another one for the active
+      drawable (layer or mask).
+    </para>
+
+    <para>
+      A GIMP image is a structure that contains, among others, guides,
+      layers, layer masks, and any data associated to the image. The
+      word "drawable" is often used in GIMP internal structures. A
+      "drawable" is an object where you can get, and sometimes modify,
+      raw data. So : layers, layer masks, selections are all
+      "drawables".
+    </para>
+    
+    <para role="images">
+      <ulink url="GimpImage.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="GimpImage-small.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Drawables</phrase>
+          </textobject>
+        </mediaobject>
+        Drawables
+      </ulink>
+    </para>
+  </section>
+
+  <section>
+    <title>Accessing the data</title>
+
+    <para>
+      To get a GimpDrawable from its identifier, we need the
+      gimp_drawable_get() function:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      GimpDrawable *gimp_drawable_get(gint32 drawable_id);
+     ]]>
+    </programlisting>
+
+    <para>
+      From this structure, one can access drawable data through a
+      GimpPixelRgn structure, and one can check the drawable type
+      (RGB, gray level). The full listing of functions available for a
+      GimpDrawable can be found <ulink
+      url="http://developer.gimp.org/api/2.0/libgimp/libgimp-gimpdrawable.html">in
+      the API</ulink>.
+    </para>
+
+    <para>
+      Two very important functions for plug-ins are
+      gimp_drawable_mask_bounds() and gimp_pixel_rgn_init(). The first
+      gives the active selection limits on the drawable, and the
+      second initializes the GimpPixelRgn we will use to access the
+      data.
+    </para>
+
+    <para>
+      As soon as we have a well initialized GimpPixelRgn, we can
+      access the image data in several different ways, by pixel, by
+      rectangle, by row or by column. The best method will depend on
+      the algorithm one plans to use. Moreover, The GIMP uses a
+      tile-based architecture, and loading or unloading data is
+      expensive, so we should not use it more than necessary.
+    </para>
+
+    <para role="images">
+      <ulink url="tiles.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="tiles-small.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Tiles</phrase>
+          </textobject>
+        </mediaobject>
+        Tiles
+      </ulink>
+    </para>
+    
+    <para>
+      The main functions to get and set image data are:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      void gimp_pixel_rgn_get_pixel (GimpPixelRgn *pr,
+                                     guchar *buf,
+                                     gint x,
+                                     gint y);
+      void gimp_pixel_rgn_get_row (GimpPixelRgn *pr,
+                                   guchar *buf,
+                                   gint x,
+                                   gint y,
+                                   gint width);
+      void gimp_pixel_rgn_get_col (GimpPixelRgn *pr,
+                                   guchar *buf,
+                                   gint x,
+                                   gint y,
+                                   gint height);
+      void gimp_pixel_rgn_get_rect (GimpPixelRgn *pr,
+                                    guchar *buf,
+                                    gint x,
+                                    gint y,
+                                    gint width,
+                                    gint height);
+      void gimp_pixel_rgn_set_pixel (GimpPixelRgn *pr,
+                                     const guchar *buf,
+                                     gint x,
+                                     gint y);
+      void gimp_pixel_rgn_set_row (GimpPixelRgn *pr,
+                                   const guchar *buf,
+                                   gint x,
+                                   gint y,
+                                   gint width);
+      void gimp_pixel_rgn_set_col (GimpPixelRgn *pr,
+                                   const guchar *buf,
+                                   gint x,
+                                   gint y,
+                                   gint height);
+      void gimp_pixel_rgn_set_rect (GimpPixelRgn *pr,
+                                    const guchar *buf,
+                                    gint x,
+                                    gint y,
+                                    gint width,
+                                    gint height);
+     ]]>
+    </programlisting>
+
+    <para>
+      There is also another way to access image data (it's even used
+      more often), that allows to manage data at the tile level. We
+      will look at it in detail later.
+    </para>
+  </section>
+  
+  <section>
+    <title>Updating the image</title>
+
+    <para>
+      At last, a plug-in that has modified a drawable data must flush
+      it to send data to the core, and to tell the application that
+      the display must be updated. This is done with the following
+      function:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      gimp_displays_flush ();
+      gimp_drawable_detach (drawable);
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>Implementing blur()</title>
+
+    <para>
+      To be able to try out several different processing methods, we
+      will delegate the job to a blur() function. Our run() is below.
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static void run (const gchar      *name,
+                       gint              nparams,
+                       const GimpParam  *param,
+                       gint             *nreturn_vals,
+                       GimpParam       **return_vals)
+      {
+           static GimpParam values[1];
+           GimpPDBStatusType status = GIMP_PDB_SUCCESS;
+           GimpRunMode run_mode;
+           GimpDrawable *drawable;
+
+           /* Setting mandatory output values */
+           *nreturn_vals = 1;
+           *return_vals = values;
+
+           values[0].type = GIMP_PDB_STATUS;
+           values[0].data.d_status = status;
+
+           /* Getting run_mode - we won't display a dialog if 
+            * we are in NONINTERACTIVE mode */
+           run_mode = param[0].data.d_int32;
+
+           /*  Get the specified drawable  */
+           drawable = gimp_drawable_get (param[2].data.d_drawable);
+           
+           gimp_progress_init ("LinuxMag Demo...");
+
+           /* Let's time blur - don't forget to include time.h */
+           /* {
+            *   time_t before = time(NULL);
+            */
+           blur (drawable);
+           /*   printf("Blur() took %ld seconds.\n", time(NULL) - before); 
+            * } */
+
+           gimp_displays_flush ();
+           gimp_drawable_detach (drawable);
+
+           return;
+      }
+     ]]>
+    </programlisting>
+
+    <para>
+      There are a few lines here that need to be explained a bit more.
+      The call to gimp_progress_init() initializes a progress
+      measurement for our plug-in. Later, if we call
+      gimp_progress_update(double percent), the percentage given as an
+      input parameter will be shown graphically. The run_mode tells us
+      whether the plug-in was launched in a way such as we can display
+      a graphical interface or not. Possible values are
+      GIMP_RUN_INTERACTIVE, GIMP_RUN_NONINTERACTIVE or
+      GIMP_RUN_WITH_LAST_VALS, which mean the plug-in was executed
+      from The GIMP, from a script, or from the "Repeat last filter"
+      menu entry.
+    </para>
+
+    <para>
+      Regarding the blur alogrithm itself, the first version using
+      gimp_pixel_rgn_(get|set)_pixel() is found below. Some functions
+      in it have not been explained yet.
+    </para>
+
+    <para>
+      gimp_drawable_mask_bounds() allows calculation of the filter's
+      effect limits, excluding any region that is not in the active
+      selection. Limiting the processing this way allows an important
+      performance improvement.
+    </para>
+
+    <para>
+      gimp_pixel_rgn_init() takes as input parameters the drawable,
+      its limits for the processing, and two booleans that
+      significantly modify the behavior of the resulting GimpPixelRgn.
+      The first one tells that "set" operations must be done on shadow
+      tiles, in order to leave original data as is until
+      gimp_drawable_merge_shadow() is called, when all modified data
+      will be merged. The second one tells that modified tiles should
+      be tagged "dirty" and sent to the core to be merged. Most of the
+      time, to read data, one uses FALSE and FALSE for these two
+      parameters, and to write data, one uses TRUE and TRUE. Other
+      combinations are possible but seldom used.
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static void blur(GimpDrawable *drawable)
+      {
+           gint i, j, k, channels;
+           gint x1, y1, x2, y2;
+           GimpPixelRgn rgn_in, rgn_out;
+           guchar output[4];
+
+           /* Gets upper left and lower right coordinates,
+            * and layers number in the image */
+           gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, &x2, &y2);
+           channels = gimp_drawable_bpp(drawable->drawable_id);
+
+           /* Initializes two PixelRgns, one to read original data,
+            * and the other to write output data. That second one will
+            * be merged at the end by the call to
+            * gimp_drawable_merge_shadow() */
+           gimp_pixel_rgn_init (&rgn_in, drawable, x1, y1, (x2 - x1), (y2 - y1), 
+                                FALSE, FALSE);
+           gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, (x2 - x1), (y2 - y1), 
+                                TRUE, TRUE);
+
+           for (i = x1; i < x2; i++)
+           {
+                for (j = y1; j < y2; j++)
+                {
+                     guchar pixel[9][4];
+
+                     /* Get nine pixels */
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[0], MAX(i-1,x1), 
+                                              MAX(j-1, y1));
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[1], MAX(i-1,x1), j);
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[2], MAX(i-1,x1), 
+                                              MIN(j+1,y2-1));
+
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[3], i, MAX(j-1,y1));
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[4], i, j);
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[5], i, MIN(j+1,y2-1));
+
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[6], MIN(i+1,x2-1), 
+                                              MAX(j-1,y1));
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[7], MIN(i+1,x2-1), j);
+                     gimp_pixel_rgn_get_pixel(&rgn_in, pixel[8], MIN(i+1,x2-1), 
+                                              MIN(j+1,y2-1));
+
+                     /* For each layer, compute the average of the
+                      * nine */
+                     for (k = 0; k < channels; k++)
+                     {
+                          int tmp, sum = 0;
+                          for (tmp = 0; tmp < 9; tmp ++)
+                          {
+                               sum += pixel[tmp][k];
+                          }
+                          output[k] = sum / 9;
+                     }
+
+                     gimp_pixel_rgn_set_pixel(&rgn_out, output, i, j);
+                }
+
+                if (i%10 == 0)
+                    gimp_progress_update ((gdouble) (i - x1) / (gdouble) (x2 - x1));
+           }
+
+           /*  Update the modified region */
+           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
+           gimp_drawable_flush (drawable);
+           gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
+                                 (y2 - y1));
+      }
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>Row processing</title>
+
+    <para>
+      Our function has a bug drawback: performance. On a 300x300
+      selection, with the timing code uncommented, blur() took 12
+      minutes on my K6-2 350MHz, well loaded with other stuff. To
+      compare, on the same selection, Gaussian blur took 3 seconds.
+    </para>
+
+    <para>
+      If we modify our function to rather use
+      gimp_pixel_rgn_(get|set)_row() the result is far better. We
+      reduce the timing for the 300x300 selection from 760 seconds to
+      6 seconds. blur() V2 is below:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static void blur(GimpDrawable *drawable)
+      {
+           gint i, j, k, channels;
+           gint x1, y1, x2, y2;
+           GimpPixelRgn rgn_in, rgn_out;
+           guchar *row1, *row2, *row3;
+           guchar *outrow;
+
+           gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, &x2, &y2);
+           channels = gimp_drawable_bpp(drawable->drawable_id);
+
+           gimp_pixel_rgn_init (&rgn_in, drawable, x1, y1, (x2 - x1), (y2 - y1), 
+                                FALSE, FALSE);
+           gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, (x2 - x1), (y2 - y1), 
+                                TRUE, TRUE);
+
+           /* Initialize enough memory for row1, row2, row3, outrow */
+           row1 = malloc (channels * (x2 - x1) * sizeof *row1);
+           row2 = malloc (channels * (x2 - x1) * sizeof *row2);
+           row3 = malloc (channels * (x2 - x1) * sizeof *row3);
+           outrow = malloc (channels * (x2 - x1) * sizeof *outrow);
+
+           for (i = y1; i < y2; i++)
+           {
+                /* Get row i-1, i, i+1 */
+                gimp_pixel_rgn_get_row (&rgn_in, row1, x1, MAX(y1, i-1), (x2 - x1));
+                gimp_pixel_rgn_get_row (&rgn_in, row2, x1, i, (x2 - x1));
+                gimp_pixel_rgn_get_row (&rgn_in, row3, x1, MIN(y2-1, i+1), (x2 - x1));
+
+                for (j = x1; j < x2; j++)
+                {
+               /* For each layer, compute the average of the nine
+                * pixels */
+                     for (k = 0; k < channels; k++)
+                     {
+                          int sum = 0;
+                          sum =  row1[channels * MAX((j - 1 - x1), 0) + k]
+                               + row1[channels * (j - x1) + k]
+                               + row1[channels * MIN((j + 1 - x1), x2 - x1 - 1) + k]
+                               + row2[channels * MAX((j - 1 - x1), 0) + k]
+                               + row2[channels * (j - x1) + k]
+                               + row2[channels * MIN((j + 1 - x1), x2 - x1 - 1) + k]
+                               + row3[channels * MAX((j - 1 - x1), 0) + k]
+                               + row3[channels * (j - x1) + k]
+                               + row3[channels * MIN((j + 1 - x1), x2 - x1 - 1) + k];
+                          outrow[channels * (j - x1) + k] = sum / 9;
+                     }
+
+                }
+
+                gimp_pixel_rgn_set_row(&rgn_out, outrow, x1, i, (x2 - x1));
+
+                if (i%10 == 0)
+                     gimp_progress_update ((gdouble) (i - y1) / (gdouble) (y2 - y1));
+           }
+
+           free (row1);
+           free (row2);
+           free (row3);
+           free (outrow);
+
+           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
+           gimp_drawable_flush (drawable);
+           gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
+                                 (y2 - y1));
+      }
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>Next part</title>
+
+    <para>
+      In next part, we will see how to process the image tile by tile.
+      We will also have a look at preferences, by modifying our
+      algorithm so it can take an input parameter.
+    </para>
+  </section>
+
+  <section>
+    <para role="images">
+      <ulink url="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="http://creativecommons.org/images/public/somerights20.gif"/>
+          </imageobject>
+          <textobject>
+            <phrase>Creative Commons License</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+      This work is licensed under a <ulink
+      url="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative
+      Commons Attribution-NonCommercial-ShareAlike 2.5
+      License</ulink>.
+    </para>
+  </section>
+
+</webpage>
+

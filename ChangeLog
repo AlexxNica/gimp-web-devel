@@ -1,3 +1,15 @@
+2005-09-22  Karine Delvare  <kdelvare@nerim.net>
+
+	* writing-a-plug-in/2/GimpImage-small.png
+	* writing-a-plug-in/2/GimpImage.png
+	* writing-a-plug-in/2/tiles-small.png
+	* writing-a-plug-in/2/tiles.png
+	* writing-a-plug-in-1.xml
+	* writing-a-plug-in-2.xml
+	* layout.xml
+	* plug-ins.xml: added second translated part of a tutorial on how to
+	write a GIMP plug-in, written by Dave Neary.
+
 2005-09-19  Karine Delvare  <kdelvare@nerim.net>
 
 	* plug-ins.xml: updated to show next parts are coming.

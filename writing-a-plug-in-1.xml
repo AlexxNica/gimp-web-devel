@@ -1,6 +1,8 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
-                         "dtd/website.dtd">
+                         "dtd/website.dtd" [
+<!ENTITY writing-a-plug-in-2 SYSTEM "writing-a-plug-in-2.xml" NDATA XML>
+]>
 
 <webpage id="writing-a-plug-in-1" lang="en">
 
@@ -414,10 +416,11 @@
     <title>Next part</title>
 
     <para>
-      In next part we will go on, making a more useful plug-in that
-      will get its hands on image data. We will see how to use The
-      GIMP image architecture to make the plug-in perform better,
-      processing the image tile by tile.
+      In <olink targetdocent="writing-a-plug-in-2">next part</olink>
+      we will go on, making a more useful plug-in that will get its
+      hands on image data. We will see how to use The GIMP image
+      architecture to make the plug-in perform better, processing the
+      image tile by tile.
     </para>
   </section>
 
