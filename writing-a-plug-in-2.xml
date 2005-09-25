@@ -2,6 +2,7 @@
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd" [
 <!ENTITY writing-a-plug-in-1 SYSTEM "writing-a-plug-in-1.xml" NDATA XML>
+<!ENTITY writing-a-plug-in-3 SYSTEM "writing-a-plug-in-3.xml" NDATA XML>
 ]>
 
 <webpage id="writing-a-plug-in-2" lang="en">
@@ -384,8 +385,8 @@
            }
 
            /*  Update the modified region */
-           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
            gimp_drawable_flush (drawable);
+           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
            gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
                                  (y2 - y1));
       }
@@ -473,8 +474,8 @@
            free (row3);
            free (outrow);
 
-           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
            gimp_drawable_flush (drawable);
+           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
            gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
                                  (y2 - y1));
       }
@@ -486,9 +487,10 @@
     <title>Next part</title>
 
     <para>
-      In next part, we will see how to process the image tile by tile.
-      We will also have a look at preferences, by modifying our
-      algorithm so it can take an input parameter.
+      In <olink targetdocent="writing-a-plug-in-3">next part</olink>,
+      we will see how to process the image tile by tile. We will also
+      have a look at preferences, by modifying our algorithm so it can
+      take an input parameter.
     </para>
   </section>
 

@@ -1,0 +1,835 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd" [
+<!ENTITY writing-a-plug-in-2 SYSTEM "writing-a-plug-in-2.xml" NDATA XML>
+]>
+
+<webpage id="writing-a-plug-in-3" lang="en">
+
+  <head>
+    <title>How to write a GIMP plug-in, part III</title>
+    <titleabbrev>Part III</titleabbrev>
+    <summary>Write your own</summary>
+  </head>
+
+  <para>
+    Written By <ulink url="mailto:bolsh@NOSPAM.gimp.org">Dave Neary</ulink>
+  </para>
+
+  <para>
+    In the <olink targetdocent="writing-a-plug-in-2">second
+    part</olink>, I told you about manipulating image data by pixel or
+    row. This time, I will go farther and process data by tile, which
+    will improve our plug-in performance. I will also update our
+    algorithm to take larger radius into account, and build a
+    graphical interface to allow changing that parameter.
+  </para>
+
+  <section>
+    <title>Introduction</title>
+
+    <para>
+      Let's have a look at our simple algorithm: for each pixel,
+      generate a (2r+1)x(2r+1) neighborhood and for each layer,
+      replace the layer's pixel value with the average value in the
+      neighborhood.
+    </para>
+
+    <para>
+      It's a bit more complex than that - we have to be careful near
+      image borders for example, but this algorithm makes a blur
+      effect that is not so bad in general.
+    </para>
+
+    <para>
+      But until now, we wrote the algorithm for a 3x3 neighborhood.
+      Time has come to generalize this part and to introduce the
+      radius as a parameter.
+    </para>
+
+    <para>
+      First, a word on tiles.
+    </para>
+  </section>
+
+  <section>
+    <title>Tile management</title>
+
+    <para>
+      A tile is an image data block with a 64x64 size. Usually, tiles
+      are sent to the plug-in on demand one by one, by shared memory.
+      Of course this process needs huge ressources and should be
+      avoided.
+    </para>
+
+    <para>
+      Usually, one doesn't need any particular cache, each tile is
+      sent when one needs it and freed when one asks for another one.
+      Nevertheless, we can tell our plug-in to keep a tile cache to
+      avoid this constant round trip, by calling the function:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      gimp_tile_cache_ntiles(gulong ntiles);
+     ]]>
+    </programlisting>
+
+    <para>
+      In the second part example, we called gimp_pixel_rgn_get_row()
+      and gimp_pixel_rgn_set_row() but without using any cache.
+    </para>
+
+    <para>
+      The number of tiles in a tile row will be the layer width
+      divided by the tile width, plus one. So, for a layer width of
+      65, we will cache two tiles. As we usually also process shadow
+      tiles, we can double that number to compute the ideal cache size
+      for our plug-in.
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      gimp_tile_cache_ntiles (2 * (drawable->width / 
+                              gimp_tile_width () + 1));
+     ]]>
+    </programlisting>
+
+    <para>
+      With the cache, our slow plug-in becomes fast. On a 300x300
+      selection, our last blur took 3 seconds, but on a 2000x1500
+      selection it was much slower - 142 seconds.
+    </para>
+
+    <para>
+      Adding the above line of code, things are getting better: 11
+      seconds. We still lose transition time when we reach tile
+      borders, we can go down to 10 seconds when multiplying by 4
+      instead of 2 (meaning we cache two tiles rows), but the more
+      tiles we cache, the more hard disk access we make, which reduce
+      the time gain at a point.
+    </para>
+  </section>
+
+  <section>
+    <title>Algorithm generalization</title>
+
+    <para>
+      We can modify the algorithm to take a parameter into account:
+      radius. With a radius of 3, the neighborhood of a pixel will be
+      7x7, instead of 3x3 with a radius of 1. To achieve this I modify
+      the previous algorithm:
+      <itemizedlist>
+        <listitem>allocate space for 2r+1 tile rows</listitem>
+        <listitem>initialize this rows array, taking care of
+        borders</listitem>
+        <listitem>for each tile row
+          <itemizedlist>
+            <listitem>for each pixel in the tile row
+              <itemizedlist>
+                <listitem>compute the neighborhood average, taking
+                care of borders</listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>get a new tile row and cycle rows</listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <para>
+      This algorithm is more complex than the last one, because the
+      average computing will be a O(r²) algorithm.
+    </para>
+
+    <para>
+      The modified code to get this behavior is below. Most of the
+      work is done in the process_row function. init_mem and shuffle
+      are there to keep the blur code clean and small.
+    </para>
+
+    <programlisting>
+    <![CDATA[    
+      static void blur (GimpDrawable *drawable);
+
+      static void init_mem (guchar ***row, guchar **outrow, gint num_bytes);
+      static void process_row (guchar **row, guchar *outrow, gint x1, gint y1, 
+                           gint width, gint height, gint channels, gint i);
+      static void shuffle (GimpPixelRgn *rgn_in, guchar **row, gint x1, gint y1, 
+                           gint width, gint height, gint ypos);
+
+      /* The radius is still a constant, we'll change that when the
+       * graphical interface will be built. */
+      static gint radius = 3;
+      ...
+
+      static void blur(GimpDrawable *drawable)
+      {
+           gint i, ii, channels;
+           gint x1, y1, x2, y2;
+           GimpPixelRgn rgn_in, rgn_out;
+           guchar **row;
+           guchar *outrow;
+           gint width, height;
+
+           gimp_progress_init ("My Blur...");
+
+           /* Gets upper left and lower right coordinates,
+            * and layers number in the image */
+           gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, &x2, &y2);
+           width = x2 - x1;
+           height = y2 - y1;
+
+           channels = gimp_drawable_bpp(drawable->drawable_id);
+
+           /* Allocate a big enough tile cache */
+           gimp_tile_cache_ntiles (2 * (drawable->width / 
+                                        gimp_tile_width () + 1));
+
+           /* Initializes two PixelRgns, one to read original data,
+            * and the other to write output data. That second one will
+            * be merged at the end by the call to
+            * gimp_drawable_merge_shadow() */
+           gimp_pixel_rgn_init (&rgn_in, drawable, x1, y1, width, height, 
+                                FALSE, FALSE);
+           gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, width, height, 
+                                TRUE, TRUE);
+
+           /* Allocate memory for input and output tile rows */
+           init_mem(&row, &outrow, width * channels);
+           
+           for (ii = -radius; ii <= radius; ii++)
+           {
+                gimp_pixel_rgn_get_row (&rgn_in, row[radius + ii], x1, 
+                                        y1 + CLAMP (ii, 0, height - 1), 
+                                        width);
+           }
+
+           for (i = 0; i < height; i++)
+           {
+                /* To be done for each tile row */
+                process_row(row, outrow, x1, y1, width, height, channels, i);
+                gimp_pixel_rgn_set_row(&rgn_out, outrow, x1, i + y1, width);
+                /* shift tile rows to insert the new one at the end */
+                shuffle(&rgn_in, row, x1, y1, width, height, i );
+                if (i%10 == 0)
+                     gimp_progress_update ((gdouble) i / 
+                                           (gdouble) height);
+           }
+
+           /* We could also put that in a separate function but it's
+            * rather simple */
+           for (ii = 0; ii < 2 * radius + 1; ii++)
+           {
+                free (row[ii]);
+           }
+
+           free (row);
+           free (outrow);
+
+           /*  Update the modified region */
+           gimp_drawable_flush (drawable);
+           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
+           gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
+                                 (y2 - y1));
+      }
+
+
+      static void init_mem (guchar ***row, guchar **outrow, gint num_bytes)
+      {
+           gint i;
+           /* Allocate enough memory for row and outrow */
+
+           *row = g_new (char *, (2*radius + 1));
+           for (i = -radius; i <= radius; i++)
+           {
+                (*row)[i + radius] = g_new (guchar, num_bytes);
+           }
+
+           *outrow = g_new (guchar, num_bytes);
+      }
+
+      static void process_row(guchar **row, guchar *outrow, gint x1, gint y1, 
+                          gint width, gint height, gint channels, gint i)
+      {
+           gint j;
+
+           for (j = 0; j < width; j++)
+           {
+                gint k, ii, jj;
+                gint left = (j - radius),
+                     right = (j + radius);
+
+                /* For each layer, compute the average of the
+                 * (2r+1)x(2r+1) pixels */
+                for (k = 0; k < channels; k++)
+                {
+                     gint sum = 0;
+
+                     for (ii = 0; ii < 2*radius + 1; ii++)
+                     {
+                          for (jj = left; jj <= right; jj++)
+                          {
+                               sum += row[ii][channels * 
+                                               CLAMP (jj, 0, width - 1) 
+                                               + k];
+                          }
+                     }
+
+                     outrow[channels * j + k] = 
+                          sum / (4*radius*radius + 4*radius + 1);
+                }
+           }
+      }
+
+      static void shuffle(GimpPixelRgn *rgn_in, guchar **row, gint x1, gint y1, 
+                          gint width, gint height, gint ypos)
+      {
+           gint i;
+           guchar *tmp_row;
+
+           /* Get tile row (i + radius + 1) into row[0] */
+           gimp_pixel_rgn_get_row (rgn_in, row[0], x1, 
+                                   MIN(ypos + radius + y1, y1 + height - 1), 
+                                   width);
+           
+           /* Permute row[i] with row[i-1] and row[0] with row[2r] */
+           tmp_row = row[0];
+           for (i = 1; i < 2*radius + 1; i++)
+                row[i - 1] = row[i];
+           row[2*radius] = tmp_row;
+      }
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>Adding a graphical interface and saving parameters</title>
+
+    <para>
+      To let the user modify the radius, or let a non-interactive
+      script give it as a parameter, we now need to get back to our
+      run() function and settle some simple things.
+    </para>
+
+    <para>
+      First we create a structure to allow saving and returning
+      options. Usually one does this even for plug-ins with only one
+      parameter.
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      typedef struct
+      {
+        gint     radius;
+      } MyBlurVals;
+
+
+      /* Set up default values for options */
+      static MyBlurVals bvals =
+      {
+        3  /* radius */
+      };
+     ]]>
+    </programlisting>
+
+    <para>
+      Next, we modify the run() function so that execution modes are
+      taken into account. In interactive mode and repeat last filter
+      mode, we try to get the last values used by the gimp_get_data()
+      function, which takes a unique data identifier as its first
+      input parameter. Usually, one uses the procedure's name.
+    </para>
+
+    <para>
+      Finally, in interactive mode, we add a few lines that will build
+      the graphical interface allowing options modification.
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static void run (const gchar      *name,
+                       gint              nparams,
+                       const GimpParam  *param,
+                       gint             *nreturn_vals,
+                       GimpParam       **return_vals)
+      {
+           static GimpParam values[1];
+           GimpPDBStatusType status = GIMP_PDB_SUCCESS;
+           GimpRunMode run_mode;
+           GimpDrawable *drawable;
+
+           /* Setting mandatory output values */
+           *nreturn_vals = 1;
+           *return_vals = values;
+
+           values[0].type = GIMP_PDB_STATUS;
+           values[0].data.d_status = status;
+
+           /* Getting run_mode - we won't display a dialog if 
+            * we are in NONINTERACTIVE mode */
+           run_mode = param[0].data.d_int32;
+
+           /*  Get the specified drawable  */
+           drawable = gimp_drawable_get (param[2].data.d_drawable);
+           
+           switch (run_mode)
+           {
+           case GIMP_RUN_INTERACTIVE:
+                /* Get options last values if needed */
+                gimp_get_data ("plug_in_myblur", &bvals);
+
+                /* Display the dialog */
+                if (! blur_dialog (drawable))
+                     return;
+                break;
+
+           case GIMP_RUN_NONINTERACTIVE:
+                if (nparams != 4)
+                {
+                     status = GIMP_PDB_CALLING_ERROR;
+                }
+                if (status == GIMP_PDB_SUCCESS)
+                {
+                     bvals.radius   = param[3].data.d_int32;
+                }
+                break;
+
+           case GIMP_RUN_WITH_LAST_VALS:
+                /*  Get options last values if needed  */
+                gimp_get_data ("plug_in_myblur", &bvals);
+                break;
+
+           default:
+                break;
+           }
+
+           blur (drawable);
+
+           gimp_displays_flush ();
+           gimp_drawable_detach (drawable);
+
+            /*  Finally, set options in the core  */
+            if (run_mode == GIMP_RUN_INTERACTIVE)
+              gimp_set_data ("plug_in_myblur", &bvals, sizeof (MyBlurVals));
+
+           return;
+      }
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>The graphical interface</title>
+
+    <para>
+      I won't detail GTK+ programming as this is done very well in
+      other places. Our first try will be very simple. We will use the
+      utility widget of GIMP, the GimpDialog, to create a window with
+      a header, a numeric control of type GtkSpinButton (associated
+      with a GtkAdjustment) and its label, nicely framed in a
+      GtkFrame.
+    </para>
+
+    <para>
+      In the following parts, in order to show how easy one can do
+      such things, I will add a preview in the dialog to show real
+      time effects of the parameters.
+    </para>
+
+    <para>
+      Our final dialog will look like this (tree generated with
+      Glade):
+    </para>
+
+    <para role="images">
+      <ulink url="glade-tree.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="glade-tree-small.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Glade tree</phrase>
+          </textobject>
+        </mediaobject>
+        Glade tree
+      </ulink>
+    </para>
+
+    <para>
+      In The GIMP 2.2, there is a number of widgets that come bundled
+      with parameters that allow a coherent behavior, consistent with
+      GNOME Human Interface Guidelines. GimpPreview also appeared in
+      2.2. Let's make a first try without it:
+    </para>
+
+    <para role="images">
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="blur_dialog1.png"/>
+        </imageobject>
+        <textobject>
+          <phrase>Blur dialog</phrase>
+        </textobject>
+      </mediaobject>
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static gboolean
+      blur_dialog (GimpDrawable *drawable)
+      {
+        GtkWidget *dialog;
+        GtkWidget *main_vbox;
+        GtkWidget *main_hbox;
+        // GtkWidget *preview;
+        GtkWidget *frame;
+        GtkWidget *radius_label;
+        GtkWidget *alignment;
+        GtkWidget *spinbutton;
+        GtkObject *spinbutton_adj;
+        GtkWidget *frame_label;
+        gboolean   run;
+
+        gimp_ui_init ("myblur", FALSE);
+
+        dialog = gimp_dialog_new ("My blur", "myblur",
+                                  NULL, 0,
+                                  gimp_standard_help_func, "plug-in-myblur",
+
+                                  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                  GTK_STOCK_OK,     GTK_RESPONSE_OK,
+
+                                  NULL);
+
+        main_vbox = gtk_vbox_new (FALSE, 6);
+        gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), main_vbox);
+        gtk_widget_show (main_vbox);
+
+        frame = gtk_frame_new (NULL);
+        gtk_widget_show (frame);
+        gtk_box_pack_start (GTK_BOX (main_vbox), frame, TRUE, TRUE, 0);
+        gtk_container_set_border_width (GTK_CONTAINER (frame), 6);
+
+        alignment = gtk_alignment_new (0.5, 0.5, 1, 1);
+        gtk_widget_show (alignment);
+        gtk_container_add (GTK_CONTAINER (frame), alignment);
+        gtk_alignment_set_padding (GTK_ALIGNMENT (alignment), 6, 6, 6, 6);
+
+        main_hbox = gtk_hbox_new (FALSE, 0);
+        gtk_widget_show (main_hbox);
+        gtk_container_add (GTK_CONTAINER (alignment), main_hbox);
+
+        radius_label = gtk_label_new_with_mnemonic ("_Radius:");
+        gtk_widget_show (radius_label);
+        gtk_box_pack_start (GTK_BOX (main_hbox), radius_label, FALSE, FALSE, 6);
+        gtk_label_set_justify (GTK_LABEL (radius_label), GTK_JUSTIFY_RIGHT);
+
+        spinbutton_adj = gtk_adjustment_new (3, 1, 16, 1, 5, 5);
+        spinbutton = gtk_spin_button_new (GTK_ADJUSTMENT (spinbutton_adj), 1, 0);
+        gtk_widget_show (spinbutton);
+        gtk_box_pack_start (GTK_BOX (main_hbox), spinbutton, FALSE, FALSE, 6);
+        gtk_spin_button_set_numeric (GTK_SPIN_BUTTON (spinbutton), TRUE);
+
+        frame_label = gtk_label_new ("<b>Modify radius</b>");
+        gtk_widget_show (frame_label);
+        gtk_frame_set_label_widget (GTK_FRAME (frame), frame_label);
+        gtk_label_set_use_markup (GTK_LABEL (frame_label), TRUE);
+
+        g_signal_connect (spinbutton_adj, "value_changed",
+                          G_CALLBACK (gimp_int_adjustment_update),
+                          &bvals.radius);
+        gtk_widget_show (dialog);
+
+        run = (gimp_dialog_run (GIMP_DIALOG (dialog)) == GTK_RESPONSE_OK);
+
+        gtk_widget_destroy (dialog);
+
+        return run;
+      }
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>Adding a GimpPreview</title>
+
+    <para>
+      Adding a GimpPreview is quite easy. First we create a GtkWidget
+      with gimp_drawable_preview_new(), then we attach an invalidated
+      signal to it, which will call the blur function to update the
+      preview. We also add a second parameter to MyBlurVals to
+      remember the activation state of the preview.
+    </para>
+
+    <para>
+      A method to update easily the preview is to add a preview
+      parameter in the blur function, and if preview is not NULL, to
+      take GimpPreview limits. So when we call blur from run(), we set
+      the preview parameter to NULL.
+    </para>
+
+    <para>
+      To take GimpPreview limits, we use gimp_preview_get_position()
+      and gimp_preview_get_size(), so we can generate only what will
+      be displayed.
+    </para>
+
+    <para>
+      To achieve this the right way we'll tune some of the code - we
+      don't need to update the progress bar while generating the
+      preview, and we should tell at GimpPixelRgn init time that the
+      tiles should not be sent back to the core.
+    </para>
+
+    <para>
+      Finally, we display the updated preview with the
+      gimp_drawable_preview_draw_region() function. We get a dialog
+      box that shows us in real time the plug-in effects. Moreover,
+      thanks to the GIMP core, our plug-in already takes selections
+      into account.
+    </para>
+
+    <para role="images">
+      <ulink url="blur_dialog2.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="blur_dialog2-small.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Blur dialog, improved</phrase>
+          </textobject>
+        </mediaobject>
+        Blur dialog, improved
+      </ulink>
+    </para>
+
+    <para role="images">
+      <ulink url="blur_select.png">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="blur_select-small.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>Blur a selection</phrase>
+          </textobject>
+        </mediaobject>
+        Blur a selection
+      </ulink>
+    </para>
+
+    <para>
+      Here are the two functions in their last version:
+    </para>
+
+    <programlisting>
+    <![CDATA[
+      static void blur (GimpDrawable *drawable, GimpPreview *preview)
+      {
+           gint i, ii, channels;
+           gint x1, y1, x2, y2;
+           GimpPixelRgn rgn_in, rgn_out;
+           guchar **row;
+           guchar *outrow;
+           gint width, height;
+
+           if (!preview)
+                gimp_progress_init ("My Blur...");
+
+           /* Gets upper left and lower right coordinates,
+            * and layers number in the image */
+           if (preview)
+           {
+                gimp_preview_get_position (preview, &x1, &y1);
+                gimp_preview_get_size(preview, &width, &height);
+                x2 = x1 + width;
+                y2 = y1 + height;
+           }
+           else
+           {
+                gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, 
+                                           &x2, &y2);
+                width = x2 - x1;
+                height = y2 - y1;
+           }
+
+           channels = gimp_drawable_bpp(drawable->drawable_id);
+
+           /* Allocate a big enough tile cache */
+           gimp_tile_cache_ntiles (2 * (drawable->width / 
+                                        gimp_tile_width () + 1));
+
+           /* Initializes two PixelRgns, one to read original data,
+            * and the other to write output data. That second one will
+            * be merged at the end by the call to
+            * gimp_drawable_merge_shadow() */
+           gimp_pixel_rgn_init (&rgn_in, drawable, x1, y1, width, height, 
+                                FALSE, FALSE);
+           gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, width, height, 
+                                preview == NULL, TRUE);
+
+           init_mem(&row, &outrow, width * channels);
+           
+           for (ii = -bvals.radius; ii <= bvals.radius; ii++)
+           {
+                gimp_pixel_rgn_get_row (&rgn_in, row[bvals.radius + ii], x1, 
+                                        y1 + CLAMP (ii, 0, height - 1), 
+                                        width);
+           }
+
+           for (i = 0; i < height; i++)
+           {
+                process_row(row, outrow, x1, y1, width, height, channels, i);
+                gimp_pixel_rgn_set_row(&rgn_out, outrow, x1, i + y1, width);
+                shuffle(&rgn_in, row, x1, y1, width, height, i );
+                if (i%10 == 0 && !preview)
+                     gimp_progress_update ((gdouble) i / 
+                                           (gdouble) height);
+           }
+
+           for (ii = 0; ii < 2 * bvals.radius + 1; ii++)
+           {
+                g_free (row[ii]);
+           }
+
+           g_free (row);
+           g_free (outrow);
+
+           /*  Update the modified region  */
+           if (preview)
+           {
+                gimp_drawable_preview_draw_region (GIMP_DRAWABLE_PREVIEW (preview),
+                                                   &rgn_out);
+           }
+           else
+           {
+                gimp_drawable_flush (drawable);
+                gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
+                gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
+                                      (y2 - y1));
+           }
+      }
+
+      static gboolean
+      blur_dialog (GimpDrawable *drawable)
+      {
+        GtkWidget *dialog;
+        GtkWidget *main_vbox;
+        GtkWidget *main_hbox;
+        GtkWidget *preview;
+        GtkWidget *frame;
+        GtkWidget *radius_label;
+        GtkWidget *spinbutton;
+        GtkObject *spinbutton_adj;
+        gboolean   run;
+
+        gimp_ui_init ("myblur", FALSE);
+
+        dialog = gimp_dialog_new ("My blur", "myblur",
+                                  NULL, 0,
+                                  gimp_standard_help_func, "plug-in-myblur",
+
+                                  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                  GTK_STOCK_OK,     GTK_RESPONSE_OK,
+
+                                  NULL);
+
+        main_vbox = gtk_vbox_new (FALSE, 6);
+        gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), main_vbox);
+        gtk_widget_show (main_vbox);
+
+        preview = gimp_drawable_preview_new (drawable, &bvals.preview);
+        gtk_box_pack_start (GTK_BOX (main_vbox), preview, TRUE, TRUE, 0);
+        gtk_widget_show (preview);
+
+        frame = gimp_frame_new ("Blur radius");
+        gtk_box_pack_start (GTK_BOX (main_vbox), frame, FALSE, FALSE, 0);
+        gtk_widget_show (frame);
+
+        main_hbox = gtk_hbox_new (FALSE, 12);
+        gtk_container_set_border_width (GTK_CONTAINER (main_hbox), 12);
+        gtk_widget_show (main_hbox);
+        gtk_container_add (GTK_CONTAINER (frame), main_hbox);
+
+        radius_label = gtk_label_new_with_mnemonic ("_Radius:");
+        gtk_widget_show (radius_label);
+        gtk_box_pack_start (GTK_BOX (main_hbox), radius_label, FALSE, FALSE, 6);
+        gtk_label_set_justify (GTK_LABEL (radius_label), GTK_JUSTIFY_RIGHT);
+
+        /* spinbutton for radius */
+        spinbutton = gimp_spin_button_new (&spinbutton_adj, bvals.radius, 
+                                           1, 32, 1, 1, 1, 5, 0);
+        gtk_box_pack_start (GTK_BOX (main_hbox), spinbutton, FALSE, FALSE, 0);
+        gtk_widget_show (spinbutton);
+
+        g_signal_connect_swapped (preview, "invalidated",
+                                  G_CALLBACK (blur),
+                                  drawable);
+        g_signal_connect_swapped (spinbutton_adj, "value_changed",
+                                  G_CALLBACK (gimp_preview_invalidate),
+                                  preview);
+
+        blur (drawable, GIMP_PREVIEW (preview));
+
+        g_signal_connect (spinbutton_adj, "value_changed",
+                          G_CALLBACK (gimp_int_adjustment_update),
+                          &bvals.radius);
+        gtk_widget_show (dialog);
+
+        run = (gimp_dialog_run (GIMP_DIALOG (dialog)) == GTK_RESPONSE_OK);
+
+        gtk_widget_destroy (dialog);
+
+        return run;
+      }
+     ]]>
+    </programlisting>
+  </section>
+
+  <section>
+    <title>Conclusion</title>
+
+    <para>
+      In these articles, we saw basic concepts for several aspects of
+      a GIMP plug-in. We messed with image data treatment through a
+      simple algorithm, and followed a path that showed us how to
+      avoid performance problems. Finally, we generalized the
+      algorithm and added parameters to it, and we used some GIMP
+      widgets to make a nice user interface.
+    </para>
+  </section>
+
+  <section>
+    <title>Thanks</title>
+
+    <para>
+      Thanks to my wife Anne and to David Odin (preview master) for
+      helping me while I was writing this article.
+    </para>
+  </section>
+
+  <section>
+    <para role="images">
+      <ulink url="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="http://creativecommons.org/images/public/somerights20.gif"/>
+          </imageobject>
+          <textobject>
+            <phrase>Creative Commons License</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+
+    <para>
+      This work is licensed under a <ulink
+      url="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative
+      Commons Attribution-NonCommercial-ShareAlike 2.5
+      License</ulink>.
+    </para>
+  </section>
+
+</webpage>
+

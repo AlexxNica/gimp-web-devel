@@ -1,3 +1,18 @@
+2005-09-25  Karine Delvare  <kdelvare@nerim.net>
+
+	* writing-a-plug-in/3/blur_dialog1.png
+	* writing-a-plug-in/3/blur_dialog2-small.png
+	* writing-a-plug-in/3/blur_dialog2.png
+	* writing-a-plug-in/3/blur_select-small.png
+	* writing-a-plug-in/3/blur_select.png
+	* writing-a-plug-in/3/glade-tree-small.png
+	* writing-a-plug-in/3/glade-tree.png
+	* writing-a-plug-in-2.xml
+	* writing-a-plug-in-3.xml
+	* layout.xml
+	* plug-ins.xml: added last translated part of a tutorial on how to
+	write a GIMP plug-in, written by Dave Neary.
+
 2005-09-22  Karine Delvare  <kdelvare@nerim.net>
 
 	* writing-a-plug-in/2/GimpImage-small.png

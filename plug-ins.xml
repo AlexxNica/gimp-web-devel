@@ -3,6 +3,7 @@
                          "dtd/website.dtd" [
 <!ENTITY writing-a-plug-in-1 SYSTEM "writing-a-plug-in-1.xml" NDATA XML>
 <!ENTITY writing-a-plug-in-2 SYSTEM "writing-a-plug-in-2.xml" NDATA XML>
+<!ENTITY writing-a-plug-in-3 SYSTEM "writing-a-plug-in-3.xml" NDATA XML>
 ]>
 
 <webpage id="plug-ins" lang="en">
@@ -21,7 +22,7 @@
         <olink targetdocent="writing-a-plug-in-2">Writing a GIMP Plug-In Part II</olink>
       </listitem>
       <listitem>
-        Writing a GIMP Plug-In Part III (coming soon)
+        <olink targetdocent="writing-a-plug-in-3">Writing a GIMP Plug-In Part III</olink>
       </listitem>
     </itemizedlist>
   </para>
