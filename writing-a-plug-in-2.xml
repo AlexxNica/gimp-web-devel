@@ -35,10 +35,10 @@
 
     <para>
       That algorithm is very simple. Each pixel in our image is
-      replaced by a mean value of its neighbors. For example, if we
-      look at the simplest case where the neighborhood is 3x3 (see
+      replaced by a mean value of its neighbours. For example, if we
+      look at the simplest case where the neighbourhood is 3x3 (see
       figure 1), in that case the center value will be replaced with
-      5, the mean of the 9 numbers in its neighborhood.
+      5, the mean of the 9 numbers in its neighbourhood.
     </para>
 
     <para>
@@ -124,12 +124,12 @@
       Two very important functions for plug-ins are
       gimp_drawable_mask_bounds() and gimp_pixel_rgn_init(). The first
       gives the active selection limits on the drawable, and the
-      second initializes the GimpPixelRgn we will use to access the
+      second initialises the GimpPixelRgn we will use to access the
       data.
     </para>
 
     <para>
-      As soon as we have a well initialized GimpPixelRgn, we can
+      As soon as we have a well initialised GimpPixelRgn, we can
       access the image data in several different ways, by pixel, by
       rectangle, by row or by column. The best method will depend on
       the algorithm one plans to use. Moreover, The GIMP uses a
@@ -260,7 +260,7 @@
            /*  Get the specified drawable  */
            drawable = gimp_drawable_get (param[2].data.d_drawable);
            
-           gimp_progress_init ("LinuxMag Demo...");
+           gimp_progress_init ("My Blur...");
 
            /* Let's time blur - don't forget to include time.h */
            /* {
@@ -280,7 +280,7 @@
 
     <para>
       There are a few lines here that need to be explained a bit more.
-      The call to gimp_progress_init() initializes a progress
+      The call to gimp_progress_init() initialises a progress
       measurement for our plug-in. Later, if we call
       gimp_progress_update(double percent), the percentage given as an
       input parameter will be shown graphically. The run_mode tells us
@@ -293,7 +293,7 @@
     </para>
 
     <para>
-      Regarding the blur alogrithm itself, the first version using
+      Regarding the blur algorithm itself, the first version using
       gimp_pixel_rgn_(get|set)_pixel() is found below. Some functions
       in it have not been explained yet.
     </para>
@@ -308,7 +308,7 @@
     <para>
       gimp_pixel_rgn_init() takes as input parameters the drawable,
       its limits for the processing, and two booleans that
-      significantly modify the behavior of the resulting GimpPixelRgn.
+      significantly modify the behaviour of the resulting GimpPixelRgn.
       The first one tells that "set" operations must be done on shadow
       tiles, in order to leave original data as is until
       gimp_drawable_merge_shadow() is called, when all modified data
@@ -333,7 +333,7 @@
            gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, &x2, &y2);
            channels = gimp_drawable_bpp(drawable->drawable_id);
 
-           /* Initializes two PixelRgns, one to read original data,
+           /* Initialises two PixelRgns, one to read original data,
             * and the other to write output data. That second one will
             * be merged at the end by the call to
             * gimp_drawable_merge_shadow() */
@@ -429,7 +429,7 @@
            gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, (x2 - x1), (y2 - y1), 
                                 TRUE, TRUE);
 
-           /* Initialize enough memory for row1, row2, row3, outrow */
+           /* Initialise enough memory for row1, row2, row3, outrow */
            row1 = malloc (channels * (x2 - x1) * sizeof *row1);
            row2 = malloc (channels * (x2 - x1) * sizeof *row2);
            row3 = malloc (channels * (x2 - x1) * sizeof *row3);

@@ -30,9 +30,9 @@
 
     <para>
       Let's have a look at our simple algorithm: for each pixel,
-      generate a (2r+1)x(2r+1) neighborhood and for each layer,
+      generate a (2r+1)x(2r+1) neighbourhood and for each layer,
       replace the layer's pixel value with the average value in the
-      neighborhood.
+      neighbourhood.
     </para>
 
     <para>
@@ -42,8 +42,8 @@
     </para>
 
     <para>
-      But until now, we wrote the algorithm for a 3x3 neighborhood.
-      Time has come to generalize this part and to introduce the
+      But until now, we wrote the algorithm for a 3x3 neighbourhood.
+      Time has come to generalise this part and to introduce the
       radius as a parameter.
     </para>
 
@@ -58,7 +58,7 @@
     <para>
       A tile is an image data block with a 64x64 size. Usually, tiles
       are sent to the plug-in on demand one by one, by shared memory.
-      Of course this process needs huge ressources and should be
+      Of course this process needs huge resources and should be
       avoided.
     </para>
 
@@ -112,22 +112,22 @@
   </section>
 
   <section>
-    <title>Algorithm generalization</title>
+    <title>Algorithm generalisation</title>
 
     <para>
       We can modify the algorithm to take a parameter into account:
-      radius. With a radius of 3, the neighborhood of a pixel will be
+      radius. With a radius of 3, the neighbourhood of a pixel will be
       7x7, instead of 3x3 with a radius of 1. To achieve this I modify
       the previous algorithm:
       <itemizedlist>
         <listitem>allocate space for 2r+1 tile rows</listitem>
-        <listitem>initialize this rows array, taking care of
+        <listitem>initialise this rows array, taking care of
         borders</listitem>
         <listitem>for each tile row
           <itemizedlist>
             <listitem>for each pixel in the tile row
               <itemizedlist>
-                <listitem>compute the neighborhood average, taking
+                <listitem>compute the neighbourhood average, taking
                 care of borders</listitem>
               </itemizedlist>
             </listitem>
@@ -143,7 +143,7 @@
     </para>
 
     <para>
-      The modified code to get this behavior is below. Most of the
+      The modified code to get this behaviour is below. Most of the
       work is done in the process_row function. init_mem and shuffle
       are there to keep the blur code clean and small.
     </para>
@@ -186,7 +186,7 @@
            gimp_tile_cache_ntiles (2 * (drawable->width / 
                                         gimp_tile_width () + 1));
 
-           /* Initializes two PixelRgns, one to read original data,
+           /* Initialises two PixelRgns, one to read original data,
             * and the other to write output data. That second one will
             * be merged at the end by the call to
             * gimp_drawable_merge_shadow() */
@@ -459,7 +459,7 @@
 
     <para>
       In The GIMP 2.2, there is a number of widgets that come bundled
-      with parameters that allow a coherent behavior, consistent with
+      with parameters that allow a coherent behaviour, consistent with
       GNOME Human Interface Guidelines. GimpPreview also appeared in
       2.2. Let's make a first try without it:
     </para>
@@ -660,7 +660,7 @@
            gimp_tile_cache_ntiles (2 * (drawable->width / 
                                         gimp_tile_width () + 1));
 
-           /* Initializes two PixelRgns, one to read original data,
+           /* Initialises two PixelRgns, one to read original data,
             * and the other to write output data. That second one will
             * be merged at the end by the call to
             * gimp_drawable_merge_shadow() */
@@ -794,7 +794,7 @@
       In these articles, we saw basic concepts for several aspects of
       a GIMP plug-in. We messed with image data treatment through a
       simple algorithm, and followed a path that showed us how to
-      avoid performance problems. Finally, we generalized the
+      avoid performance problems. Finally, we generalised the
       algorithm and added parameters to it, and we used some GIMP
       widgets to make a nice user interface.
     </para>

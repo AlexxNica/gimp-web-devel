@@ -17,7 +17,7 @@
   </para>
 
   <para>
-    In this article, I present GIMP plug-ins basis and introduce the
+    In this article, I present GIMP plug-ins basics and introduce the
     libgimp API.  I will also show how to use the PDB to make our
     plug-in available to other script authors.
   </para>
@@ -26,7 +26,7 @@
     <title>Introduction</title>
 
     <para>
-      New developpers are often intimidated by The GIMP size and its
+      New developers are often intimidated by The GIMP size and its
       reputation.  They think that writing a plug-in would be a
       difficult task. The goal of these articles is to dumb this
       feeling down, by showing how easily one can make a C plug-in.
@@ -58,7 +58,7 @@
 
     <para>
       The GIMP script interface is centered on the Procedural database
-      (PDB). At startup, The GIMP looks into a predefinite set of
+      (PDB). At startup, The GIMP looks into a predefined set of
       places for scripts and plug-ins, and asks each new script to
       identify itself.
     </para>
@@ -120,7 +120,7 @@
   </section>
 
   <section>
-    <title>Behavior</title>
+    <title>Behaviour</title>
 
     <para>
       A GIMP plug-in can typically behave three different ways. It can
@@ -175,7 +175,7 @@
     <para>
       The quit() function is not used much either. It is called when
       The GIMP is about to be closed, to allow it to free some
-      ressources. It is used in the script-fu plug-in.
+      resources. It is used in the script-fu plug-in.
     </para>
 
     <para>
@@ -184,7 +184,7 @@
     </para>
 
     <para>
-      The run() function is the plug-in's centerpiece. It is called
+      The run() function is the plug-in's centrepiece. It is called
       when the plug-in is asked to run. It gets the plug-in name (as a
       plug-in can register several procedures), input parameters, and
       a pointer to output parameters, then determines if it is
@@ -208,7 +208,7 @@
     <title>MAIN ()</title>
 
     <para>
-      MAIN is a C macro that holds a bit of dark magic to initialize
+      MAIN is a C macro that holds a bit of dark magic to initialise
       arguments.  It also calls the appropriate PLUG_IN_INFO function
       depending on the timing. Your plug-in needs it.
     </para>
