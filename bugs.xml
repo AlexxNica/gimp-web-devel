@@ -36,6 +36,10 @@
         Bugzilla Weekly Summary</ulink>
       </listitem>
       <listitem>
+        <ulink url="http://bugzilla.gnome.org/browse.cgi?product=GIMP">
+        GIMP Product Summary</ulink>
+      </listitem>
+      <listitem>
         <ulink url="http://bugzilla.gnome.org/buglist.cgi?product=GIMP&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
         List of Open Bugs</ulink>
       </listitem>
