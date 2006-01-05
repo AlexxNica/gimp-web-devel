@@ -9,8 +9,8 @@
   <config param="banner-right" value="images/developer-right.png" />
 
   <copyright>
-    <year>2003-2005</year>
-    <holder role="http://www.gimp.org/">The GIMP Team</holder>
+    <year>2003-2006</year>
+    <holder role="http://www.gimp.org/">The GIMP Development Team</holder>
   </copyright>
 
   <headlink rel="icon"
