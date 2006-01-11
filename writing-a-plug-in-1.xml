@@ -235,7 +235,7 @@
           static GimpParamDef args[] = {
             {
               GIMP_PDB_INT32,
-              "run_mode",
+              "run-mode",
               "Run mode"
             },
             {
@@ -251,17 +251,20 @@
           };
 
           gimp_install_procedure (
-            "plug_in_hello",
+            "plug-in-hello",
             "Hello, world!",
             "Displays \"Hello, world!\" in a dialog",
             "David Neary",
             "Copyright David Neary",
             "2004",
-            "<Image>/Filters/Misc/_Hello world...",
+            "_Hello world...",
             "RGB*, GRAY*",
             GIMP_PLUGIN,
             G_N_ELEMENTS (args), 0,
             args, NULL);
+
+            gimp_plugin_menu_register ("plug-in-hello",
+                                       "<Image>/Filters/Misc/"); 
         }
      ]]>
     </programlisting>

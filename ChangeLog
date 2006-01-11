@@ -1,3 +1,9 @@
+2006-01-11  Sven Neumann  <sven@gimp.org>
+
+	* writing-a-plug-in-1.xml
+	* writing-a-plug-in-3.xml: use canonical procedure names and
+	undeprecated the menu registration example.
+
 2006-01-05  Sven Neumann  <sven@gimp.org>
 
 	* layout.xml: updated copyright notice for 2006.
