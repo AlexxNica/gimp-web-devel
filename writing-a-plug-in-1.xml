@@ -264,7 +264,7 @@
             args, NULL);
 
             gimp_plugin_menu_register ("plug-in-hello",
-                                       "<Image>/Filters/Misc/"); 
+                                       "<Image>/Filters/Misc"); 
         }
      ]]>
     </programlisting>
@@ -412,6 +412,10 @@
           <phrase>Hello, world!</phrase>
         </textobject>
       </mediaobject>
+    </para>
+
+    <para>
+      Have a look at the full <ulink url="writing-a-plug-in/1/hello.c">hello.c</ulink> plug-in code.
     </para>
   </section>
 
