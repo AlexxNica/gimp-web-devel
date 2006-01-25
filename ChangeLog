@@ -1,3 +1,10 @@
+2006-01-25  Karine Delvare  <kdelvare@nerim.net>
+
+	* writing-a-plug-in/2/myblur1.c
+	* writing-a-plug-in/2/myblur2.c
+	* writing-a-plug-in-2.xml: added complete plug-in code and used
+	g_new and g_free.
+
 2006-01-18  Karine Delvare  <kdelvare@nerim.net>
 
 	* writing-a-plug-in/1/hello.c
