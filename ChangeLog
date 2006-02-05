@@ -1,3 +1,16 @@
+2006-02-05  Karine Delvare  <kdelvare@nerim.net>
+
+	* writing-a-plug-in/1/hello.c
+	* writing-a-plug-in-1.xml
+	* writing-a-plug-in/2/myblur1.c
+	* writing-a-plug-in/2/myblur2.c
+	* writing-a-plug-in-2.xml
+	* writing-a-plug-in/3/myblur3.c
+	* writing-a-plug-in/3/myblur4.c
+	* writing-a-plug-in/3/myblur5.c
+	* writing-a-plug-in-3.xml: style cleanup, added complete plug-in code
+	for part 3.
+
 2006-01-25  Karine Delvare  <kdelvare@nerim.net>
 
 	* writing-a-plug-in/2/myblur1.c

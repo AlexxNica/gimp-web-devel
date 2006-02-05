@@ -107,7 +107,7 @@
 
     <programlisting>
     <![CDATA[
-      GimpDrawable *gimp_drawable_get(gint32 drawable_id);
+      GimpDrawable *gimp_drawable_get (gint32 drawable_id);
      ]]>
     </programlisting>
 
@@ -158,45 +158,45 @@
     <programlisting>
     <![CDATA[
       void gimp_pixel_rgn_get_pixel (GimpPixelRgn *pr,
-                                     guchar *buf,
-                                     gint x,
-                                     gint y);
+                                     guchar       *buf,
+                                     gint          x,
+                                     gint          y);
       void gimp_pixel_rgn_get_row   (GimpPixelRgn *pr,
-                                     guchar *buf,
-                                     gint x,
-                                     gint y,
-                                     gint width);
+                                     guchar       *buf,
+                                     gint          x,
+                                     gint          y,
+                                     gint          width);
       void gimp_pixel_rgn_get_col   (GimpPixelRgn *pr,
-                                     guchar *buf,
-                                     gint x,
-                                     gint y,
-                                     gint height);
+                                     guchar       *buf,
+                                     gint          x,
+                                     gint          y,
+                                     gint          height);
       void gimp_pixel_rgn_get_rect  (GimpPixelRgn *pr,
-                                     guchar *buf,
-                                     gint x,
-                                     gint y,
-                                     gint width,
-                                     gint height);
+                                     guchar       *buf,
+                                     gint          x,
+                                     gint          y,
+                                     gint          width,
+                                     gint          height);
       void gimp_pixel_rgn_set_pixel (GimpPixelRgn *pr,
                                      const guchar *buf,
-                                     gint x,
-                                     gint y);
+                                     gint          x,
+                                     gint          y);
       void gimp_pixel_rgn_set_row   (GimpPixelRgn *pr,
                                      const guchar *buf,
-                                     gint x,
-                                     gint y,
-                                     gint width);
+                                     gint          x,
+                                     gint          y,
+                                     gint          width);
       void gimp_pixel_rgn_set_col   (GimpPixelRgn *pr,
                                      const guchar *buf,
-                                     gint x,
-                                     gint y,
-                                     gint height);
+                                     gint          x,
+                                     gint          y,
+                                     gint          height);
       void gimp_pixel_rgn_set_rect  (GimpPixelRgn *pr,
                                      const guchar *buf,
-                                     gint x,
-                                     gint y,
-                                     gint width,
-                                     gint height);
+                                     gint          x,
+                                     gint          y,
+                                     gint          width,
+                                     gint          height);
      ]]>
     </programlisting>
 
@@ -235,45 +235,44 @@
 
     <programlisting>
     <![CDATA[
-      static void run (const gchar      *name,
-                       gint              nparams,
-                       const GimpParam  *param,
-                       gint             *nreturn_vals,
-                       GimpParam       **return_vals)
+      static void
+      run (const gchar      *name,
+           gint              nparams,
+           const GimpParam  *param,
+           gint             *nreturn_vals,
+           GimpParam       **return_vals)
       {
-           static GimpParam values[1];
-           GimpPDBStatusType status = GIMP_PDB_SUCCESS;
-           GimpRunMode run_mode;
-           GimpDrawable *drawable;
+        static GimpParam  values[1];
+        GimpPDBStatusType status = GIMP_PDB_SUCCESS;
+        GimpRunMode       run_mode;
+        GimpDrawable     *drawable;
 
-           /* Setting mandatory output values */
-           *nreturn_vals = 1;
-           *return_vals = values;
+        /* Setting mandatory output values */
+        *nreturn_vals = 1;
+        *return_vals  = values;
 
-           values[0].type = GIMP_PDB_STATUS;
-           values[0].data.d_status = status;
+        values[0].type = GIMP_PDB_STATUS;
+        values[0].data.d_status = status;
 
-           /* Getting run_mode - we won't display a dialog if 
-            * we are in NONINTERACTIVE mode */
-           run_mode = param[0].data.d_int32;
+        /* Getting run_mode - we won't display a dialog if 
+         * we are in NONINTERACTIVE mode */
+        run_mode = param[0].data.d_int32;
 
-           /*  Get the specified drawable  */
-           drawable = gimp_drawable_get (param[2].data.d_drawable);
-           
-           gimp_progress_init ("My Blur...");
+        /*  Get the specified drawable  */
+        drawable = gimp_drawable_get (param[2].data.d_drawable);
 
-           /* Let's time blur - don't forget to include time.h */
-           /* {
-            *   time_t before = time(NULL);
-            */
-           blur (drawable);
-           /*   printf("Blur() took %ld seconds.\n", time(NULL) - before); 
-            * } */
+        gimp_progress_init ("My Blur...");
 
-           gimp_displays_flush ();
-           gimp_drawable_detach (drawable);
+        /* Let's time blur - don't forget to include time.h */
+        /* {
+         *   time_t before = time(NULL);
+         */
+        blur (drawable);
+        /*   printf("Blur() took %ld seconds.\n", time(NULL) - before); 
+         * } */
 
-           return;
+        gimp_displays_flush ();
+        gimp_drawable_detach (drawable);
       }
      ]]>
     </programlisting>
@@ -321,74 +320,107 @@
 
     <programlisting>
     <![CDATA[
-      static void blur (GimpDrawable *drawable)
+      static void
+      blur (GimpDrawable *drawable)
       {
-           gint i, j, k, channels;
-           gint x1, y1, x2, y2;
-           GimpPixelRgn rgn_in, rgn_out;
-           guchar output[4];
+        gint         i, j, k, channels;
+        gint         x1, y1, x2, y2;
+        GimpPixelRgn rgn_in, rgn_out;
+        guchar       output[4];
 
-           /* Gets upper left and lower right coordinates,
-            * and layers number in the image */
-           gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, &x2, &y2);
-           channels = gimp_drawable_bpp (drawable->drawable_id);
+        /* Gets upper left and lower right coordinates,
+         * and layers number in the image */
+        gimp_drawable_mask_bounds (drawable->drawable_id,
+                                   &x1, &y1,
+                                   &x2, &y2);
+        channels = gimp_drawable_bpp (drawable->drawable_id);
 
-           /* Initialises two PixelRgns, one to read original data,
-            * and the other to write output data. That second one will
-            * be merged at the end by the call to
-            * gimp_drawable_merge_shadow() */
-           gimp_pixel_rgn_init (&rgn_in, drawable, x1, y1, (x2 - x1), (y2 - y1), 
-                                FALSE, FALSE);
-           gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, (x2 - x1), (y2 - y1), 
-                                TRUE, TRUE);
+        /* Initialises two PixelRgns, one to read original data,
+         * and the other to write output data. That second one will
+         * be merged at the end by the call to
+         * gimp_drawable_merge_shadow() */
+        gimp_pixel_rgn_init (&rgn_in,
+                             drawable,
+                             x1, y1,
+                             x2 - x1, y2 - y1, 
+                             FALSE, FALSE);
+        gimp_pixel_rgn_init (&rgn_out,
+                             drawable,
+                             x1, y1,
+                             x2 - x1, y2 - y1, 
+                             TRUE, TRUE);
 
-           for (i = x1; i < x2; i++)
-           {
-                for (j = y1; j < y2; j++)
-                {
-                     guchar pixel[9][4];
+        for (i = x1; i < x2; i++)
+          {
+            for (j = y1; j < y2; j++)
+              {
+                guchar pixel[9][4];
 
-                     /* Get nine pixels */
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[0], MAX (i-1, x1),
-                                               MAX (j-1, y1));
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[1], MAX (i-1, x1), j);
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[2], MAX (i-1, x1),
-                                               MIN (j+1, y2-1));
+                /* Get nine pixels */
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[0],
+                                          MAX (i - 1, x1),
+                                          MAX (j - 1, y1));
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[1],
+                                          MAX (i - 1, x1),
+                                          j);
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[2],
+                                          MAX (i - 1, x1),
+                                          MIN (j + 1, y2 - 1));
 
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[3], i, MAX (j-1, y1));
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[4], i, j);
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[5], i, MIN (j+1, y2-1));
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[3],
+                                          i,
+                                          MAX (j - 1, y1));
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[4],
+                                          i,
+                                          j);
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[5],
+                                          i,
+                                          MIN (j + 1, y2 - 1));
 
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[6], MIN (i+1, x2-1),
-                                               MAX (j-1, y1));
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[7], MIN (i+1, x2-1), j);
-                     gimp_pixel_rgn_get_pixel (&rgn_in, pixel[8], MIN (i+1, x2-1),
-                                               MIN (j+1, y2-1));
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[6],
+                                          MIN (i + 1, x2 - 1),
+                                          MAX (j - 1, y1));
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[7],
+                                          MIN (i + 1, x2 - 1),
+                                          j);
+                gimp_pixel_rgn_get_pixel (&rgn_in,
+                                          pixel[8],
+                                          MIN (i + 1, x2 - 1),
+                                          MIN (j + 1, y2 - 1));
 
-                     /* For each layer, compute the average of the
-                      * nine */
-                     for (k = 0; k < channels; k++)
-                     {
-                          int tmp, sum = 0;
-                          for (tmp = 0; tmp < 9; tmp ++)
-                          {
-                               sum += pixel[tmp][k];
-                          }
-                          output[k] = sum / 9;
-                     }
+                /* For each layer, compute the average of the
+                 * nine */
+                for (k = 0; k < channels; k++)
+                  {
+                    int tmp, sum = 0;
+                    for (tmp = 0; tmp < 9; tmp++)
+                      sum += pixel[tmp][k];
+                    output[k] = sum / 9;
+                  }
 
-                     gimp_pixel_rgn_set_pixel (&rgn_out, output, i, j);
-                }
+                gimp_pixel_rgn_set_pixel (&rgn_out,
+                                          output,
+                                          i, j);
+              }
 
-                if (i%10 == 0)
-                    gimp_progress_update ((gdouble) (i - x1) / (gdouble) (x2 - x1));
-           }
+            if (i % 10 == 0)
+              gimp_progress_update ((gdouble) (i - x1) / (gdouble) (x2 - x1));
+          }
 
-           /*  Update the modified region */
-           gimp_drawable_flush (drawable);
-           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
-           gimp_drawable_update (drawable->drawable_id, x1, y1, (x2 - x1), 
-                                 (y2 - y1));
+        /*  Update the modified region */
+        gimp_drawable_flush (drawable);
+        gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
+        gimp_drawable_update (drawable->drawable_id,
+                              x1, y1,
+                              x2 - x1, y2 - y1);
       }
      ]]>
     </programlisting>
@@ -413,71 +445,93 @@
 
     <programlisting>
     <![CDATA[
-      static void blur (GimpDrawable *drawable)
+      static void
+      blur (GimpDrawable *drawable)
       {
-           gint i, j, k, channels;
-           gint x1, y1, x2, y2;
-           GimpPixelRgn rgn_in, rgn_out;
-           guchar *row1, *row2, *row3;
-           guchar *outrow;
+        gint         i, j, k, channels;
+        gint         x1, y1, x2, y2;
+        GimpPixelRgn rgn_in, rgn_out;
+        guchar      *row1, *row2, *row3;
+        guchar      *outrow;
 
-           gimp_drawable_mask_bounds (drawable->drawable_id, &x1, &y1, &x2, &y2);
-           channels = gimp_drawable_bpp (drawable->drawable_id);
+        gimp_drawable_mask_bounds (drawable->drawable_id,
+                                   &x1, &y1,
+                                   &x2, &y2);
+        channels = gimp_drawable_bpp (drawable->drawable_id);
 
-           gimp_pixel_rgn_init (&rgn_in, drawable, x1, y1, (x2 - x1), (y2 - y1), 
-                                FALSE, FALSE);
-           gimp_pixel_rgn_init (&rgn_out, drawable, x1, y1, (x2 - x1), (y2 - y1),
-                                TRUE, TRUE);
+        gimp_pixel_rgn_init (&rgn_in,
+                             drawable,
+                             x1, y1,
+                             x2 - x1, y2 - y1, 
+                             FALSE, FALSE);
+        gimp_pixel_rgn_init (&rgn_out,
+                             drawable,
+                             x1, y1,
+                             x2 - x1, y2 - y1,
+                             TRUE, TRUE);
 
-           /* Initialise enough memory for row1, row2, row3, outrow */
-           row1 = g_new (guchar, channels * (x2 - x1));
-           row2 = g_new (guchar, channels * (x2 - x1));
-           row3 = g_new (guchar, channels * (x2 - x1));
-           outrow = g_new (guchar, channels * (x2 - x1));
+        /* Initialise enough memory for row1, row2, row3, outrow */
+        row1 = g_new (guchar, channels * (x2 - x1));
+        row2 = g_new (guchar, channels * (x2 - x1));
+        row3 = g_new (guchar, channels * (x2 - x1));
+        outrow = g_new (guchar, channels * (x2 - x1));
 
-           for (i = y1; i < y2; i++)
-           {
-                /* Get row i-1, i, i+1 */
-                gimp_pixel_rgn_get_row (&rgn_in, row1, x1, MAX (y1, i-1), (x2 - x1));
-                gimp_pixel_rgn_get_row (&rgn_in, row2, x1, i, (x2 - x1));
-                gimp_pixel_rgn_get_row (&rgn_in, row3, x1, MIN (y2-1, i+1), (x2 - x1));
+        for (i = y1; i < y2; i++)
+          {
+            /* Get row i-1, i, i+1 */
+            gimp_pixel_rgn_get_row (&rgn_in,
+                                    row1,
+                                    x1, MAX (y1, i - 1),
+                                    x2 - x1);
+            gimp_pixel_rgn_get_row (&rgn_in,
+                                    row2,
+                                    x1, i,
+                                    x2 - x1);
+            gimp_pixel_rgn_get_row (&rgn_in,
+                                    row3,
+                                    x1, MIN (y2 - 1, i + 1),
+                                    x2 - x1);
 
-                for (j = x1; j < x2; j++)
-                {
-               /* For each layer, compute the average of the nine
-                * pixels */
-                     for (k = 0; k < channels; k++)
-                     {
-                          int sum = 0;
-                          sum =  row1[channels * MAX ((j - 1 - x1), 0) + k]
-                               + row1[channels * (j - x1) + k]
-                               + row1[channels * MIN ((j + 1 - x1), x2 - x1 - 1) + k]
-                               + row2[channels * MAX ((j - 1 - x1), 0) + k]
-                               + row2[channels * (j - x1) + k]
-                               + row2[channels * MIN ((j + 1 - x1), x2 - x1 - 1) + k]
-                               + row3[channels * MAX ((j - 1 - x1), 0) + k]
-                               + row3[channels * (j - x1) + k]
-                               + row3[channels * MIN ((j + 1 - x1), x2 - x1 - 1) + k];
-                          outrow[channels * (j - x1) + k] = sum / 9;
-                     }
+            for (j = x1; j < x2; j++)
+              {
+                /* For each layer, compute the average of the nine
+                 * pixels */
+                for (k = 0; k < channels; k++)
+                  {
+                    int sum = 0;
+                    sum = row1[channels * MAX ((j - 1 - x1), 0) + k]           +
+                          row1[channels * (j - x1) + k]                        +
+                          row1[channels * MIN ((j + 1 - x1), x2 - x1 - 1) + k] +
+                          row2[channels * MAX ((j - 1 - x1), 0) + k]           +
+                          row2[channels * (j - x1) + k]                        +
+                          row2[channels * MIN ((j + 1 - x1), x2 - x1 - 1) + k] +
+                          row3[channels * MAX ((j - 1 - x1), 0) + k]           +
+                          row3[channels * (j - x1) + k]                        +
+                          row3[channels * MIN ((j + 1 - x1), x2 - x1 - 1) + k];
+                    outrow[channels * (j - x1) + k] = sum / 9;
+                  }
 
-                }
+             }
 
-                gimp_pixel_rgn_set_row (&rgn_out, outrow, x1, i, (x2 - x1));
+             gimp_pixel_rgn_set_row (&rgn_out,
+                                     outrow,
+                                     x1, i,
+                                     x2 - x1);
 
-                if (i%10 == 0)
-                     gimp_progress_update ((gdouble) (i - y1) / (gdouble) (y2 - y1));
-           }
+             if (i % 10 == 0)
+                  gimp_progress_update ((gdouble) (i - y1) / (gdouble) (y2 - y1));
+        }
 
-           g_free (row1);
-           g_free (row2);
-           g_free (row3);
-           g_free (outrow);
+        g_free (row1);
+        g_free (row2);
+        g_free (row3);
+        g_free (outrow);
 
-           gimp_drawable_flush (drawable);
-           gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
-           gimp_drawable_update (drawable->drawable_id, x1, y1,
-                                 (x2 - x1), (y2 - y1));
+        gimp_drawable_flush (drawable);
+        gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
+        gimp_drawable_update (drawable->drawable_id,
+                              x1, y1,
+                              x2 - x1, y2 - y1);
       }
      ]]>
     </programlisting>
@@ -486,6 +540,7 @@
       Have a look at the <ulink url="writing-a-plug-in/2/myblur1.c">slow</ulink>
       or <ulink url="writing-a-plug-in/2/myblur2.c">fast blur</ulink>
       complete code.
+    </para>
   </section>
 
   <section>

@@ -17,7 +17,8 @@ GimpPlugInInfo PLUG_IN_INFO =
 
 MAIN()
 
-static void query (void)
+static void
+query (void)
 {
   static GimpParamDef args[] =
   {
@@ -55,19 +56,20 @@ static void query (void)
                              "<Image>/Filters/Misc");
 }
 
-static void run (const gchar      *name,
-                 gint              nparams,
-                 const GimpParam  *param,
-                 gint             *nreturn_vals,
-                 GimpParam       **return_vals)
+static void
+run (const gchar      *name,
+     gint              nparams,
+     const GimpParam  *param,
+     gint             *nreturn_vals,
+     GimpParam       **return_vals)
 {
-  static GimpParam values[1];
+  static GimpParam  values[1];
   GimpPDBStatusType status = GIMP_PDB_SUCCESS;
-  GimpRunMode run_mode;
+  GimpRunMode       run_mode;
 
   /* Setting mandatory output values */
   *nreturn_vals = 1;
-  *return_vals = values;
+  *return_vals  = values;
 
   values[0].type = GIMP_PDB_STATUS;
   values[0].data.d_status = status;
@@ -78,7 +80,5 @@ static void run (const gchar      *name,
 
   if (run_mode != GIMP_RUN_NONINTERACTIVE)
     g_message("Hello, world!\n");
-
-  return;
 }
 

@@ -230,7 +230,8 @@
 
     <programlisting>
     <![CDATA[
-      static void query (void)
+      static void
+      query (void)
         {
           static GimpParamDef args[] = {
             {
@@ -372,30 +373,31 @@
 
     <programlisting>
     <![CDATA[
-      static void run (const gchar      *name,
-                       gint              nparams,
-                       const GimpParam  *param,
-                       gint             *nreturn_vals,
-                       GimpParam       **return_vals)
-        {
-          static GimpParam  values[1];
-          GimpPDBStatusType status = GIMP_PDB_SUCCESS;
-          GimpRunMode       run_mode;
+      static void
+      run (const gchar      *name,
+           gint              nparams,
+           const GimpParam  *param,
+           gint             *nreturn_vals,
+           GimpParam       **return_vals)
+      {
+        static GimpParam  values[1];
+        GimpPDBStatusType status = GIMP_PDB_SUCCESS;
+        GimpRunMode       run_mode;
 
-          /* Setting mandatory output values */
-          *nreturn_vals = 1;
-          *return_vals  = values;
+        /* Setting mandatory output values */
+        *nreturn_vals = 1;
+        *return_vals  = values;
 
-          values[0].type = GIMP_PDB_STATUS;
-          values[0].data.d_status = status;
+        values[0].type = GIMP_PDB_STATUS;
+        values[0].data.d_status = status;
 
-          /* Getting run_mode - we won't display a dialog if 
-           * we are in NONINTERACTIVE mode */
-          run_mode = param[0].data.d_int32;
+        /* Getting run_mode - we won't display a dialog if 
+         * we are in NONINTERACTIVE mode */
+        run_mode = param[0].data.d_int32;
 
-          if (run_mode != GIMP_RUN_NONINTERACTIVE)
-            g_message("Hello, world!\n");
-        }
+        if (run_mode != GIMP_RUN_NONINTERACTIVE)
+          g_message("Hello, world!\n");
+      }
      ]]>
     </programlisting>
 
