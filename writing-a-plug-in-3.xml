@@ -854,11 +854,9 @@
     </programlisting>
 
     <para>
-      Have a look at the
-      <ulink url="writing-a-plug-in/3/myblur3.c">tiled</ulink>,
-      <ulink url="writing-a-plug-in/3/myblur4.c">UI</ulink>
-      or <ulink url="writing-a-plug-in/3/myblur5.c">preview</ulink>
-      blur complete code.
+      Have a look at the <ulink url="myblur3.c">tiled</ulink>,
+      <ulink url="myblur4.c">UI</ulink> or
+      <ulink url="myblur5.c">preview</ulink> blur complete code.
     </para>
   </section>
 

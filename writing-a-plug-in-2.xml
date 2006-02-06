@@ -537,9 +537,8 @@
     </programlisting>
 
     <para>
-      Have a look at the <ulink url="writing-a-plug-in/2/myblur1.c">slow</ulink>
-      or <ulink url="writing-a-plug-in/2/myblur2.c">fast blur</ulink>
-      complete code.
+      Have a look at the <ulink url="myblur1.c">slow</ulink> or
+      <ulink url="myblur2.c">fast</ulink> blur complete code.
     </para>
   </section>
 

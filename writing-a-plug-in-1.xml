@@ -417,7 +417,7 @@
     </para>
 
     <para>
-      Have a look at the full <ulink url="writing-a-plug-in/1/hello.c">hello.c</ulink> plug-in code.
+      Have a look at the full <ulink url="hello.c">hello.c</ulink> plug-in code.
     </para>
   </section>
 

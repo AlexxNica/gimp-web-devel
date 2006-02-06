@@ -1,3 +1,9 @@
+2006-02-06  Karine Delvare  <kdelvare@nerim.net>
+
+	* writing-a-plug-in-1.xml
+	* writing-a-plug-in-2.xml
+	* writing-a-plug-in-3.xml: fixed links.
+
 2006-02-05  Karine Delvare  <kdelvare@nerim.net>
 
 	* writing-a-plug-in/1/hello.c
