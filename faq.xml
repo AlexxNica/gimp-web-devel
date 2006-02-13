@@ -268,6 +268,76 @@
       <qandaentry>
         <question>
           <para>
+            How can I configure my editor for this coding style?
+          </para>
+        </question>
+        <answer>
+          <para>
+            Your editor will not be able to do everything for you, but
+            you can configure most editors so that they use two spaces
+            for indentation, use spaces instead of tabs, etc.
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                If you are using Emacs, you can insert the following
+                settings into your <filename>~/.emacs</filename> file:
+              </para>
+              <programlisting><![CDATA[
+;; Merge this into your custom-set-variables section if you already have one
+(custom-set-variables
+ ;; Syntax highlighting
+ '(global-font-lock-mode t nil (font-lock))
+ '(show-paren-mode t nil (paren))
+ ;; User name to be put in the ChangeLog file by M-x add-change-log-entry
+ '(user-full-name "Your Name Here")
+ '(user-mail-address "your@email.address"))
+)
+;; use UTF-8 by default
+(prefer-coding-system 'mule-utf-8)
+;; use the GNU style for C files, spaces instead of tabs, highlight bad spaces
+(setq c-mode-common-hook '(lambda () (c-set-style "gnu")
+                            (setq indent-tabs-mode nil)
+                            (setq show-trailing-whitespace t))) ]]></programlisting>
+            </listitem>
+            <listitem>
+              <para>
+                If you are using Vim, you can insert the following
+                settings into your <filename>~/.vimrc</filename> file:
+              </para>
+              <programlisting><![CDATA[
+syn on           " syntax highlighting
+set expandtab    " use tabs instead of spaces
+set shiftwidth=2 " default indentation is 2 spaces ]]></programlisting>
+              <para>
+                Recent versions of Vim should be able to handle
+                <filename>ChangeLog</filename> entries correctly
+                using the command <code>NewChangelogEntry</code>.  You
+                can also use a simplified version by creating a file
+                <filename>~/.vim/ftplugin/changelog.vim</filename> 
+                with the following contents:
+              </para>
+              <programlisting><![CDATA[
+" Press F2 to insert the header at the top of the ChangeLog file
+nmap &lt;F2&gt; 1GO&lt;C-R&gt;=strftime("%Y-%m-%d")&lt;CR&gt;  Your Name Here  &lt;your@email.address&gt;&lt;CR&gt;&lt;CR&gt; *
+set noexpandtab  " use real tabs in ChangeLog, not spaces
+set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
+            </listitem>
+            <listitem>
+              <para>
+                If you are using another editor and you know how to
+                configure it correctly, please tell us about it on the
+                GIMP developer <olink targetdocent="lists">mailing
+                list</olink> so that we can update this FAQ.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>
             Who coordinates the translation of the GIMP?
           </para>
         </question>
@@ -412,7 +482,7 @@
         </question>
         <answer>
           <para>
-	    The short answer is yes. The GIMP 2.2 is binary compatible
+            The short answer is yes. The GIMP 2.2 is binary compatible
             with plug-ins compiled for GIMP 2.0. The API is also
             backwards source compatible, so your plug-in should also
             compile cleanly against GIMP 2.2.

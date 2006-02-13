@@ -1,3 +1,8 @@
+2006-02-13  Raphaël Quinet  <raphael@gimp.org>
+
+	* faq.xml: Added a new FAQ entry about how to configure some
+	editors (currently Emacs and Vim) for the GIMP coding style.
+
 2006-02-06  Karine Delvare  <kdelvare@nerim.net>
 
 	* writing-a-plug-in-1.xml
@@ -29,8 +34,8 @@
 	* writing-a-plug-in/1/hello.c
 	* writing-a-plug-in/1/plug-in-details.png
 	* writing-a-plug-in/1/plug-in-details-small.png
-	* writing-a-plug-in-1.xml: added complete plug-in code and removed extra
-	slash.
+	* writing-a-plug-in-1.xml: added complete plug-in code and removed
+	extra slash.
 
 2006-01-11  Sven Neumann  <sven@gimp.org>
 
