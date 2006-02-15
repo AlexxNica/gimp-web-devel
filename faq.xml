@@ -737,8 +737,8 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
           </para>
           <para>
             This is explained further in <ulink
-            url="http://bugzilla.gnome.org/bug_status.html">A Bug's
-            Life Cycle</ulink> except for the difference between
+            url="http://bugzilla.gnome.org/page.cgi?id=bug-status.html">A
+            Bug's Life Cycle</ulink> except for the difference between
             stable and unstable releases.
           </para>
         </answer>
