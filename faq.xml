@@ -655,7 +655,7 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
           <para>
             More information about the meaning of the Bugzilla status
             field codes can be found in <ulink
-            url="http://bugzilla.gnome.org/bug_status.html">
+            url="http://bugzilla.gnome.org/page.cgi?id=bug-status.html">
             A Bug's Life Cycle</ulink>.
           </para>
         </answer>

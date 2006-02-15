@@ -1,3 +1,7 @@
+2006-02-15  Raphaël Quinet  <raphael@gimp.org>
+
+	* faq.xml: Fixed broken link to Bugzilla (bug life cycle page).
+
 2006-02-13  Raphaël Quinet  <raphael@gimp.org>
 
 	* faq.xml: Added a new FAQ entry about how to configure some
