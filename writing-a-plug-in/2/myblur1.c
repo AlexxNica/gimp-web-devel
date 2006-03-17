@@ -76,8 +76,9 @@ run (const gchar      *name,
   values[0].type = GIMP_PDB_STATUS;
   values[0].data.d_status = status;
 
-  /* Getting run_mode - we won't display a dialog if 
-   * we are in NONINTERACTIVE mode */
+  /* Getting run_mode - we won't display a dialog if
+   * we are in NONINTERACTIVE mode
+   */
   run_mode = param[0].data.d_int32;
 
   /*  Get the specified drawable  */
@@ -85,13 +86,16 @@ run (const gchar      *name,
 
   gimp_progress_init ("My Blur...");
 
-  /* Let's time blur - don't forget to include time.h */
-  /* {
-   *   time_t before = time(NULL);
+  /* Let's time blur
+   *
+   *   GTimer timer = g_timer_new time ();
    */
+
   blur (drawable);
-  /*   printf("Blur() took %ld seconds.\n", time(NULL) - before); 
-   * } */
+
+  /*   g_print ("blur() took %g seconds.\n", g_timer_elapsed (timer));
+   *   g_timer_destroy (timer);
+   */
 
   gimp_displays_flush ();
   gimp_drawable_detach (drawable);

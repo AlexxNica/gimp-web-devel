@@ -1,3 +1,9 @@
+2006-03-17  Sven Neumann  <sven@gimp.org>
+
+	* writing-a-plug-in-2.xml
+	* writing-a-plug-in/2/myblur1.c
+	* writing-a-plug-in/2/myblur2.c: use a GTimer instead of time().
+
 2006-02-15  Raphaël Quinet  <raphael@gimp.org>
 
 	* faq.xml: Fixed broken link to Bugzilla (bug life cycle page).
