@@ -1,0 +1,261 @@
+<?xml version='1.0'?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+                         "dtd/website.dtd">
+
+<webpage id="gimpcon2006" lang="en">
+  
+  <head>
+    <title>The GIMP Developers Conference 2006</title>
+    <titleabbrev>GIMPCon 2006</titleabbrev>
+    <summary>This year's GimpCon</summary>
+  </head>
+  
+  <para>
+    The GIMP was part of the <ulink
+    url="http://www.libregraphicsmeeting.org">Libre Graphics
+      Meeting
+    </ulink>
+    held in Lyon from 17th to 19th of March.
+  </para>
+  
+  <section>
+    <title>Whats Next: Things to do for GIMP 2.4</title>
+   
+    <section>
+      
+    <title>SIOX</title> 
+      
+      <para>
+        There are still performance concerns and features missing
+        with SIOX.
+      </para>
+
+      <itemizedlist>
+        <title>TODO</title>
+        <listitem>
+          <para>
+            Implement a low resolution preview for large images.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Implement a detail refinement brush.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            New preview toggle, which temporarily disables the automatic
+            computation for multiple brush strokes for example.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            A volunteer for this is needed.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>New Tools</title>
+      
+      <para>
+        Sven pointed out that the rectangular and ellipse selection
+        tools should behave similar. The new align tool which is also
+        confusing sometimes. It still behaves to flaky. The code for the
+        Lanczos interpolation is currently broken.
+      </para>
+      
+      <para>
+        Either fix the Lanczos code or hide it from the 2.4 release by
+        removing it from the UI.
+      </para>
+    </section>
+
+    <section>
+      <title>Googles Summer of Code</title>
+
+      <para>
+        Dave pointed out that the Summer of Code is coming soon were
+        ideas are needed. GIMP is one of the projects which can offer
+        tasks to be solved.
+      </para>
+
+      <para>
+        Ideas and Tasks are needed at the beginning of May.
+      </para>
+    </section>
+
+    <section>
+      <title>Preparations for 2.4</title>
+
+      <para>
+        Michael pointed out, that some terms the GIMP UI uses are
+        misleading and very different from other image manipulation
+        programs. One example is the misleading dpi instead of ppi.
+      </para>
+
+      <para>
+        Michael proposed a Texttool PDB and also new features: multiple
+        styles for a line of text, more control over text.
+        Unfortunately, GIMP doesn't support currently all pango
+        features. Sometimes Ligature problems with Bitstream Vera Sans
+        occur.
+      </para>
+
+      <itemizedlist>
+        <title>TODO</title>
+        <listitem>
+          <para>
+            A list of blocker bugs for the 2.4 release is needed.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            A string and UI freeze is needed.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Mitchs cleanup should not be commited before 2.4 release.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Volunteers are needed for checking GIMP terms (English and
+            translations). A wiki page should track the termans and also
+            possible translations. One volunteer should elaborate if
+            Rosetta from Ubuntu can be used for this.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            A bug is needed for plug-ins which use g_message() and where
+            dialogs pop up behind the main window.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            A volunteer is needed for the Texttool PDB.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+
+  <section>
+    <title>Documentation</title>
+
+    <para>
+      The manual currently features nine languages, five are activly
+      worked on. Russian and Norwegian will be added after the 0.10
+      release. DocBook/XML is a barrier for new contributors, but there
+      is currently no valuable alternative available.
+    </para>
+
+    <para>
+      For PDF creation we should use dblatex instead of the dead project
+      db2latex.
+    </para>
+
+    <para>
+      The more translation an XML file holds the more difficult it is
+      for contributors to concentrate on their content. Maybe we should
+      split up the content directory-wise instead of profiling.
+    </para>
+
+    <para>
+      Michael proposed way users can comment on HTML pages like the PHP
+      documentation. The problems are: what will happen to comments
+      after an update of the documentation, how and who manages
+      comments, which system will suit our needs.
+    </para>
+
+    <itemizedlist>
+      <title>TODO</title>
+      <listitem>
+        <para>
+          Stick to DocBook/XML for the next year. Be aware of the
+          problems and change to a different internal structure if
+          needed. A new project page should make it easier to
+          contributors to join the project.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Elaborate which issue tracker can lower the barriers for
+          feedback from our readers.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+ 
+  <section>
+    <title>GIMP 2.99</title>
+
+    <section>
+      <title>GEGL</title>
+
+      <para>
+        Pippin pointed out, that GEGL does not yet support calculation
+        over regions of interest. Some of the code that does that is
+        currently 8-bits only, but the reference buffer implementation
+        would be 32bits float per pixel. Yosh proposed to generate all
+        the code needed for this from a template.
+      </para>
+
+      <para>
+        Mitch suggested, that the integration of GEGL should be in small
+        steps. The plug-in API should be GEGL only, but will provide
+        backwards compatibility from old plug-ins for 8bits only.
+      </para>
+
+      <para>
+        UI and Usability problems are also caused by the indexed mode.
+        We concluded, that it should be available if the user exports
+        his image to an indexed format, like GIF.
+      </para>
+
+      <itemizedlist>
+        <title>TODO</title>
+        <listitem>
+          <para>
+            Write the 32bits float version first, then generate others
+            from that reference version.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Replace the code in the base directory by GEGL operations.
+            First replace the image map tool (used for color correction,
+            etc.) using GEGL adapters around the pixel buffers. Then
+            later replace the layers.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+
+  <section>
+    <title>How can we Motivate People to Join the GIMP Development?</title>
+
+    <para>
+      The current project page for gimp.org is not really structured and
+      not very easy to get in touch with the developers. The GIMP
+      developers should setup a tasks list in which they consider they
+      are easy to solve and useful for the next version. Some of them
+      can be used for Googles Summer of Code.
+    </para>
+
+    <itemizedlist>
+      <title>TODO</title>
+      <listitem>
+        <para>
+          Setup a tasks list on the wiki of what can be achieved and
+          implemented. It ranges from easy to very complex tasks. A bug
+          on bugzilla for each task should be filed.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</webpage>
