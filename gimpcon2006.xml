@@ -258,4 +258,115 @@
       </listitem>
     </itemizedlist>
   </section>
+
+  <section>
+    <title>What is GIMP?</title>
+
+    <para>
+      Peter Sikking helped us to formulate a product vision for GIMP.
+      The vision helps to define what standard installation of the
+      GIMP is: what plug-ins are standard and what plug-ins are
+      optional. It shouldn't be a simple cost-and-benefit analysis of
+      what it means to support a feature. The current problem of the
+      product vision is too broad to be practical. Peter proposes that
+      our product vision should address a kind of Gauss curve of what
+      users GIMP is made for. Currently we have the experts and newbies,
+      but a low point for the intermediates.
+    </para>
+
+    <para>
+      Good defaults would be chosen depending on our vision, not
+      by inventing new scenarios all for each thing that we want to
+      evaluate. The user scenarios would be written down in advance.
+      These scenarios should not be changed afterwards because it would
+      lead to too much discussion. The goal is to cut down all this
+      discussion. <emphasis role="bold">The product vision is to be used
+      as a filter.</emphasis>
+      For example: If someone comes with the request that the UI of GIMP
+      should be like Photoshop, we can simple put: <quote>We are not
+      trying to be like Photoshop, because we hve a different product
+      vision.</quote>. Though, the feature requests should still be
+      examined carefully.
+    </para>
+
+    <section>
+      <title>Targeted user base</title>
+      
+      <para>
+        The GIMP targets experienced users.  If we acknowledge that the
+        GIMP is not (primarily) for beginners, we cut off a lot of
+        problems such as <quote>do we need to support that,</quote> etc.
+        Peter noted, that a <quote>GIMP Light</quote> would not just
+        have some options cut off from the menus: it would have a
+        completely different user interface, even if it would use the
+        same code under the hood. 
+      </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+            Graphics professionals, not developers
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>What it is:</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+            Free software
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Professional image manipulation
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            High-End photo retouching
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Good development platform for cutting edge scientific or
+            artistic image processing algorithms (like SIOX) 
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>What GIMP is not:</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>GIMP is not MS Paint or Adobe Photoshop</para> 
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <itemizedlist>
+      <title>TODO</title>
+      <listitem>
+        <para>
+          Make it easier to perform repetitive tasks (macro recording)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Provide a UI with a low barrier to entry
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          GIMP should be easily extensible by the average user: one
+          click-installation of plug-ins
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
 </webpage>
