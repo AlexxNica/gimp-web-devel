@@ -1,22 +1,25 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd" [
-<!ENTITY plug-ins SYSTEM "plug-ins.xml"    NDATA XML>
-<!ENTITY gimpcon  SYSTEM "gimpcon2004.xml" NDATA XML>
+<!ENTITY plug-ins SYSTEM "plug-ins.xml" NDATA XML>
 ]>
 
 <webpage id="home" lang="en">
 
   <head>
-    <title>What is this site all about?</title>
+    <headlink rel="alternate"
+              type="application/rss+xml"
+              title="GIMP Development News"
+              href="http://edhel.gimp.org/devnews-rss.xml" />
+    <title>GIMP Development</title>
     <summary>Online Resources for GIMP Developers</summary>
   </head>
 
   <para>
     This site tries to provide useful information for GIMP developers.
-    No matter whether you are into <olink targetdocent="plug-ins">plug-in
-    development</olink> or want to dive into the internals of the GIMP core,
-    you should find your way from here.
+    No matter if you are into <olink targetdocent="plug-ins">plug-in
+    development</olink> or want to dive into the internals of the GIMP
+    core, you should find your way from here.
   </para>
 
   <para>
