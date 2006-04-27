@@ -1,3 +1,7 @@
+2006-04-27  Simon Budig  <simon@gimp.org>
+
+	* bugs.xml: added Bug-link for milestone 2.4.
+
 2006-04-20  Sven Neumann  <sven@gimp.org>
 
 	* index.xml: added edhel's gimpdev feed as alternative.
