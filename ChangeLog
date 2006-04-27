@@ -1,3 +1,11 @@
+2006-04-27  Raphaël Quinet  <raphael@gimp.org>
+
+	* gimpcon/2006/people.jpg
+	* gimpcon/2006/people_small.jpg: Added group photo to be used in
+	the updated gimpcon2006 minutes.  This is actually a composite
+	from 3 photos, picking the "best" version of those who closed
+	their eyes or looked away from the camera during the 1st shot.
+
 2006-04-27  Simon Budig  <simon@gimp.org>
 
 	* bugs.xml: added Bug-link for milestone 2.4.
