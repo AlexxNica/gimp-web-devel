@@ -1,3 +1,13 @@
+2006-05-11  Raphaël Quinet  <raphael@gimp.org>
+
+	* layout.xml: Added link to GIMPCon2006 minutes.
+
+	* gimpcon.xml: Added link to GIMPCon2006 minutes, mentioned the
+	GIMP BOF at GUADEC 2005.
+
+	* gimpcon2006.xml: Updated minutes including images, revised
+	introduction and vision, some other minor updates.
+
 2006-05-02  Raphaël Quinet  <raphael@gimp.org>
 
 	* gimpcon/2006/meetings.jpg

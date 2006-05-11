@@ -9,88 +9,172 @@
     <titleabbrev>GIMPCon 2006</titleabbrev>
     <summary>This year's GimpCon</summary>
   </head>
-  
+
   <para>
-    The GIMP was part of the <ulink
-    url="http://www.libregraphicsmeeting.org">Libre Graphics
-      Meeting
-    </ulink>
-    held in Lyon from 17th to 19th of March.
+    The GIMP Developers Conference 2006 was held as a sub-event
+    of the <ulink url="http://www.libregraphicsmeeting.org">Libre
+    Graphics Meeting</ulink> in Lyon, France, on the 17th, 18th and
+    19th of March.
   </para>
-  
+
+  <para role="images">
+    <ulink url="people.jpg">
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="people_small.jpg"/>
+        </imageobject>
+        <textobject>
+          <phrase>The People at GIMPCon 2006</phrase>
+        </textobject>
+      </mediaobject>
+    </ulink>
+  </para>
+
   <section>
-    <title>Whats Next: Things to do for GIMP 2.4</title>
-   
-    <section>
-      
-    <title>SIOX</title> 
-      
-      <para>
-        There are still performance concerns and features missing
-        with SIOX.
-      </para>
+    <title>About the GIMP Developers Conference</title>
+
+    <para>
+      The GIMP Developers Conference, also known as GIMPCon, is a
+      gathering of GIMP and GEGL developers from all over the
+      World. It is a vital opportunity for GIMP developers to meet
+      each other and discuss the direction which the software will
+      take over the coming years.
+    </para>
+
+    <para>
+      There have been four GIMP Conferences previously: two in Berlin,
+      Germany hosted by the CCC (the Chaos Computer Club), one in
+      Kristiansand, Norway as part of GUADEC 2004 and one in
+      Stuttgart, Germany as part of GUADEC 2005.
+    </para>
+
+   </section>
+
+  <section>
+    <title>Minutes of the GIMP Developers Conference 2006</title>
+
+    <para>
+      During LGM, we had two sessions dedicated to GIMP: one on
+      Saturday afternoon (16:30-18:00) and one on Sunday
+      (10:30-16:00). The following points were on the agenda:
 
       <itemizedlist>
-        <title>TODO</title>
         <listitem>
-          <para>
-            Implement a low resolution preview for large images.
-          </para>
+          <link linkend="gimp24">GIMP 2.4</link>
         </listitem>
         <listitem>
-          <para>
-            Implement a detail refinement brush.
-          </para>
+          <link linkend="documentation">Documentation</link>
         </listitem>
         <listitem>
-          <para>
-            New preview toggle, which temporarily disables the automatic
-            computation for multiple brush strokes for example.
-          </para>
+          <link linkend="gimp299">GIMP 2.99</link>
         </listitem>
         <listitem>
-          <para>
-            A volunteer for this is needed.
-          </para>
+          <link linkend="developers">How to get more GIMP developers?</link>
+        </listitem>
+        <listitem>
+          <link linkend="vision">GIMP vision</link>
         </listitem>
       </itemizedlist>
+    </para>
+
+    <para role="images">
+      <ulink url="meetings.jpg">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="meetings_small.jpg"/>
+          </imageobject>
+          <textobject>
+            <phrase>Discussions and presentations at GIMPCon 2006</phrase>
+          </textobject>
+        </mediaobject>
+      </ulink>
+    </para>
+
+  </section>
+
+  <section id="gimp24">
+    <title>GIMP 2.4</title>
+   
+    <section>
+      <subtitle>SIOX</subtitle> 
+      
+      <para>Gerald explained the current status of SIOX and its future
+      developments:
+
+        <itemizedlist>
+          <listitem>
+            There are still some performance concerns because SIOX was
+            designed mainly for web-sized images. In the morning,
+            Raphaël suggested a way to add a low resolution preview
+            for large images and this feature will be implemented
+            soon.
+          </listitem>
+          <listitem>
+            Implement a detail refinement brush. Simon suggested to
+            apply the refinement automatically on the edge area, but
+            Gerald replied that defining such an area assumes that the
+            shape is simple, which is something that SIOX tries to
+            avoid.
+          </listitem>
+          <listitem>
+            New preview toggle, which temporarily disables the
+            automatic computation for multiple brush strokes for
+            example.
+          </listitem>
+          <listitem>
+            A volunteer for integrating more SIOX features in GIMP
+            is needed.
+          </listitem>
+        </itemizedlist>
+      </para>
     </section>
 
     <section>
-      <title>New Tools</title>
-      
+      <subtitle>New tools</subtitle>
+
       <para>
-        Sven pointed out that the rectangular and ellipse selection
-        tools should behave similar. The new align tool which is also
-        confusing sometimes. It still behaves to flaky. The code for the
-        Lanczos interpolation is currently broken.
-      </para>
-      
-      <para>
-        Either fix the Lanczos code or hide it from the 2.4 release by
-        removing it from the UI.
+        <itemizedlist>
+          <listitem>
+            Sven pointed out that the rectangular and ellipse selection
+            tools should have the same behavior.
+          </listitem>
+          <listitem>
+            The new align tool is also confusing for some users. Its
+            behavior is still too flaky. Sven mentioned that Peter
+            Sikking may be able to help in determining what the users
+            want. A session with Peter is planned for tomorrow (the
+            <link linkend="vision">vision discussion</link>).
+          </listitem>
+          <listitem>
+            The code for the Lanczos interpolation is currently
+            broken. Either we fix the Lanczos code or we hide it from
+            the 2.4 release by removing it from the UI and from the
+            PDB.
+          </listitem>
+        </itemizedlist>
       </para>
     </section>
 
     <section>
-      <title>Googles Summer of Code</title>
+      <subtitle>Google's Summer of Code</subtitle>
 
       <para>
-        Dave pointed out that the Summer of Code is coming soon were
+        Dave pointed out that the Summer of Code is coming soon and
         ideas are needed. GIMP is one of the projects which can offer
         tasks to be solved.
       </para>
-
       <para>
-        Ideas and Tasks are needed at the beginning of May.
+        Ideas and Tasks are needed soon, probably around the beginning
+        of May.
       </para>
+
     </section>
 
     <section>
-      <title>Preparations for 2.4</title>
+      <subtitle>Preparation for the 2.4 release</subtitle>
 
       <para>
-        Michael pointed out, that some terms the GIMP UI uses are
+        Michael pointed out that some terms in the GIMP UI uses are
         misleading and very different from other image manipulation
         programs. One example is the misleading dpi instead of ppi.
       </para>
@@ -98,9 +182,15 @@
       <para>
         Michael proposed a Texttool PDB and also new features: multiple
         styles for a line of text, more control over text.
-        Unfortunately, GIMP doesn't support currently all pango
-        features. Sometimes Ligature problems with Bitstream Vera Sans
-        occur.
+        Unfortunately, GIMP does not currently support all pango
+        features. Sometimes ligature problems occur with Bitstream
+        Vera Sans.
+      </para>
+
+      <para>
+        Various other issues were also discussed: undo handling of
+        vector operations, improvements to the full screen mode (some
+        plug-ins cannot display progress bars), etc.
       </para>
 
       <itemizedlist>
@@ -117,13 +207,14 @@
         </listitem>
         <listitem>
           <para>
-            Mitchs cleanup should not be commited before 2.4 release.
+            Mitch's cleanup should not be commited before the 2.4
+            release.
           </para>
         </listitem>
         <listitem>
           <para>
             Volunteers are needed for checking GIMP terms (English and
-            translations). A wiki page should track the termans and also
+            translations). A wiki page should track the terms and also
             possible translations. One volunteer should elaborate if
             Rosetta from Ubuntu can be used for this.
           </para>
@@ -143,7 +234,7 @@
     </section>
   </section>
 
-  <section>
+  <section id="documentation">
     <title>Documentation</title>
 
     <para>
@@ -184,20 +275,21 @@
       <listitem>
         <para>
           Elaborate which issue tracker can lower the barriers for
-          feedback from our readers.
+          feedback from our readers without turning it into a
+	  discussion forum that needs active moderation.
         </para>
       </listitem>
     </itemizedlist>
   </section>
  
-  <section>
+  <section id="gimp299">
     <title>GIMP 2.99</title>
 
     <section>
-      <title>GEGL</title>
+      <subtitle>GEGL</subtitle>
 
       <para>
-        Pippin pointed out, that GEGL does not yet support calculation
+        Pippin pointed out that GEGL does not yet support calculation
         over regions of interest. Some of the code that does that is
         currently 8-bits only, but the reference buffer implementation
         would be 32bits float per pixel. Yosh proposed to generate all
@@ -205,15 +297,25 @@
       </para>
 
       <para>
-        Mitch suggested, that the integration of GEGL should be in small
+        Pippin: GEGL is undead.
+      </para>
+
+      <para>
+        Mitch suggested that the integration of GEGL should be in small
         steps. The plug-in API should be GEGL only, but will provide
         backwards compatibility from old plug-ins for 8bits only.
       </para>
 
       <para>
         UI and Usability problems are also caused by the indexed mode.
-        We concluded, that it should be available if the user exports
-        his image to an indexed format, like GIF.
+        We concluded that it should be available if the user exports
+        his image to an indexed format, like GIF or PCX. For some indexed
+        images, the order of the colors in the palette is significant.
+        Raphaël proposed to handle these images through GEGL as 16bits
+        images with the 8 least significant bits representing the
+        original palette index so that it can be restored later when
+        saving. Gerald mentioned that Apple may already be doing
+        something similar.
       </para>
 
       <itemizedlist>
@@ -229,22 +331,42 @@
             Replace the code in the base directory by GEGL operations.
             First replace the image map tool (used for color correction,
             etc.) using GEGL adapters around the pixel buffers. Then
-            later replace the layers.
+            later replace the layers and masks.
           </para>
         </listitem>
       </itemizedlist>
     </section>
   </section>
 
-  <section>
-    <title>How can we Motivate People to Join the GIMP Development?</title>
+  <section id="developers">
+    <title>How can we motivate people to join the GIMP development?</title>
 
     <para>
       The current project page for gimp.org is not really structured and
-      not very easy to get in touch with the developers. The GIMP
-      developers should setup a tasks list in which they consider they
-      are easy to solve and useful for the next version. Some of them
-      can be used for Googles Summer of Code.
+      not very easy to get in touch with the developers. It would
+      help to show to the potential contributers a list of tasks that
+      GIMP developers consider relatively easy and useful for the
+      next version. We could also use the task list for the Google
+      Summer of Code or for bounties, etc.
+    </para>
+
+    <para>
+      We should make sure that people feel welcome when they read the
+      GIMP mailing lists. For example, we should avoid criticizing
+      those who mention GimpShop or commercial programs such as
+      Photoshop.
+    </para>
+
+    <para>
+      Some suggestions were discussed, such as introducing aging in
+      the list of GIMP authors. The About dialog would first list
+      those who contributed to the current version and then a longer
+      list of previous contributers. Sven and Yosh remarked that we
+      are not really using the mailing lists for discussing GIMP
+      development. Most of the discussion happens on IRC or directly
+      between people. This could be improved. There was also some
+      debate about how to avoid pointless discussions on the gimp-web
+      mailing list.
     </para>
 
     <itemizedlist>
@@ -252,15 +374,24 @@
       <listitem>
         <para>
           Setup a tasks list on the wiki of what can be achieved and
-          implemented. It ranges from easy to very complex tasks. A bug
-          on bugzilla for each task should be filed.
+          implemented. It ranges from easy to very complex tasks. Each
+          task should be linked to a bugzilla bug report. If someone
+          starts working on one of these tasks, its bug report should
+          be marked as ASSIGNED.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Improve the infrastructure for the web site and try to make
+          contributions easier: simpler installation and testing, if
+          possible without requiring special skills or permissions.
         </para>
       </listitem>
     </itemizedlist>
   </section>
 
-  <section>
-    <title>What is GIMP?</title>
+  <section id="vision">
+    <title>GIMP vision</title>
 
     <para>
       Peter Sikking helped us to formulate a product vision for GIMP.
@@ -276,71 +407,105 @@
 
     <para>
       Good defaults would be chosen depending on our vision, not
-      by inventing new scenarios all for each thing that we want to
+      by inventing new scenarios for each thing that we want to
       evaluate. The user scenarios would be written down in advance.
       These scenarios should not be changed afterwards because it would
       lead to too much discussion. The goal is to cut down all this
       discussion. <emphasis role="bold">The product vision is to be used
       as a filter.</emphasis>
       For example: If someone comes with the request that the UI of GIMP
-      should be like Photoshop, we can simple put: <quote>We are not
-      trying to be like Photoshop, because we hve a different product
-      vision.</quote>. Though, the feature requests should still be
+      should be like Photoshop, we can simply state: <quote>We are not
+      trying to be like Photoshop, because we have a different product
+      vision.</quote> Though, the feature requests should still be
       examined carefully.
     </para>
 
     <section>
-      <title>Targeted user base</title>
+      <subtitle>Targeted user base</subtitle>
       
       <para>
-        The GIMP targets experienced users.  If we acknowledge that the
-        GIMP is not (primarily) for beginners, we cut off a lot of
-        problems such as <quote>do we need to support that,</quote> etc.
-        Peter noted, that a <quote>GIMP Light</quote> would not just
-        have some options cut off from the menus: it would have a
+        GIMP targets experienced users. If we acknowledge that GIMP is
+        not (primarily) for beginners, we cut off a lot of problems
+        such as <quote>do we need to support that,</quote> etc.  Peter
+        noted that a <quote>GIMP Light</quote> would not just have
+        some options cut off from the menus: it would have a
         completely different user interface, even if it would use the
-        same code under the hood. 
+        same code under the hood.
       </para>
 
+      <para>
+        Some developers work on GIMP to promote the Free Software
+        movement and would probably not contribute if GIMP was not
+        free.  Others think that GIMP should provide fun for its
+        developers, although our user base has grown a bit large for
+        just doing fun experiments.  We have to acknowledge that we
+        address a user base that may be more experienced in image
+        manipulation than we are, so the developers are partially out
+        of the target group.
+      </para>
+
+      <para>
+        Before converging towards a definition of the GIMP target
+        groups and GIMP vision, there were several discussions
+        involving examples and use cases, whether GIMP should be the
+        best image manipulation program in the universe (best for
+        who?), whether those working on icons and those working on
+        photos have the same needs (number of images open, relative
+        sizes), whether people need to switch frequently between GIMP
+        and other applications (browser or editor for web work),
+        whether we will support painting with shapes and natural
+        media, etc.
+      </para>
+
+      <para>
+        Eventually, a GIMP vision emerged...
+      </para>
+    </section>
+
+    <section>
+      <subtitle>What GIMP is:</subtitle>
+
       <itemizedlist>
         <listitem>
           <para>
-            Graphics professionals, not developers
+            GIMP is Free Software
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            GIMP is a high-end photo manipulation application, and
+            supports creating original art from images;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            GIMP is a high-end application for producing icons,
+            graphical elements of web pages, and art for user interface
+            elements;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            GIMP is a platform for programming cutting edge image
+            processing algorithms, by scientists and artists;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            GIMP is user-configurable to automate repetitive tasks;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            GIMP is easily user-extendable, by easy installation
+            of plug-ins.
           </para>
         </listitem>
       </itemizedlist>
     </section>
 
     <section>
-      <title>What it is:</title>
-
-      <itemizedlist>
-        <listitem>
-          <para>
-            Free software
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            Professional image manipulation
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            High-End photo retouching
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            Good development platform for cutting edge scientific or
-            artistic image processing algorithms (like SIOX) 
-          </para>
-        </listitem>
-      </itemizedlist>
-    </section>
-
-    <section>
-      <title>What GIMP is not:</title>
+      <subtitle>What GIMP is not:</subtitle>
 
       <itemizedlist>
         <listitem>
@@ -369,4 +534,12 @@
       </listitem>
     </itemizedlist>
   </section>
+
+  <section>
+    <para>
+      Minutes written by Roman Joost and Raphaël Quinet. Photos by
+      Jean + Karine Delvare and Raphaël Quinet.
+    </para>
+ </section>
+
 </webpage>

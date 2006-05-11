@@ -4,6 +4,7 @@
 <!ENTITY gimpcon2000 SYSTEM "gimpcon2000.xml" NDATA XML>
 <!ENTITY gimpcon2003 SYSTEM "gimpcon2003.xml" NDATA XML>
 <!ENTITY gimpcon2004 SYSTEM "gimpcon2004.xml" NDATA XML>
+<!ENTITY gimpcon2006 SYSTEM "gimpcon2006.xml" NDATA XML>
 ]>
 
 <webpage id="gimpcon" lang="en">
@@ -25,13 +26,23 @@
   <para>
     <itemizedlist>
       <listitem>
-        <olink targetdocent="gimpcon2000">GIMPCon 2000</olink>
+        <olink targetdocent="gimpcon2000">GIMPCon 2000</olink>, June
+        2-3-4 in Berlin, Germany.
       </listitem>
       <listitem>
-        <olink targetdocent="gimpcon2003">GIMPCon 2003</olink>
+        <olink targetdocent="gimpcon2003">GIMPCon 2003</olink>,
+        August 7-8-9-10 in Berlin, Germany.
       </listitem>
       <listitem>
-        <olink targetdocent="gimpcon2004">GIMPCon 2004</olink>
+        <olink targetdocent="gimpcon2004">GIMPCon 2004</olink>,
+        June 28-29-30 in Kristiansand, Norway.
+      </listitem>
+      <listitem>
+        GIMP meeting at GUADEC 2005, May 28-29-30-31 in Stuttgart, Germany.
+      </listitem>
+      <listitem>
+        <olink targetdocent="gimpcon2006">GIMPCon 2006</olink>,
+        March 17-18-19 in Lyon, France.
       </listitem>
     </itemizedlist>
   </para>
