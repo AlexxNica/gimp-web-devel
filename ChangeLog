@@ -1,3 +1,9 @@
+2006-05-17  Sven Neumann  <sven@gimp.org>
+
+	* install.sh: do not set PATH, the system-wide installed version
+	of xsltproc is now new enough.  Force update of the front page so
+	that we always get the latest gimpdev news.
+
 2006-05-17  Carol Spears  <carol@gimp.org>
 
 	* images/developer-left.png: removed "THE" from the logo image.
