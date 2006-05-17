@@ -1,3 +1,7 @@
+2006-05-17  Carol Spears  <carol@gimp.org>
+
+	* images/developer-left.png: removed "THE" from the logo image.
+
 2006-05-11  Raphaël Quinet  <raphael@gimp.org>
 
 	* layout.xml: Added link to GIMPCon2006 minutes.
