@@ -18,8 +18,9 @@
   <para>
     This site tries to provide useful information for GIMP developers.
     No matter if you are into <olink targetdocent="plug-ins">plug-in
-    development</olink> or want to dive into the internals of the GIMP
-    core, you should find your way from here.
+    development</olink> or want to dive into the
+    <ulink url="/api/2.0/app/app-hierarchy-part.html">internals of the
+    GIMP core</ulink>, you should find your way from here.
   </para>
 
   <para>
