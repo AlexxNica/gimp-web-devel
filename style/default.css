@@ -3,6 +3,20 @@
  * that changes done here will change the appearance on the whole site
  * so keep a backup of this file while working with it. Niklas */
 
+/* Copyright (C) 2002-2006 by The GIMP Web Team - Contributions by:
+ * Ville Pätsi (drc), Henrik Brix Andersen (brix), Carol Spears
+ * (carol), Niklas Mattisson (scizzo), Raphaël Quinet (raphael) and
+ * Branko Collin (branko).
+ *
+ * This style sheet and corresponding site layout are designed to be
+ * used on official GIMP web sites only.  You may copy some parts of
+ * this file into your own style sheet as long as you create your own
+ * design that is significantly different from the one used on GIMP
+ * web sites (layout, colors, etc.) and you give appropriate credit if
+ * you copy more than a few lines from this file (do not claim that
+ * you wrote everything yourself).
+ */
+
 body {
   background: white;
   color: black;
