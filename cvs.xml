@@ -116,6 +116,14 @@
 	</row>
 	<row>
 	  <entry>
+            <ulink url="http://cvs.gnome.org/viewcvs/gimp-ruby/">gimp-ruby</ulink>
+          </entry>
+	  <entry>
+            GIMP Ruby-based scripting plug-in
+          </entry>
+	</row>
+	<row>
+	  <entry>
             <ulink url="http://cvs.gnome.org/viewcvs/gimp-tiny-fu/">gimp-tiny-fu</ulink>
           </entry>
 	  <entry>
