@@ -98,11 +98,9 @@
         </question>
         <answer>
           <para>
-            If building from CVS you can pass
-            <command>--enable-gtk-doc</command> to the gimp
-            <filename>configure</filename> script.  This requires
-            having <ulink
-            url="ftp://ftp.gtk.org/pub/gtk-doc/">gtk-doc</ulink>
+            You can pass <command>--enable-gtk-doc</command> to the gimp
+            <filename>configure</filename> script.  This requires having
+	    <ulink url="ftp://ftp.gtk.org/pub/gtk-doc/">gtk-doc</ulink>
             installed.  After running <command>make</command> you can
             find the GIMP API reference in the
             <filename>devel-docs</filename> directory.
@@ -348,7 +346,7 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
             <ulink
             url="http://developer.gnome.org/projects/gtp/">GNOME
             Translation Project</ulink> who coordinate all translation
-            efforts in the GNOME CVS tree.
+            efforts for projects hosted in the GNOME Subversion repository.
           </para>
           <para>
             More information about the GIMP and localisation can be
@@ -501,18 +499,18 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
 
     </qandadiv>
     <qandadiv>
-      <title>CVS</title>
+      <title>Subversion</title>
 
       <qandaentry>
         <question>
           <para>
-            What should I put in the ChangeLog when doing a CVS commit?
+            What should I put in the ChangeLog when doing a svn commit?
           </para>
         </question>
         <answer>
           <para>
             The ChangeLog entry must list all files affected by the
-            CVS commit along with a description of the changes.  The
+            commit along with a description of the changes.  The
             ChangeLog entry should follow the style set forth in the
             rest of the ChangeLog.
           </para>
@@ -527,13 +525,13 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
       <qandaentry>
         <question>
           <para>
-            What should I put in the CVS log?
+            What should I put in the commit log message?
           </para>
         </question>
         <answer>
           <para>
             You should always paste the entry from the ChangeLog to
-            the CVS log when doing a CVS commit.  Please strip the
+            the commit message when doing a svn commit.  Please strip the
             leading whitespace first to make the log more readable.
           </para>
         </answer>
@@ -722,14 +720,14 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
           <para>
             When fixing a bug, always mention the bug number in the
             commit message and ChangeLog entry.  Once the changes are
-            in CVS, paste the relevant part of the ChangeLog entry (or
+            in SVN, paste the relevant part of the ChangeLog entry (or
             all of it) in the comment field and mark the bug as
             RESOLVED FIXED.  These cross-references help a lot when
             trying to find when a bug was fixed, its relations to
             other bugs, and potential regressions.
           </para>
           <para>
-            A bug that is fixed in CVS or in an unstable release
+            A bug that is fixed in SVN or in an unstable release
             should be marked as RESOLVED FIXED.  Optionally, the
             reporter or someone other than the one who fixed the bug
             can mark it as VERIFIED after some testing.  When the fix
