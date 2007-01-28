@@ -1,3 +1,11 @@
+2007-01-28  Sven Neumann  <sven@gimp.org>
+
+	* cvs.xml: renamed to svn.xml. Updated for the migration to SVN.
+
+	* faq.xml: updated for the migration to SVN.
+
+	* layout.xml: changed accordingly. Updated copyright.
+
 2006-09-29  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: updated TIFF links.

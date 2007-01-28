@@ -403,8 +403,8 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
           <para>
             Yes.  An official GIMP plug-in template is available in
             the <ulink
-            url="http://cvs.gnome.org/viewcvs/gimp-plugin-template/">gimp-plugin-template
-            CVS module</ulink>.  Snapshots are available at <ulink
+            url="http://svn.gnome.org/viewcvs/gimp-plugin-template/">gimp-plugin-template
+            </ulink> SVN module.  Snapshots are available at <ulink
             url="ftp://ftp.gimp.org/pub/gimp/plugin-template/">ftp.gimp.org</ulink>.
           </para>
         </answer>

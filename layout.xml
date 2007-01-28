@@ -9,7 +9,7 @@
   <config param="banner-right" value="images/developer-right.png" />
 
   <copyright>
-    <year>2003-2006</year>
+    <year>2003-2007</year>
     <holder role="http://www.gimp.org/">The GIMP Development Team</holder>
   </copyright>
 
@@ -36,18 +36,18 @@
 
   <toc page="index.xml" filename="index.html">
 
-    <tocentry page="cvs.xml" filename="cvs.html">
+    <tocentry page="svn.xml" filename="svn.html">
 
       <tocentry page="changelog.xml" filename="changelog.html" />
 
       <tocentry id="news" href="/NEWS">
         <title>News</title>
-        <summary>The NEWS file in CVS</summary>
+        <summary>The NEWS file in the trunk</summary>
       </tocentry>
 
       <tocentry id="hacking" href="/HACKING">
         <title>Hacking</title>
-	<summary>The HACKING file in CVS</summary>
+	<summary>The HACKING file in the trunk</summary>
       </tocentry>
 
     </tocentry>
@@ -114,4 +114,3 @@
   </toc>
 
 </layout>
-
