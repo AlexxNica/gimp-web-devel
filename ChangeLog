@@ -1,6 +1,6 @@
 2007-01-30  Sven Neumann  <sven@gimp.org>
 
-	* svn.xml: removed reference to libpdb.
+	* svn.xml: removed reference to libpdb, added link to the SVN intro.
 
 2007-01-28  Sven Neumann  <sven@gimp.org>
 
