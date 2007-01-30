@@ -52,8 +52,6 @@
 
     </tocentry>
 
-   <notoc page="cvs.xml" filename="cvs.html"/>
-
    <tocentry page="bugs.xml" filename="bugs.html"/>
 
     <tocentry page="mailing-lists.xml" filename="lists.html" />
@@ -114,5 +112,7 @@
     <tocentry page="about.xml" filename="about.html" />
 
   </toc>
+
+  <notoc page="cvs.xml" filename="cvs.html"/>
 
 </layout>

@@ -1,5 +1,10 @@
 2007-01-31  Sven Neumann  <sven@gimp.org>
 
+	* layout.xml
+	* cvs.xml: fixed syntax error, corrected id and use of notoc element.
+
+2007-01-31  Sven Neumann  <sven@gimp.org>
+
 	* changelog.xml: cvs -> subversion.
 
 	* layout.xml

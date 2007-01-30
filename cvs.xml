@@ -2,8 +2,9 @@
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd" [
 <!ENTITY subversion SYSTEM "svn.xml" NDATA XML>
+]>
 
-<webpage id="svn" lang="en">
+<webpage id="cvs" lang="en">
 
   <head>
     <title>CVS</title>
@@ -14,4 +15,5 @@
     GIMP doesn't use CVS any longer. The source code repository has been
     migrated to <olink targetdocent="subversion">Subversion</olink>.
   </para>
+
 </webpage>
