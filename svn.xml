@@ -82,14 +82,6 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewcvs/gimp-help/">gimp-help</ulink>
-          </entry>
-	  <entry>
-            GIMP help pages for gimp 1.2
-          </entry>
-	</row>
-	<row>
-	  <entry>
             <ulink url="http://svn.gnome.org/viewcvs/gimp-help-2/">gimp-help-2</ulink>
           </entry>
 	  <entry>
