@@ -150,14 +150,6 @@
             the source of the pages you are reading right now
           </entry>
 	</row>
-	<row>
-	  <entry>
-            <ulink url="http://svn.gnome.org/viewcvs/libpdb/">libpdb</ulink>
-          </entry>
-	  <entry>
-            a rewrite of the GIMP Plugin Procedural Database
-          </entry>
-	</row>
       </tbody>
     </tgroup>
   </informaltable>
