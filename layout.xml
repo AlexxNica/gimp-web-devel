@@ -52,7 +52,9 @@
 
     </tocentry>
 
-    <tocentry page="bugs.xml" filename="bugs.html"/>
+   <notoc page="cvs.xml" filename="cvs.html"/>
+
+   <tocentry page="bugs.xml" filename="bugs.html"/>
 
     <tocentry page="mailing-lists.xml" filename="lists.html" />
 
