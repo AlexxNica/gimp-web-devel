@@ -1,6 +1,8 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
-                         "dtd/website.dtd" >
+                         "dtd/website.dtd" [
+<!ENTITY subversion SYSTEM "svn.xml" NDATA XML>
+]>
 
 <webpage id="about" lang="en">
 
@@ -21,7 +23,8 @@
 
   <para>
     If you want to help us with developer.gimp.org, check out the
-    module <emphasis>gimp-web-devel</emphasis> from GNOME CVS.
+    module <emphasis>gimp-web-devel</emphasis>
+    from <olink targetdocent="subversion">Subversion</olink>.
   </para>
 
 </webpage>

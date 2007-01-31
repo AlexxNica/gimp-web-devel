@@ -1,5 +1,9 @@
 2007-01-31  Sven Neumann  <sven@gimp.org>
 
+	* about.xml: eliminated another reference to CVS.
+
+2007-01-31  Sven Neumann  <sven@gimp.org>
+
 	* gimpcon.xml
 	* gimpcon2000.xml
 	* gimpcon2003.xml
