@@ -10,9 +10,9 @@
 <webpage id="gimpcon" lang="en">
 
   <head>
-    <title>The GIMP Developers Conferences</title>
+    <title>GIMP Developer Conferences</title>
     <titleabbrev>Conference</titleabbrev>
-    <summary>Hanging out with the GIMP developers</summary>
+    <summary>Hanging out with GIMP developers</summary>
   </head>
 
   <para>
@@ -20,7 +20,7 @@
     gathering of <ulink url="http://www.gimp.org">GIMP</ulink> and
     <ulink url="http://www.gegl.org">GEGL</ulink> developers from all
     over the World. This is where we get together and discuss the
-    future development, hack on The GIMP and meet the GIMP users.
+    future development, hack on GIMP and meet GIMP users.
   </para>
 
   <para>
