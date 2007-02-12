@@ -195,17 +195,31 @@
 
    <varlistentry>
       <term>
+	<ulink url="http://dbus.freedesktop.org/doc/dbus-specification.html">Desktop Message Bus</ulink>
+      </term>
+      <listitem>
+	<para>
+          D-Bus is a message bus for the desktop. If available, GIMP
+	  uses it to detect if another GIMP instance is already
+	  running. In the future, GIMP might make even more use of
+	  D-Bus.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
 	<ulink url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html">Desktop Entry Specification</ulink>
       </term>
       <listitem>
 	<para>
 	  This spec describes desktop entries: files describing
 	  information about an application such as the name, icon, and
-	  description. GIMP installs such a <filename>.desktop</filename>
-	  file.
+	  description. GIMP installs such
+	  a <filename>.desktop</filename> file.
 	</para>
       </listitem>
-    </varlistentry>
+   </varlistentry>
 
    <varlistentry>
       <term>
@@ -229,7 +243,7 @@
 	  much of these guidelines as makes sense.
 	</para>
       </listitem>
-    </varlistentry>
+   </varlistentry>
 
    <varlistentry>
       <term>

@@ -1,3 +1,7 @@
+2007-02-12  Sven Neumann  <sven@gimp.org>
+
+	* standards.xml: added a link to the D-Bus spec.
+
 2007-01-31  Sven Neumann  <sven@gimp.org>
 
 	* about.xml: eliminated another reference to CVS.
