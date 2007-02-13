@@ -195,6 +195,20 @@
 
    <varlistentry>
       <term>
+	<ulink url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html">Desktop Entry Specification</ulink>
+      </term>
+      <listitem>
+	<para>
+	  This document describes desktop entries: files describing
+	  information about an application such as the name, icon, and
+	  description. GIMP installs such
+	  a <filename>.desktop</filename> file.
+	</para>
+      </listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term>
 	<ulink url="http://dbus.freedesktop.org/doc/dbus-specification.html">Desktop Message Bus</ulink>
       </term>
       <listitem>
@@ -206,20 +220,6 @@
 	</para>
       </listitem>
     </varlistentry>
-
-   <varlistentry>
-      <term>
-	<ulink url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html">Desktop Entry Specification</ulink>
-      </term>
-      <listitem>
-	<para>
-	  This spec describes desktop entries: files describing
-	  information about an application such as the name, icon, and
-	  description. GIMP installs such
-	  a <filename>.desktop</filename> file.
-	</para>
-      </listitem>
-   </varlistentry>
 
    <varlistentry>
       <term>
