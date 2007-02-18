@@ -318,6 +318,20 @@
 
    <varlistentry>
       <term>
+	<ulink url="http://www.freedesktop.org/wiki/ClipboardManager">Clipboard Manager</ulink>
+      </term>
+      <listitem>
+	<para>
+	  The Clipboard Manager specification describes how
+	  applications can actively store the contents of the
+	  clipboard when the application is quit. This requires that a
+	  compliant clipboard manager is running.
+	</para>
+      </listitem>
+    </varlistentry>
+
+   <varlistentry>
+      <term>
 	<ulink url="http://freedesktop.org/Standards/XDND">Drag-and-Drop Protocol for the X Window System</ulink>
       </term>
       <listitem>
