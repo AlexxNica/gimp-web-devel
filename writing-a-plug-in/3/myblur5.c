@@ -170,26 +170,26 @@ blur (GimpDrawable *drawable,
   guchar      *outrow;
   gint         width, height;
 
-  if (!preview)
+  if (! preview)
     gimp_progress_init ("My Blur...");
 
   /* Gets upper left and lower right coordinates,
    * and layers number in the image */
   if (preview)
-  {
-    gimp_preview_get_position (preview, &x1, &y1);
-    gimp_preview_get_size (preview, &width, &height);
-    x2 = x1 + width;
-    y2 = y1 + height;
-  }
+    {
+      gimp_preview_get_position (preview, &x1, &y1);
+      gimp_preview_get_size (preview, &width, &height);
+      x2 = x1 + width;
+      y2 = y1 + height;
+    }
   else
-  {
-    gimp_drawable_mask_bounds (drawable->drawable_id,
-                               &x1, &y1,
-                               &x2, &y2);
-    width = x2 - x1;
-    height = y2 - y1;
-  }
+    {
+      gimp_drawable_mask_bounds (drawable->drawable_id,
+                                 &x1, &y1,
+                                 &x2, &y2);
+      width = x2 - x1;
+      height = y2 - y1;
+    }
 
   channels = gimp_drawable_bpp (drawable->drawable_id);
 
@@ -241,7 +241,8 @@ blur (GimpDrawable *drawable,
                x1, y1,
                width, height,
                i);
-      if (i % 10 == 0)
+
+      if (! preview && i % 16 == 0)
         gimp_progress_update ((gdouble) i / (gdouble) height);
     }
 
