@@ -1,3 +1,8 @@
+2007-03-07  Sven Neumann  <sven@gimp.org>
+
+	* writing-a-plug-in/3/myblur5.c: don't update the progress when
+	doing a preview.
+
 2007-02-18  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: added link to the Clipboard Manager spec.
