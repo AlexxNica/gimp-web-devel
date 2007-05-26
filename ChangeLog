@@ -1,3 +1,7 @@
+2007-05-26  Sven Neumann  <sven@gimp.org>
+
+	* standards.xml: updated link to the file-uri spec.
+
 2007-03-07  Sven Neumann  <sven@gimp.org>
 
 	* writing-a-plug-in/3/myblur5.c: don't update the progress when
