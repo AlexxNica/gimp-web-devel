@@ -1,3 +1,7 @@
+2007-06-11  Mukund Sivaraman  <muks@mukund.org>
+
+	* bugs.xml: fixed link to bugzilla weekly summary.
+
 2007-05-26  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: updated link to the file-uri spec.
