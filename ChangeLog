@@ -1,3 +1,7 @@
+2007-06-21  Raphaël Quinet  <raphael@gimp.org>
+
+	* faq.xml: Removed extra parenthesis spotted by Mukund.
+
 2007-06-11  Mukund Sivaraman  <muks@mukund.org>
 
 	* bugs.xml: fixed link to bugzilla weekly summary.

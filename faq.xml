@@ -289,7 +289,7 @@
  '(show-paren-mode t nil (paren))
  ;; User name to be put in the ChangeLog file by M-x add-change-log-entry
  '(user-full-name "Your Name Here")
- '(user-mail-address "your@email.address"))
+ '(user-mail-address "your@email.address")
 )
 ;; use UTF-8 by default
 (prefer-coding-system 'mule-utf-8)
