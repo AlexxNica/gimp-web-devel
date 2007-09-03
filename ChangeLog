@@ -1,3 +1,9 @@
+2007-09-03  Raphaël Quinet  <raphael@gimp.org>
+
+	* bugs.xml: milestones 2.4 and 2.6 are more useful than 2.2.
+
+	* MAINTAINERS: added file required by pre-commit hook.
+
 2007-06-21  Raphaël Quinet  <raphael@gimp.org>
 
 	* faq.xml: Removed extra parenthesis spotted by Mukund.
