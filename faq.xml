@@ -167,7 +167,7 @@
       <qandaentry>
         <question>
           <para>
-            What is the preferred coding style used in the GIMP?
+            What is the preferred coding style used in GIMP?
           </para>
         </question>
         <answer>
@@ -305,7 +305,7 @@
               </para>
               <programlisting><![CDATA[
 syn on           " syntax highlighting
-set expandtab    " use tabs instead of spaces
+set expandtab    " use spaces instead of tabs
 set shiftwidth=2 " default indentation is 2 spaces ]]></programlisting>
               <para>
                 Recent versions of Vim should be able to handle
@@ -336,7 +336,7 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
       <qandaentry>
         <question>
           <para>
-            Who coordinates the translation of the GIMP?
+            Who coordinates the GIMP translation efforts?
           </para>
         </question>
         <answer>
@@ -349,9 +349,8 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
             efforts for projects hosted in the GNOME Subversion repository.
           </para>
           <para>
-            More information about the GIMP and localisation can be
-            found in the file <ulink
-            url="README.i18n">README.i18n</ulink>.
+            More information about GIMP and localisation can be found
+            in the file <ulink url="README.i18n">README.i18n</ulink>.
           </para>
         </answer>
       </qandaentry>
@@ -364,19 +363,19 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
         </question>
         <answer>
           <para>
-            By using the GIMP and reporting any bugs you find to
-            <ulink url="http://bugzilla.gnome.org">Bugzilla</ulink>
+            By using GIMP and reporting any bugs you find to
+            <ulink url="http://bugzilla.gnome.org/">Bugzilla</ulink>
             you're helping a great deal.  But there are other
             non-technical ways of supporting the development of The
             GIMP as well.
           </para>
           <para>
-            The GIMP has a web site, application documentation, lots
-            of tutorials, and more.  Unfortunately, as the GIMP
-            develops over time, much of this documentation needs to be
-            re-written or freshened up, documentation needs to be
-            added for new functionality, the web site needs to get a
-            new lick of paint and so on.
+            GIMP has a web site, application documentation, lots of
+            tutorials, and more.  Unfortunately, as GIMP develops over
+            time, much of this documentation needs to be re-written or
+            freshened up, documentation needs to be added for new
+            functionality, the web site needs to get a new lick of
+            paint and so on.
           </para>
           <para>
             If you're interested in helping out you should drop an
@@ -431,17 +430,21 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
         </question>
         <answer>
           <para>
-            Basically you should open an enhancement request in
-            Bugzilla and attach your plug-in there asking for it to be
-            included in the GIMP.  If your plug-in is generally useful
-            the GIMP developers might decide to include it in an
-            upcoming release of the GIMP.
+            The best way to make your plug-in available to the World
+            is to submit it to <ulink
+            url="http://registry.gimp.org/">the GIMP Plug-In
+            Registry</ulink>.
           </para>
           <para>
-            Another way of making your plug-in available to the World
-            is to submit it to <ulink
-            url="http://registry.gimp.org">the GIMP Plug-In
-            Registry</ulink>.
+            If you are certain that your plug-in will be useful to all
+	    GIMP users, then you can ask the GIMP developers to
+	    consider it for inclusion in future GIMP release.  The
+	    best way to do that is to suggest it on the GIMP developer
+            <olink targetdocent="lists">mailing list</olink> or to
+	    open an enhancement request in Bugzilla. However, we would
+	    like to limit the number of plug-ins included in the
+	    standard distribution and encourage all users to use the
+	    registry.
           </para>
         </answer>
       </qandaentry>
@@ -474,21 +477,21 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
       <qandaentry>
         <question>
           <para>
-            Will the plug-in I compiled against 2.0 work with the
-            GIMP 2.2?
+            Will the plug-in I compiled against 2.0 work with
+            GIMP 2.2 or 2.4?
           </para>
         </question>
         <answer>
           <para>
-            The short answer is yes. The GIMP 2.2 is binary compatible
-            with plug-ins compiled for GIMP 2.0. The API is also
-            backwards source compatible, so your plug-in should also
-            compile cleanly against GIMP 2.2.
+            The short answer is yes. GIMP 2.2 and 2.4 are binary
+            compatible with plug-ins compiled for GIMP 2.0. The API is
+            also backwards source compatible, so your plug-in should
+            also compile cleanly against GIMP 2.2 and 2.4.
           </para>
           <para>
-            If the plug-in you compiled for 2.0 does not work with
-            2.2, there is one change which has been made which is not
-            backwards compatible, since the old behaviour was
+            If the plug-in you compiled for 2.0 does not work with 2.2
+            or 2.4, there is one change which has been made which is
+            not backwards compatible, since the old behaviour was
             considered incorrect. If you create a temporary drawable,
             using for example gimp_layer_new(), you are now required
             to add it to an image before calling any functions with
@@ -551,8 +554,8 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
           <para>
             GEGL is the <ulink url="http://www.gegl.org">Generic
             Graphical Library</ulink>.  It is supposed to replace the
-            handling of various image processing tasks in the GIMP in
-            a not too distant future.
+            handling of various image processing tasks in GIMP in
+            a not too distant future (planned for GIMP 2.6).
           </para>
         </answer>
       </qandaentry>
@@ -585,7 +588,7 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
       <qandaentry>
         <question>
           <para>
-            What does all that gibberish mean for the GIMP?
+            What does all that gibberish mean for GIMP?
           </para>
         </question>
         <answer>
@@ -750,7 +753,7 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
         <question>
           <para>
             Where can I learn more about the GObject system used by
-            the GIMP?
+            GIMP?
           </para>
         </question>
         <answer>

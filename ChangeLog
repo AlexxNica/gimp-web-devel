@@ -1,3 +1,8 @@
+2007-09-13  Raphaël Quinet  <raphael@gimp.org>
+
+	* faq.xml: corrected misleading comment (tabs vs. spaces), updated
+	several other entries.
+
 2007-09-03  Raphaël Quinet  <raphael@gimp.org>
 
 	* bugs.xml: milestones 2.4 and 2.6 are more useful than 2.2.
