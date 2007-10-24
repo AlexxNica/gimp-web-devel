@@ -1,5 +1,9 @@
 2007-10-24  Sven Neumann  <sven@gimp.org>
 
+	* install.exclude: exclude NEWS-2.4 and ChangeLog-2.4.
+
+2007-10-24  Sven Neumann  <sven@gimp.org>
+
 	* images/wilber-icon.png: use the new Wilber icon.
 
 2007-09-13  Raphaël Quinet  <raphael@gimp.org>
