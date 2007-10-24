@@ -1,3 +1,7 @@
+2007-10-24  Sven Neumann  <sven@gimp.org>
+
+	* images/wilber-icon.png: use the new Wilber icon.
+
 2007-09-13  Raphaël Quinet  <raphael@gimp.org>
 
 	* faq.xml: corrected misleading comment (tabs vs. spaces), updated
