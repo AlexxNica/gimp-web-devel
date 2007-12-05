@@ -1,3 +1,7 @@
+2007-12-05  Sven Neumann  <sven@gimp.org>
+
+	* changelog.xml: the CIA moved, updated the URLs.
+
 2007-10-24  Sven Neumann  <sven@gimp.org>
 
 	* install.exclude: exclude NEWS-2.4 and ChangeLog-2.4.

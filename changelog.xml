@@ -7,8 +7,8 @@
   <head>
     <headlink rel="alternate"
               type="application/rss+xml"
-              title="GIMP commits (cia.navi.cx)"
-              href="http://cia.navi.cx/stats/project/gnome/gimp/.rss" />
+              title="GIMP commits (by cia.vc)"
+              href="http://cia.vc/stats/project/gnome/gimp/.rss" />
 
     <title>GIMP ChangeLog</title>
     <titleabbrev>ChangeLog</titleabbrev>
@@ -24,7 +24,7 @@
     lists all changes in detail. The list below shows the latest
     commits to the GIMP subversion repository.  It is generated from
     the RSS feed delivered by
-    the <ulink url="http://cia.navi.cx/">CIA</ulink>.
+    the <ulink url="http://cia.vc/">CIA</ulink>.
   </para>
 
   <rss feed="http://cia.navi.cx/stats/project/gnome/gimp/.rss?ver=1" />
