@@ -65,14 +65,6 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-freetype/">gimp-freetype</ulink>
-          </entry>
-	  <entry>
-            GIMP FreeType plug-in, does some fancy text rendering
-          </entry>
-	</row>
-	<row>
-	  <entry>
             <ulink url="http://svn.gnome.org/viewvc/gimp-gap/">gimp-gap</ulink>
           </entry>
 	  <entry>
@@ -85,7 +77,7 @@
             <ulink url="http://svn.gnome.org/viewvc/gimp-help-2/">gimp-help-2</ulink>
           </entry>
 	  <entry>
-            GIMP help pages, a rewrite for 2.0
+            GIMP User Manual
           </entry>
 	</row>
 	<row>
