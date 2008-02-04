@@ -183,7 +183,7 @@
       <listitem>
 	<para>
 	  This is a specification for associating ICC color profiles
-	  with X screens. GIMP 2.4 will support this proposed standard. 
+	  with X screens. GIMP 2.4 implements this proposed standard. 
 	</para>
       </listitem>
     </varlistentry>
@@ -349,7 +349,7 @@
       <listitem>
 	<para>
 	  XDS defines an extension to XDND that allow users to save a file by
-	  simply dragging it to a file manager window. GIMP 2.4 will support
+	  simply dragging it to a file manager window. GIMP 2.4 supports
 	  this protocol.
 	</para>
       </listitem>
