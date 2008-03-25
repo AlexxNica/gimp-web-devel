@@ -19,10 +19,10 @@
   <section>
     <title>GIMP Developers Conference 2004</title>
     <para role="images">
-      <ulink url="/gimpcon/2004/gimp-people.jpg">
+      <ulink url="http://carol.gimp.org/GIMP/gimp-people.jpg">
         <mediaobject>
           <imageobject>
-            <imagedata fileref="gimp-people-small.jpg"/>
+            <imagedata fileref="http://carol.gimp.org/GIMP/gimp-people-small.jpg"/>
           </imageobject>
           <textobject>
             <phrase>GIMP Application and Web Developers</phrase>
