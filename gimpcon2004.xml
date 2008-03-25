@@ -17,6 +17,29 @@
   </para>
 
   <section>
+    <title>GIMP Developers Conference 2004</title>
+    <para role="images">
+      <ulink url="/gimpcon/2004/gimp-people.jpg">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="gimp-people-small.jpg"/>
+          </imageobject>
+          <textobject>
+            <phrase>GIMP Application and Web Developers</phrase>
+          </textobject>
+        </mediaobject>
+        photograph by Jakub Steiner
+      </ulink>
+    </para>
+
+    <para>
+      From left to right, back row: Tuomas Kuosmanen, Manish Singh, Ville Pätsi,
+      Carol Spears, Dave Neary, Niklas Mattisson, Dave Neary, David Odin, Sven Neuman.
+      Front row: Nathan Summers, Tor Lillqvist, Simon Budig, Roman Joost, Øyvind Kolås.
+    </para>
+  </section>
+
+  <section>
     <title>GIMP related talks at GUADEC</title>
 
     <para>
