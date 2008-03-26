@@ -1,3 +1,8 @@
+2008-03-26  Sven Neumann  <sven@gimp.org>
+
+	* gimpcon2004.xml: reverted changes done by Carol without approval
+	and without a ChangeLog entry.
+
 2008-02-04  Sven Neumann  <sven@gimp.org>
 
 	* standards.xml: changed tense, 2.4 is released by now.

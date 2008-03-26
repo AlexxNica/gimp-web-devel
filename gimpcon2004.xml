@@ -17,27 +17,90 @@
   </para>
 
   <section>
-    <title>GIMP Developers Conference 2004</title>
+    <title>GIMP related talks at GUADEC</title>
+
+    <para>
+      Programming a GIMP Plug-in &mdash; Dave Neary
+    </para>
+
     <para role="images">
-      <ulink url="http://carol.gimp.org/GIMP/gimp-people.jpg">
+      <ulink url="mailto:bolsh@NOSPAM.gimp.org">
         <mediaobject>
           <imageobject>
-            <imagedata fileref="http://carol.gimp.org/GIMP/gimp-people-small.jpg"/>
+            <imagedata fileref="Dave_Neary.jpg"/>
           </imageobject>
           <textobject>
-            <phrase>GIMP Application and Web Developers</phrase>
+            <phrase>Dave Neary</phrase>
           </textobject>
         </mediaobject>
-        photograph by Jakub Steiner
+        Dave Neary
       </ulink>
     </para>
 
     <para>
-      From left to right, back row: Tuomas Kuosmanen, Manish Singh, Ville Pätsi,
-      Carol Spears, Niklas Mattisson, Dave Neary, David Odin, Sven Neuman.
-      Front row: Nathan Summers, Tor Lillqvist, Simon Budig, Roman Joost, Øyvind Kolås.
+      Dave Neary's been hanging around free software for about 6
+      years. He started off as a leech, and then decided to turn into
+      a leechee sometime around 1999, when he started working on the
+      GIMP. His main interest in the GIMP is revitalising the
+      relationship betweek the user and developer communities. He has
+      also helped out a little now and again on other things, and is
+      listed as a co-author of gnect.
+    </para>
+    <para>
+      He is currently living and working in Lyon, France.
+    </para>
+
+    <para>
+      Custom widgets in GtkCairo &mdash; &Oslash;yvind Kol&aring;s
+    </para>
+
+    <para role="images">
+      <ulink url="mailto:pippin@NOSPAM.gimp.org">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="Oyvind_Kolas.png"/>
+          </imageobject>
+          <textobject>
+            <phrase>&Oslash;yvind Kol&aring;s</phrase>
+          </textobject>
+        </mediaobject>
+        &Oslash;yvind Kol&aring;s
+      </ulink>
+    </para>
+
+    <para>
+      &Oslash;yvind is working on an application called Bauxite, which
+      uses a node-based data structure similar to GEGL This
+      application is both a standalone video editor and a
+      comprehensive test bed of GEGL's node structrues.
+    </para>
+    <para>
+      &Oslash;yvind is also working on the next generation XCF format.
+    </para>
+    <para>
+      His primary interests in the GIMP is graph compositing.
     </para>
   </section>
+
+  <section>
+    <title>Other graphics talks at GUADEC</title>
+
+    <itemizedlist>
+      <listitem>
+        Typography and graphic design for programmers &mdash;Liam Quin
+      </listitem>
+      <listitem>
+        The future of rendering in GNOME &mdash; Owen Taylor
+      </listitem>
+      <listitem>
+        GStreamer Internals &mdash; Benjamin Otte
+      </listitem>
+      <listitem>
+        Digital Photography in a GNOME Environment &mdash; Hubert Figui&eacute;re
+      </listitem>
+    </itemizedlist>
+  </section>
+
   <section>
     <title>Sponsors</title>
 
