@@ -1,3 +1,15 @@
+2008-04-09  Sven Neumann  <sven@gimp.org>
+
+	* scripts/thumb.sh: increased thumb size to 320 pixels.
+
+	* screenshots/*.png: removed old screenshots.
+
+	* screenshots/gimp-empty.png: added a new screenshot.
+
+	* screenshots.xml: use the new screenshot.
+
+	* screenshots/Makefile (THUMBS): updated.
+
 2008-03-26  Sven Neumann  <sven@gimp.org>
 
 	* gimpcon2004.xml: reverted changes done by Carol without approval

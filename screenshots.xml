@@ -15,47 +15,17 @@
   </para>
 
   <para role="screenshot">
-    <ulink url="screenshots/gimp-misc.png">
+    <ulink url="screenshots/gimp-empty.png">
       <mediaobject>
         <imageobject>
-          <imagedata fileref="screenshots/gimp-misc-thumb.png"/>
+          <imagedata fileref="screenshots/gimp-empty-thumb.png"/>
         </imageobject>
         <textobject>
-          <phrase>Showing off some new stuff</phrase>
+          <phrase>No image opened</phrase>
         </textobject>
       </mediaobject>
     </ulink>
-    This desktop shows off some of the changes in GIMP 2.3.
-  </para>
-
-  <para role="screenshot">
-    <ulink url="screenshots/gimp-prefs-color-management.png">
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="screenshots/gimp-prefs-color-management-thumb.png"/>
-        </imageobject>
-        <textobject>
-          <phrase>Configuration of color management</phrase>
-        </textobject>
-      </mediaobject>
-    </ulink>
-    The new Color Management section in the preferences. The image
-    display does already respect these settings but there's still a
-    lot to do to fully integate color management into GIMP.
-  </para>
-
-  <para role="screenshot">
-    <ulink url="screenshots/gimp-help-browser.png">
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="screenshots/gimp-help-browser-thumb.png"/>
-        </imageobject>
-        <textobject>
-          <phrase>GIMP Help Browser</phrase>
-        </textobject>
-      </mediaobject>
-    </ulink>
-    The Help Browser plug-in has undergone some usability improvements.
+    This desktop shows GIMP 2.5 right after startup with no image loaded yet.
   </para>
 
 </webpage>
