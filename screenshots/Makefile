@@ -1,5 +1,6 @@
 THUMBS = \
-	gimp-empty-thumb.png
+	gimp-empty-thumb.png	\
+	gimp-print-thumb.png
 
 all: thumbs
 
@@ -7,10 +8,10 @@ all: thumbs
 thumbs: $(THUMBS)
 
 %-thumb.png: %.png
-	sh ../scripts/thumb.sh $<
+	@sh ../scripts/thumb.sh $<
 
 %-thumb.png: %.jpeg
-	sh ../scripts/thumb.sh $<
+	@sh ../scripts/thumb.sh $<
 
 .PHONY: clean
 clean:

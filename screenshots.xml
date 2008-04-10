@@ -25,7 +25,22 @@
         </textobject>
       </mediaobject>
     </ulink>
-    This desktop shows GIMP 2.5 right after startup with no image loaded yet.
+    This screenshot shows a GNOME desktop and GIMP 2.5 right after
+    startup with no image loaded yet.
+  </para>
+
+  <para role="screenshot">
+    <ulink url="screenshots/gimp-print.png">
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="screenshots/gimp-print-thumb.png"/>
+        </imageobject>
+        <textobject>
+          <phrase>Print dialog</phrase>
+        </textobject>
+      </mediaobject>
+    </ulink>
+    The Print plug-in has been further improved for GIMP 2.5.
   </para>
 
 </webpage>
