@@ -78,7 +78,7 @@ p.screenshot .mediaobject {
   background: url(/images/shadow.png) no-repeat bottom right !important;
   background: url(/images/shadow.gif) no-repeat bottom right;
   margin: 0 0 6px 6px;
-  padding: 4px;
+  padding: 8px;
 }
 
 p.screenshot .mediaobject img {

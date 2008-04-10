@@ -1,5 +1,9 @@
 2008-04-10  Sven Neumann  <sven@gimp.org>
 
+	* style/default.css: minor tweak to the layout for screenshots.
+
+2008-04-10  Sven Neumann  <sven@gimp.org>
+
 	* screenshots/Makefile
 	* screenshots/gimp-print.png
 	* screenshots.xml: added another screenshot (taken from my weblog).
