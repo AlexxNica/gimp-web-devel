@@ -43,4 +43,19 @@
     The Print plug-in has been further improved for GIMP 2.5.
   </para>
 
+  <para role="screenshot">
+    <ulink url="screenshots/gimp-curves.png">
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="screenshots/gimp-curves-thumb.png"/>
+        </imageobject>
+        <textobject>
+          <phrase>Print dialog</phrase>
+        </textobject>
+      </mediaobject>
+    </ulink>
+    This screenshot shows illustrates to the Curves dialog for the
+    upcoming GIMP 2.6 release.
+  </para>
+
 </webpage>

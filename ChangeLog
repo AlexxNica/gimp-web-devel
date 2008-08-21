@@ -1,3 +1,10 @@
+2008-08-21  Sven Neumann  <sven@gimp.org>
+
+	* screenshots/Makefile
+	* screenshots/gimp-curves.png
+	* screenshots.xml: added screenshot of Curves dialog, contributed
+	by Tobias.
+
 2008-04-10  Sven Neumann  <sven@gimp.org>
 
 	* style/default.css: reverted as it breaks the shadow.

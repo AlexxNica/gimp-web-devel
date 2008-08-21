@@ -1,4 +1,5 @@
 THUMBS = \
+	gimp-curves-thumb.png	\
 	gimp-empty-thumb.png	\
 	gimp-print-thumb.png
 
