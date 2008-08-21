@@ -50,12 +50,12 @@
           <imagedata fileref="screenshots/gimp-curves-thumb.png"/>
         </imageobject>
         <textobject>
-          <phrase>Print dialog</phrase>
+          <phrase>Curves dialog</phrase>
         </textobject>
       </mediaobject>
     </ulink>
-    This screenshot shows illustrates to the Curves dialog for the
-    upcoming GIMP 2.6 release.
+    This screenshot illustrates to the Curves dialog for the upcoming
+    GIMP 2.6 release.
   </para>
 
 </webpage>
