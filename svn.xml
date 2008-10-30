@@ -14,7 +14,7 @@
     The GIMP source code lives in module <emphasis>gimp</emphasis> on the
     <ulink url="http://svn.gnome.org/">GNOME Subversion server</ulink>.
     There's a nice
-    <ulink url="http://developer.gnome.org/tools/svn.html">introduction</ulink>
+    <ulink url="http://live.gnome.org/SubversionFAQ">introduction</ulink>
     to Subversion in general and the GNOME repository in particular.
   </para>
 
