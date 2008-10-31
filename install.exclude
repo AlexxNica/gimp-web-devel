@@ -4,12 +4,14 @@ Makefile
 /ChangeLog
 /ChangeLog-2.2
 /ChangeLog-2.4
+/ChangeLog-2.6
 /README
 /README.i18n
 /README.win32
 /NEWS
 /NEWS-2.2
 /NEWS-2.4
+/NEWS-2.6
 /HACKING
 /debug-plug-ins.txt
 /install.sh

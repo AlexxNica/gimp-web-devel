@@ -1,3 +1,7 @@
+2008-10-31  Sven Neumann  <sven@gimp.org>
+
+	* install.exclude: added NEWS-2.6.
+
 2008-10-30  Sven Neumann  <sven@gimp.org>
 
 	* svn.xml: replaced link to Subversion intro with a link to the
