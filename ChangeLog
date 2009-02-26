@@ -1,3 +1,7 @@
+2009-02-26  Sven Neumann  <sven@gimp.org>
+
+	* faq.xml: fixed link to the GObject documentation.
+
 2009-01-01  Sven Neumann  <sven@gimp.org>
 
 	* layout.xml: Happy New Year!

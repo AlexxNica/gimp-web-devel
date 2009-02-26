@@ -758,9 +758,10 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
         </question>
         <answer>
           <para>
-            Mathieu Lacage has written a nice <ulink
-            url="http://www.le-hacker.org/papers/gobject/">article</ulink>
-            about the Glib Object System.
+	    The
+	    <ulink url="http://library.gnome.org/devel/gobject/stable/">GObject
+	    documentation</ulink> has a
+	    nice <ulink url="http://library.gnome.org/devel/gobject/stable/howto-gobject.html">tutorial</ulink> that you might want to have a look at.
           </para>
         </answer>
       </qandaentry>
