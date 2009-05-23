@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
                          "dtd/website.dtd" [
-<!ENTITY subversion SYSTEM "svn.xml" NDATA XML>
+<!ENTITY git SYSTEM "git.xml" NDATA XML>
 ]>
 
 <webpage id="about" lang="en">
@@ -22,9 +22,9 @@
   </para>
 
   <para>
-    If you want to help us with developer.gimp.org, check out the
-    module <emphasis>gimp-web-devel</emphasis>
-    from <olink targetdocent="subversion">Subversion</olink>.
+    If you want to help us with developer.gimp.org, clone the
+    repository <emphasis>gimp-web-devel</emphasis>
+    from <olink targetdocent="git">git</olink>.
   </para>
 
 </webpage>

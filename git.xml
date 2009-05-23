@@ -5,21 +5,21 @@
 <webpage id="svn" lang="en">
 
   <head>
-    <title>Subversion Repository</title>
-    <titleabbrev>Subversion</titleabbrev>
+    <title>Git</title>
+    <titleabbrev>Git</titleabbrev>
     <summary>Living on the bleeding edge</summary>
   </head>
 
   <para>
-    The GIMP source code lives in module <emphasis>gimp</emphasis> on the
-    <ulink url="http://svn.gnome.org/">GNOME Subversion server</ulink>.
-    There's a nice
-    <ulink url="http://live.gnome.org/SubversionFAQ">introduction</ulink>
-    to Subversion in general and the GNOME repository in particular.
+    The GIMP source code lives in the <emphasis>gimp</emphasis>
+    repository on the
+    <ulink url="http://git.gnome.org/cgit/">GNOME git server</ulink>.
+    For more information on the GNOME git solution, go
+    <ulink url="http://live.gnome.org/Git">here</ulink>.
   </para>
 
   <para>
-    The GNOME Subversion server hosts a couple of GIMP related modules:
+    The GNOME git server hosts a couple of GIMP related repositories:
   </para>
 
   <informaltable>
@@ -33,7 +33,7 @@
       <tbody>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/babl/">babl</ulink>
+            <ulink url="http://git.gnome.org/cgit/babl">babl</ulink>
           </entry>
 	  <entry>
             Pixel format conversion library
@@ -41,7 +41,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gegl/">gegl</ulink>
+            <ulink url="http://git.gnome.org/cgit/gegl/">gegl</ulink>
           </entry>
 	  <entry>
             Generic Graphical Library
@@ -49,7 +49,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp/">gimp</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp/">gimp</ulink>
           </entry>
 	  <entry>
             GIMP and the standard set of plug-ins
@@ -57,7 +57,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-data-extras/">gimp-data-extras</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-data-extras/">gimp-data-extras</ulink>
           </entry>
 	  <entry>
             GIMP Data files such as brushes, gradients, patterns and the like
@@ -65,7 +65,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-gap/">gimp-gap</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-gap/">gimp-gap</ulink>
           </entry>
 	  <entry>
             GIMP Animation Package, a set of plug-ins that provide
@@ -74,7 +74,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-help-2/">gimp-help-2</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-help-2/">gimp-help-2</ulink>
           </entry>
 	  <entry>
             GIMP User Manual
@@ -82,7 +82,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-perl/">gimp-perl</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-perl/">gimp-perl</ulink>
           </entry>
 	  <entry>
             GIMP Perl bindings and a bunch of nice gimp-perl scripts
@@ -90,7 +90,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-plugin-template/">gimp-plugin-template</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-plugin-template/">gimp-plugin-template</ulink>
           </entry>
 	  <entry>
             GIMP Plug-In Template, a starting ground for plug-in developers
@@ -98,7 +98,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-plugins-unstable/">gimp-plugins-unstable</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-plugins-unstable/">gimp-plugins-unstable</ulink>
           </entry>
 	  <entry>
             GIMP plug-ins from the past, a collection of unstable and
@@ -107,7 +107,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-ruby/">gimp-ruby</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-ruby/">gimp-ruby</ulink>
           </entry>
 	  <entry>
             GIMP Ruby-based scripting plug-in
@@ -115,7 +115,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-tiny-fu/">gimp-tiny-fu</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-tiny-fu/">gimp-tiny-fu</ulink>
           </entry>
 	  <entry>
             GIMP Tiny-Fu, a drop-in replacement for Script-Fu
@@ -123,7 +123,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-web/">gimp-web</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-web/">gimp-web</ulink>
           </entry>
 	  <entry>
             the GIMP web site, available at <ulink url="http://www.gimp.org">www.gimp.org</ulink>
@@ -131,7 +131,7 @@
 	</row>
 	<row>
 	  <entry>
-            <ulink url="http://svn.gnome.org/viewvc/gimp-web-devel/">gimp-web-devel</ulink>
+            <ulink url="http://git.gnome.org/cgit/gimp-web-devel/">gimp-web-devel</ulink>
           </entry>
 	  <entry>
             the source of the pages you are reading right now
