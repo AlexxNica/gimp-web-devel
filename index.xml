@@ -28,4 +28,10 @@
     <ulink url="http://www.gimp.org">www.gimp.org</ulink>.
   </para>
 
+  <para>
+    The GIMP source code is versioned with git. You
+    can <ulink url="http://git.gnome.org/cgit/gimp/">browse the
+    source</ulink> online.
+  </para>
+
 </webpage>
