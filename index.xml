@@ -27,11 +27,5 @@
     If you're looking for the main GIMP website you should visit
     <ulink url="http://www.gimp.org">www.gimp.org</ulink>.
   </para>
-  
-  <para>
-    The list below shows the latest news about GIMP development.
-  </para>
-
-  <rss feed="http://edhel.gimp.org/devnews-rss1.xml" />
 
 </webpage>
