@@ -1,5 +1,4 @@
-CVS
-.cvsignore
+.git
 Makefile
 /ChangeLog
 /ChangeLog-2.2
