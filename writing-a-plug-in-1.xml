@@ -109,7 +109,7 @@
 
     <programlisting>
     <![CDATA[
-       gimptool --install plugin.c or gimptool --install-admin plugin.c
+       gimptool-2.0 --install plugin.c or gimptool-2.0 --install-admin plugin.c
      ]]>
     </programlisting>
 
