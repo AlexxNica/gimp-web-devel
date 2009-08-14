@@ -12,18 +12,16 @@
 
     <title>GIMP ChangeLog</title>
     <titleabbrev>ChangeLog</titleabbrev>
-    <summary>Keeping an eye on Subversion</summary>
+    <summary>Keeping an eye on the development</summary>
   </head>
 
   <para>
     The
-    <ulink url="/ChangeLog">
-      GIMP ChangeLog
+    <ulink url="http://git.gnome.org/cgit/gimp/log/">
+      GIT repository
     </ulink>
-    
     lists all changes in detail. The list below shows the latest
-    commits to the GIMP subversion repository.  It is generated from
-    the RSS feed delivered by
+    commits.  It is generated from the RSS feed delivered by
     the <ulink url="http://cia.vc/">CIA</ulink>.
   </para>
 

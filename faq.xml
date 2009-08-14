@@ -287,9 +287,6 @@
  ;; Syntax highlighting
  '(global-font-lock-mode t nil (font-lock))
  '(show-paren-mode t nil (paren))
- ;; User name to be put in the ChangeLog file by M-x add-change-log-entry
- '(user-full-name "Your Name Here")
- '(user-mail-address "your@email.address")
 )
 ;; use UTF-8 by default
 (prefer-coding-system 'mule-utf-8)
@@ -307,19 +304,6 @@
 syn on           " syntax highlighting
 set expandtab    " use spaces instead of tabs
 set shiftwidth=2 " default indentation is 2 spaces ]]></programlisting>
-              <para>
-                Recent versions of Vim should be able to handle
-                <filename>ChangeLog</filename> entries correctly
-                using the command <code>NewChangelogEntry</code>.  You
-                can also use a simplified version by creating a file
-                <filename>~/.vim/ftplugin/changelog.vim</filename> 
-                with the following contents:
-              </para>
-              <programlisting><![CDATA[
-" Press F2 to insert the header at the top of the ChangeLog file
-nmap &lt;F2&gt; 1GO&lt;C-R&gt;=strftime("%Y-%m-%d")&lt;CR&gt;  Your Name Here  &lt;your@email.address&gt;&lt;CR&gt;&lt;CR&gt; *
-set noexpandtab  " use real tabs in ChangeLog, not spaces
-set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
             </listitem>
             <listitem>
               <para>
@@ -346,7 +330,7 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
             <ulink
             url="http://developer.gnome.org/projects/gtp/">GNOME
             Translation Project</ulink> who coordinate all translation
-            efforts for projects hosted in the GNOME Subversion repository.
+            efforts for projects hosted in the GNOME GIT repository.
           </para>
           <para>
             More information about GIMP and localisation can be found
@@ -400,8 +384,8 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
           <para>
             Yes.  An official GIMP plug-in template is available in
             the <ulink
-            url="http://svn.gnome.org/viewcvs/gimp-plugin-template/">gimp-plugin-template
-            </ulink> SVN module.  Snapshots are available at <ulink
+            url="http://git.gnome.org/cgit/gimp-plugin-template/">gimp-plugin-template
+            </ulink> git module.  Snapshots are available at <ulink
             url="ftp://ftp.gimp.org/pub/gimp/plugin-template/">ftp.gimp.org</ulink>.
           </para>
         </answer>
@@ -502,40 +486,26 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
 
     </qandadiv>
     <qandadiv>
-      <title>Subversion</title>
+      <title>GIT</title>
 
       <qandaentry>
         <question>
           <para>
-            What should I put in the ChangeLog when doing a svn commit?
+            What should I put in the commit message when doing a git commit?
           </para>
         </question>
         <answer>
           <para>
-            The ChangeLog entry must list all files affected by the
-            commit along with a description of the changes.  The
-            ChangeLog entry should follow the style set forth in the
-            rest of the ChangeLog.
+            Please put a short explanation of the change on the first line.
+            Then, after an empty line, you can describe the change in more
+            detail using as many lines as you need. Try not to exceed 72
+            colums.
           </para>
           <para>
-            If the commit fixes a bug or part of a bug please include
-            a reference to that bug in the form <quote>bug
-            #nnnnn</quote>, where nnnnn is the bug number.
-          </para>
-        </answer>
-      </qandaentry>
-
-      <qandaentry>
-        <question>
-          <para>
-            What should I put in the commit log message?
-          </para>
-        </question>
-        <answer>
-          <para>
-            You should always paste the entry from the ChangeLog to
-            the commit message when doing a svn commit.  Please strip the
-            leading whitespace first to make the log more readable.
+            If the commit fixes a bug or part of a bug please use the
+            bug number and description as the first line of the commit
+            message. It's most convenient to just copy the line from the
+            Bugzilla bug page.
           </para>
         </answer>
       </qandaentry>
@@ -722,15 +692,15 @@ set tabstop=8    " tabulations every 8 spaces ]]> </programlisting>
         <answer>
           <para>
             When fixing a bug, always mention the bug number in the
-            commit message and ChangeLog entry.  Once the changes are
-            in SVN, paste the relevant part of the ChangeLog entry (or
-            all of it) in the comment field and mark the bug as
-            RESOLVED FIXED.  These cross-references help a lot when
-            trying to find when a bug was fixed, its relations to
-            other bugs, and potential regressions.
+            commit message.  Once the changes are in git, paste the
+            relevant part of the commit message (or all of it) in the
+            comment field and mark the bug as RESOLVED FIXED.
+            These cross-references help a lot when trying to find
+            when a bug was fixed, its relations to other bugs, and
+            potential regressions.
           </para>
           <para>
-            A bug that is fixed in SVN or in an unstable release
+            A bug that is fixed in git or in an unstable release
             should be marked as RESOLVED FIXED.  Optionally, the
             reporter or someone other than the one who fixed the bug
             can mark it as VERIFIED after some testing.  When the fix
