@@ -1,0 +1,6 @@
+*.html
+autolayout.xml
+depends.tabular
+gimpcon
+screenshots/*thumb.png
+writing-a-plug-in
